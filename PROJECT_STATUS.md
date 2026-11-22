@@ -14,13 +14,13 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 ## Episodes
 | Ep | Scene | Script | Voice | Clips | Render |
 |---|---|---|---|---|---|
-| 01 | Interstellar docking | ✅ Gemini v3, fact-checked | ✅ (977 cr) | ✅ cut | ⏳ user to send "render ep01" (commit `cfa1c3e`) |
+| 01 | Interstellar docking | ✅ Gemini v3, fact-checked | ✅ (977 cr) | ✅ cut | ✅ rendered, approved by user |
 | 05 | Jurassic Park T. rex vs Jeep | ✅ Claude v3, approved | ✅ (844 cr), subscribe line cut | ❌ needs movie in `videos/jurassicpark/` | — |
-| 02 | Spider-Man 2 train | ✅ Gemini v3, fact-checked | ❌ | ❌ needs movie | — |
+| 02 | Spider-Man 2 train | ✅ Gemini v3, fact-checked, approved | ✅ (862 cr) | ✅ cut (`cut_clips.py`) | ⏳ user to send "render ep02" |
 | 03 | Civil War helicopter | ✅ Gemini v3; **check the footage: railing or ledge?** before voicing | ❌ | ❌ needs movie | — |
 | 04 | Fast Five vault | ✅ Gemini v3, fact-checked | ❌ | ❌ needs movie | — |
 
-Scripts live in `episodes/NN-*/script.md`. Old rejected versions are in `failed/`. **ElevenLabs credits left: ~2,100.**
+Scripts live in `episodes/NN-*/script.md`. Old rejected versions are in `failed/`. **ElevenLabs credits left: ~1,240** (enough for one more episode: EP03 or EP04).
 
 ## How to cut clips for a new movie
 See `episodes/01-interstellar-docking/cut_clips.py` (ffmpeg crop to 1100x1080, H.264, stereo downmix). Find scenes with frame contact sheets plus a whisper transcript of that window. Full movies stay in `videos/` (git-ignored, never pushed).

@@ -1,7 +1,7 @@
 # EP02 v3 — Spider-Man 2: stopping the train (Gemini draft, Claude fact-checked)
 
 - **Upload title:** How Did Spider-Man Not Get Ripped In Half Here? 💀
-- **Words:** ~130 · **Status:** ✅ fact-checked, ⏳ waiting on approval, not voiced. Needs the Spider-Man 2 movie for clips.
+- **Words:** ~130 · **Status:** ✅ fact-checked, approved, voiced (take A, 862 cr, 2026-11-23). Footage checked: feet drag on rails, web anchor rips window out of wall, passes out.
 
 ## Fact-check (Claude)
 - 200 t at 70 mph (31.3 m/s), stopped in ~30 s: a ≈ 1.04 m/s², so F ≈ 208 kN ≈ **21 tonnes-force**. "Roughly twenty tons" ✅
