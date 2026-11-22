@@ -19,7 +19,7 @@ export const ep02: Episode = {
     {
       kind: 'pause', from: 0, to: 4.9,
       clip: {file: C('01-feet-brake'), start: 5.5, label: 'Freeze: feet dragging on the rails', zoom: 0.08},
-      overlays: [{type: 'meme', emoji: '👟', at: 'shoes', dur: 1.2}],
+      overlays: [{type: 'meme', file: 'ep02/assets/sneaker.jpg', emoji: '', at: 'shoes', dur: 1.4}],
     },
     // 3. explanation over moving footage
     {kind: 'vo', from: 4.9, to: 8.1, clip: {file: C('03-webs-fire'), start: 0, label: 'Webs to both buildings'}},
@@ -56,8 +56,9 @@ export const ep02: Episode = {
       kind: 'pause', from: 24.47, to: 33.57,
       clip: {file: C('07-strain-face'), start: 2.0, label: 'Freeze: teeth gritted', zoom: 0.07},
       overlays: [
-        {type: 'versus', left: '½ T', leftSub: 'deadlift world record', right: '10 T', rightSub: 'per arm', at: 'deadlift', dur: 2.6},
-        {type: 'pop', text: '×20 🏋️', x: 50, y: 30, at: '20', dur: 3.0, color: '#FFD60A', size: 190},
+        {type: 'meme', file: 'ep02/assets/deadlift.jpg', emoji: '', at: 'world', dur: 1.4},
+        {type: 'versus', left: '½ T', leftSub: 'deadlift world record', right: '10 T', rightSub: 'per arm', at: 'half', dur: 2.6},
+        {type: 'pop', text: '×20', x: 50, y: 30, at: '20', dur: 3.0, color: '#FFD60A', size: 190},
       ],
     },
     // 5. movie burst: the first web anchor rips the window out of the wall
