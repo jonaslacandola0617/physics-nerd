@@ -20,7 +20,7 @@ export const ep04: Episode = {
     {
       kind: 'pause', from: 0, to: 5.95,
       clip: {file: C('03-pull'), start: 4.1, label: 'Freeze: both Chargers, cables to the vault', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🔗', at: 'hooked', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep04/assets/tow-chain.jpg', emoji: '', at: 'hooked', dur: 1.4}],
     },
     // 3. the vault is heavy and has no wheels (sparks land on "not on wheels")
     {
