@@ -18,3 +18,8 @@ __pycache__/
 # Local test renders (the cloud renderer writes final videos to renders/)
 episodes/**/*-final.mp4
 *.tmp
+
+# Rejected renders kept locally for reference
+failed/*.mp4
+failed/**/*.mp4
+failed/**/*.mp3

@@ -1,86 +1,60 @@
 import {Episode} from '../template/types';
 import words from './ep03.words.json';
 
-// EP03 — Captain America: Civil War, holding the helicopter. Script: episodes/03-civilwar-helicopter/script.md
+// EP03 v2 — Civil War helicopter, reaction format. Script: episodes/03-civilwar-helicopter/script.md
+// Clips not cut yet: each clip shows a placeholder until `file`/`start` are filled in.
 
 export const ep03: Episode = {
   id: 'ep03',
   title: ['Physics Nerd reacts to', 'Civil War'],
   voiceover: 'ep03/vo.mp3',
   words,
+  captionFixes: {rotors: "rotor's", caps: "Cap's", smart: 'Smart'},
   beats: [
-    {kind: 'vo', from: 0, to: 4.1, clip: {label: 'Cap grabbing the helicopter', zoom: 0.08}},
-    {kind: 'movie', dur: 3, clip: {label: 'Bicep-flex close-up, rotor roar (movie audio)'}},
+    {kind: 'play', dur: 4.0, clip: {label: '~1:07:40 Bucky lifts off, Cap leaps and grabs it'}},
     {
-      kind: 'vo', from: 4.1, to: 10.7,
-      clip: {label: 'Helicopter straining to lift off the roof'},
+      kind: 'pause', from: 0, to: 5.3,
+      clip: {label: 'Freeze: Cap mid-grab', zoom: 0.08},
+      overlays: [{type: 'meme', emoji: '🐕', at: 'leash', dur: 1.0}],
+    },
+    {kind: 'play', dur: 5.0, clip: {label: '~1:07:45 the bicep-flex shot, rotor roaring'}},
+    {
+      kind: 'pause', from: 5.65, to: 15.55,
+      clip: {label: 'Freeze: wide, Cap between ledge and helicopter', zoom: 0.05},
       overlays: [
-        {type: 'pop', text: '3 TONS', x: 50, y: 30, at: 1.8, dur: 4.6, color: '#FFD60A', size: 170},
-        {type: 'stamp', text: 'NOT ALL OF IT', good: false, at: 5.0, dur: 1.6},
+        {type: 'arrow', x1: 50, y1: 70, x2: 50, y2: 18, at: 'rotors', dur: 2.6, label: 'LIFT = WEIGHT', color: '#34C759'},
+        {type: 'pop', text: '~700 KG', x: 50, y: 30, at: '700', dur: 2.0, color: '#FFD60A', size: 170},
+        {type: 'meme', emoji: '🚗', at: 'smart', dur: 1.4},
       ],
     },
+    {kind: 'play', dur: 5.0, clip: {label: '~1:07:52 helicopter strains, the arm bends'}},
     {
-      kind: 'vo', from: 10.7, to: 18.2,
-      clip: {label: 'Rotor blades spinning'},
+      kind: 'pause', from: 15.6, to: 25.25,
+      clip: {label: 'Freeze: close on the bent arm', zoom: 0.12},
       overlays: [
-        {type: 'arrow', x1: 50, y1: 70, x2: 50, y2: 25, at: 0.6, dur: 3.2, label: 'LIFT = WEIGHT', color: '#34C759'},
-        {type: 'arrow', x1: 50, y1: 45, x2: 85, y2: 15, at: 4.4, dur: 3, label: 'EXTRA', color: '#FF3B30'},
+        {type: 'pop', text: '8 : 1', x: 50, y: 25, at: 'leverage', dur: 1.8, color: '#FFD60A', size: 180},
+        {type: 'pop', text: '~6 TONS', x: 50, y: 40, at: 'six', dur: 2.4, color: '#FF3B30', size: 210},
+        {type: 'sfx', name: 'boom', at: 'retired'},
       ],
     },
+    {kind: 'play', dur: 5.0, clip: {label: '~1:08:00 Cap hauls it down onto the roof edge'}},
     {
-      kind: 'vo', from: 18.2, to: 25.45,
-      clip: {label: 'Wide: Cap stretched between ledge and helicopter'},
+      kind: 'pause', from: 25.95, to: 33.95,
+      clip: {label: 'Freeze: helicopter tipping on the edge', zoom: 0.06},
       overlays: [
-        {type: 'pop', text: '+25%', x: 50, y: 28, at: 2.0, dur: 2.2, color: '#FFD60A', size: 170},
-        {type: 'pop', text: '750 KG', x: 50, y: 28, at: 4.6, dur: 2.6, color: '#FF3B30', size: 170},
+        {type: 'stamp', text: 'HELICOPTER', good: true, at: 'easy', dur: 1.6},
+        {type: 'stamp', text: 'ARM', good: false, at: 'impossible', dur: 1.6},
       ],
     },
+    {kind: 'play', dur: 4.5, clip: {label: '~1:08:08 helicopter goes over the edge'}},
     {
-      kind: 'vo', from: 25.45, to: 30.6,
-      clip: {label: 'Cap hanging on, straining'},
+      kind: 'pause', from: 34.1, to: 41.2,
+      clip: {label: 'Freeze: mid-fall, before the splash', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '😳', at: 0.1, dur: 1.1},
-        {type: 'pop', text: '= 10 PEOPLE', x: 50, y: 30, at: 3.0, dur: 2.1, color: '#FFD60A', size: 130},
+        {type: 'meme', emoji: '🗜️', at: 'hydraulic', dur: 1.2},
+        {type: 'pop', text: 'SUBSCRIBE', x: 50, y: 25, at: 'subscribe', dur: 3.0, color: '#FFD60A', size: 120},
       ],
     },
-    {
-      kind: 'vo', from: 30.6, to: 34.7,
-      clip: {label: 'Close on his bent arm', zoom: 0.1},
-      overlays: [{type: 'pop', text: '90°', x: 55, y: 45, at: 3.0, dur: 1.1, color: '#FFD60A', size: 200}],
-    },
-    {
-      kind: 'vo', from: 34.7, to: 42.6,
-      clip: {label: 'Bent arm, slow zoom', zoom: 0.12},
-      overlays: [
-        {type: 'arrow', x1: 25, y1: 75, x2: 40, y2: 58, at: 0.8, dur: 3, label: 'bicep', color: '#FFD60A'},
-        {type: 'arrow', x1: 75, y1: 75, x2: 62, y2: 30, at: 3.3, dur: 3, label: 'load', color: '#FF3B30'},
-        {type: 'pop', text: '8 : 1', x: 50, y: 25, at: 6.4, dur: 1.5, color: '#FFD60A', size: 200},
-      ],
-    },
-    {
-      kind: 'vo', from: 42.6, to: 46.0,
-      clip: {label: "Cap's face, straining"},
-      overlays: [{type: 'pop', text: '6 TONS', x: 50, y: 40, at: 2.1, dur: 1.3, color: '#FF3B30', size: 230}],
-    },
-    {
-      kind: 'vo', from: 46.0, to: 51.4,
-      clip: {label: 'Cap holding on'},
-      overlays: [
-        {type: 'versus', left: '0.4 T', leftSub: 'heavy bicep curl', right: '6 T', rightSub: "Cap's tendon", at: 1.4, dur: 4},
-      ],
-    },
-    {
-      kind: 'vo', from: 51.4, to: 58.8,
-      clip: {label: 'Helicopter tipping over the roof edge'},
-      overlays: [
-        {type: 'stamp', text: 'NOT THAT CRAZY', good: true, at: 2.2, dur: 2.3},
-        {type: 'stamp', text: 'SNAPPED', good: false, at: 5.8, dur: 1.6},
-      ],
-    },
-    {
-      kind: 'vo', from: 58.8, to: 62.64,
-      clip: {label: 'Cap pulling the helicopter down'},
-      overlays: [{type: 'meme', emoji: '💀', at: 2.2, dur: 1.4}],
-    },
+    {kind: 'play', dur: 2.5, clip: {label: '~1:08:12 the splash'}},
   ],
 };

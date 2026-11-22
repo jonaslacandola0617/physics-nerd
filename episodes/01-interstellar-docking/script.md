@@ -1,46 +1,65 @@
-# EP01 — Interstellar: the 68 RPM docking
+# EP01 — Interstellar: the 68 RPM docking (v2 reaction script)
 
-**Title bar (placeholder, pick your persona label):** `Physics Nerd reacts to Interstellar`
-**Upload title:** `Interstellar's Docking Scene Should Have Destroyed The Ship 💀`
-**Length target:** ~60s · ~165 words of voiceover + 2 moments where the movie audio plays
+**Movie:** *Interstellar (2014)*  
+**Scene:** After the explosion, the Endurance is tumbling at 68 RPM over Mann's planet. Cooper matches the spin in the Ranger and docks ("It's not possible." / "No. It's necessary."), with Cooper and Brand close to blacking out.  
+**Timestamps:** **2:08:10–2:13:00**. These timestamps are exact film seconds taken from `cut_clips.py`, so the clips already exist.  
+**Title bar:** `Physics Nerd reacts to` / `Interstellar`  
+**Upload title:** `Interstellar's Docking Scene Should've Ripped The Ship Apart 💀`  
+**Coverage check:** ⚠️ Scene Mechanics has already covered this scene (STYLE_GUIDE §2). Ship it anyway because the footage is already cut, but our angle is the ship surviving 150 g, with Cooper as the minor problem.  
+**Status:** draft v2, waiting on the user's approval. **No voice generated.**
 
-## Numbers (checked off-screen, never shown as citations)
-- 68 RPM = 7.12 rad/s, so ω² ≈ 50.7 s⁻²
-- Endurance ring radius ≈ 30 m (the ship is roughly 60 m across)
-- Rim speed: ω·r ≈ 214 m/s ≈ 770 km/h
-- Rim acceleration: ω²·r ≈ 1,520 m/s² ≈ **155 g**
-- 1 m off the spin axis: ≈ **5 g**. At 2 m: ≈ 10 g
-- 1 g at a 30 m radius needs only ≈ 5.5 RPM
-- Untrained people grey out / black out around 4–6 g; trained fighter pilots in g-suits handle ~9 g
+## Numbers (off-screen, checked; 2 spoken numbers)
 
-## Script (VO = AI voice · MOVIE = let the film's audio play)
+- **"About a hundred and fifty g's"** at the ring. 68 RPM = 7.12 rad/s, so ω² = 50.7 s⁻². Assumed ring radius ≈ 30 m (the ship is ~60 m across). ω²r = 1,521 m/s² ≈ **155 g**, rounded down to "a hundred and fifty".
+- **"About five g's"** for Cooper. 1 m off the spin axis gives ω²·1 m = 50.7 m/s² ≈ **5.2 g** (2 m would be ~10 g). The Ranger docks on the hub, so the crew sit roughly 1 m off the axis. Untrained people grey out around 4–6 g, which matches what the film shows, so "Nolan nailed it" is fair.
+- Tumble-dryer comparison: domestic dryer drums turn at about 50–60 RPM, so "spinning like a tumble dryer" is literally the right ballpark (a washing machine on spin is ~1,000+ RPM, so that would be wrong).
 
-| # | Clip / visual | Line | On-screen overlays |
-|---|---|---|---|
-| 1 | Endurance spinning wide shot | VO: "The Endurance is spinning at sixty-eight RPM… and Cooper wants to dock with it." | `68 RPM` pops on the ship |
-| 2 | Cockpit: the "not possible / necessary" exchange | MOVIE (~4s) | — |
-| 3 | Spinning ship, close | VO: "Sixty-eight RPM is more than one full rotation every single second." | Rotation arrow + `1.13 spins/sec` |
-| 4 | Endurance from the Ranger | VO: "This ship is about sixty meters across. That means the outer ring is moving at over seven hundred kilometers an hour." | Radius line `30 m`, then `770 km/h` on the rim |
-| 5 | Same, slow zoom | VO: "And spinning things pull outward. At the rim, that's about one hundred fifty-five g's." | Outward arrows, big red `155 g` |
-| 6 | Meme cut-in (shocked reaction, 1s) | VO: "For comparison…" | — |
-| 7 | Diagram card: centrifuge / pilot | VO: "…a fighter pilot in a g-suit starts blacking out around nine." | `9 g` vs `155 g` side by side |
-| 8 | Endurance ring modules | VO: "So every ton of that ring is pulling like a hundred and fifty tons, right after it got hit by an explosion." | `1 ton → 155 tons` |
-| 9 | Diagram: slow-spinning station | VO: "Real artificial-gravity designs spin at something like two to five RPM. Endurance is doing sixty-eight." | `2–5 RPM` vs `68 RPM` |
-| 10 | Ranger thrusters firing, matching spin | VO: "Now Cooper. Even sitting just one meter off the spin axis, he's pulling around five g's." | Axis line through the Ranger, `1 m → 5 g` |
-| 11 | Cooper / Brand straining, vision blurring | VO: "And honestly? The movie gets that part right. They're both close to blacking out." | Green ✅ `ACCURATE` stamp |
-| 12 | The docking clamps lock | MOVIE (~3s, the clamp clunk / "come on, TARS") | — |
-| 13 | Endurance stabilized | VO: "So the docking? Insane, but survivable. The ship? Should be in a hundred pieces." | — |
-| 14 | Meme cut-in (1s) | VO: "Whoever welded that ring… NASA needs your number." | — |
+## Beat table
 
-## Voiceover text (what gets sent to ElevenLabs, in one take)
-The Endurance is spinning at sixty-eight RPM… and Cooper wants to dock with it.
-Sixty-eight RPM is more than one full rotation every single second.
-This ship is about sixty meters across. That means the outer ring is moving at over seven hundred kilometers an hour.
-And spinning things pull outward. At the rim, that's about one hundred fifty-five g's.
-For comparison… a fighter pilot in a g-suit starts blacking out around nine.
-So every ton of that ring is pulling like a hundred and fifty tons, right after it got hit by an explosion.
-Real artificial-gravity designs spin at something like two to five RPM. Endurance is doing sixty-eight.
-Now Cooper. Even sitting just one meter off the spin axis, he's pulling around five g's.
-And honestly? The movie gets that part right. They're both close to blacking out.
-So the docking? Insane, but survivable. The ship? Should be in a hundred pieces.
-Whoever welded that ring… NASA needs your number.
+Every PAUSE starts with a spacebar-style click and every resume gets one too. VO plays only over frozen frames.
+
+| # | PLAY/PAUSE | Movie timestamp / what's on screen | VO line (eleven_v4 tags) | Overlay / SFX | Est. s |
+|---|---|---|---|---|---|
+| 1 | **PLAY** | **2:08:10.7–2:08:15.2** (7690.7 s; `04-from-ranger` seg 1). Top-down: the Ranger closing on the spinning Endurance, CASE reading out the spin (~2:08:14). | — (movie audio only) | Click on the freeze. | 4.5 |
+| 2 | **PAUSE** | Freeze: ring mid-spin, Ranger tiny next to it. | [deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in. | Click. 1 s tumble-dryer cut-in on "tumble dryer". | 5.0 |
+| 3 | **PLAY** | **2:08:19.5–2:08:24.1** (`02-not-possible`). "It's not possible." / "No. It's necessary." | — (movie audio only) | Click (resume). | 4.6 |
+| 4 | **PAUSE** | Freeze: Cooper's face right after "necessary". | [sarcastic] Necessary. Sure. [short pause] [deadpan] At this spin, the outer ring is pulling about a hundred and fifty g's. [short pause] Every bolt on that ring just filed a complaint. | Click. Big red `~150 g` on the rim with outward arrows (whoosh). Bass drop under "complaint". | 10.0 |
+| 5 | **PLAY** | **2:09:35.9–2:09:40.9** (`07-modules-boom` seg 1). The spinning modules sweep past the Ranger. | — (movie audio only) | Click (resume). | 5.0 |
+| 6 | **PAUSE** | Freeze: Ranger on the axis, modules blurred. | [deadpan] Cooper's near the middle, so he only gets about five g's. [short pause] [sarcastic] Only. [short pause] That's a roller coaster with no exit. | Click. Axis line through the Ranger, `~5 g` pop. 1 s roller-coaster scream cut-in on "no exit". | 7.7 |
+| 7 | **PLAY** | **2:09:48.5–2:09:53.7** (`06-cooper-brand`). Cooper, then Brand, straining against the spin. | — (movie audio only) | Click (resume). | 5.2 |
+| 8 | **PAUSE** | Freeze: Cooper's strained face. | [sighs] Fair. That face? Textbook five g's. Nolan nailed it. [short pause] [deadpan] The ship, however, should be confetti. | Click. Green `✅ ACCURATE` on the face, then a `🎊` confetti pop on "confetti". | 6.2 |
+| 9 | **PLAY** | **2:10:26.4–2:10:30.0** (`11-clamps-lock`). The clamp closes: "...locked!" | — (movie audio only) | Click (resume). Clamp clunk at full volume. | 3.6 |
+| 10 | **PAUSE** | Freeze: the Ranger clamped in the port. | [deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair. | Click. `COOPER ✅` / `SHIP ✗` stamps. Optional CTA card. | 8.9 |
+| 11 | **PLAY** | **2:12:56.9–2:12:59.9** (`12-survivable` seg 2). The shredded ring. | — (movie audio only) | Click (resume), end on the wreckage. | 3.0 |
+
+## Timing check
+
+- VO: **93 words** (tags not counted) ÷ 2.6 w/s ≈ 35.8 s, plus 0.4 s click/breath per pause = **37.8 s frozen**
+- Movie playing alone: **25.9 s**
+- Total: **63.7 s**, movie alone **41%**
+- Longest stretch of narration: 9.6 s (limit ~12 s). One spoken number per pause at most.
+- Estimated cost: 93 words × ~6 credits ≈ **558 credits** for 1 take.
+
+## Alternatives (swap in if you prefer; timing changes by ±1 s)
+
+**Hook A (in the script):** [deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in.
+**Hook B:** [deadpan] Cooper saw a spinning space station and thought... [short pause] [sarcastic] I can park that. (12 words)
+**Hook C:** [incredulous] The ship just exploded. [short pause] [deadpan] And he wants to... dock with it? (11 words)
+
+**Closer A (in the script):** [deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair.
+**Closer B:** [deadpan] Whoever welded that ring... [short pause] NASA needs your number. (8 words)
+**Closer C:** [deadpan] Cooper survived five g's. The ring survived a hundred and fifty. [short pause] [sarcastic] Wrong guy got the hero shot. (17 words)
+
+## VO text block (exactly what goes to ElevenLabs: Arthur, eleven_v4, 1 take)
+
+```
+[deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in.
+[long pause]
+[sarcastic] Necessary. Sure. [short pause] [deadpan] At this spin, the outer ring is pulling about a hundred and fifty g's. [short pause] Every bolt on that ring just filed a complaint.
+[long pause]
+[deadpan] Cooper's near the middle, so he only gets about five g's. [short pause] [sarcastic] Only. [short pause] That's a roller coaster with no exit.
+[long pause]
+[sighs] Fair. That face? Textbook five g's. Nolan nailed it. [short pause] [deadpan] The ship, however, should be confetti.
+[long pause]
+[deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair.
+```

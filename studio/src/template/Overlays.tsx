@@ -1,12 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BODY_FONT, COLORS, TITLE_FONT} from './fonts';
-import {Overlay} from './types';
+import {At, Overlay} from './types';
 
 const DEFAULT_DUR = 2.5;
 
 /** Shared in/out animation: spring in, fade out over the last 0.25s. */
-const useEnvelope = (at: number, dur: number) => {
+const useEnvelope = (atIn: At, dur: number) => {
+  const at = typeof atIn === "number" ? atIn : 0;
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const local = frame - at * fps;
@@ -259,5 +260,7 @@ export const OverlayView: React.FC<{o: Overlay}> = ({o}) => {
       return <Versus {...o} />;
     case 'meme':
       return <Meme {...o} />;
+    case 'sfx':
+      return null; // audio only, handled in Short.tsx
   }
 };

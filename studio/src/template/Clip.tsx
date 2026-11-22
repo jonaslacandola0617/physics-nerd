@@ -1,14 +1,18 @@
 import React from 'react';
-import {AbsoluteFill, OffthreadVideo, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Freeze, OffthreadVideo, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BODY_FONT} from './fonts';
 import {ClipRef} from './types';
 
-/** Plays a movie clip (or a labelled placeholder until the footage exists). */
-export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames: number; blurred?: boolean}> = ({
+/**
+ * Plays a movie clip (or a labelled placeholder until the footage exists).
+ * `frozen`: show only the frame at clip.start (a PAUSE beat); the slow zoom still moves.
+ */
+export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames: number; blurred?: boolean; frozen?: boolean}> = ({
   clip,
   muted,
   durationInFrames,
   blurred,
+  frozen,
 }) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -46,7 +50,7 @@ export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames
               transform: `scale(${zoom})`,
             }}
           >
-            CLIP NEEDED
+            {frozen ? 'FREEZE FRAME NEEDED' : 'CLIP NEEDED'}
             <br />
             <span style={{fontSize: 32}}>{clip.label}</span>
           </div>
@@ -55,14 +59,17 @@ export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames
     );
   }
 
+  const video = (
+    <OffthreadVideo
+      src={staticFile(clip.file)}
+      startFrom={Math.round((clip.start ?? 0) * fps)}
+      muted={muted || blurred || frozen}
+      style={style}
+    />
+  );
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
-      <OffthreadVideo
-        src={staticFile(clip.file)}
-        startFrom={Math.round((clip.start ?? 0) * fps)}
-        muted={muted || blurred}
-        style={style}
-      />
+      {frozen ? <Freeze frame={0}>{video}</Freeze> : video}
     </AbsoluteFill>
   );
 };

@@ -1,51 +1,67 @@
-# EP05 — Jurassic Park: can a T. rex catch the Jeep?
+# EP05 — Jurassic Park: the T. rex chases the Jeep (v2 reaction script)
 
-**Movie needed:** *Jurassic Park* (1993). Scene: the T. rex chase. Muldoon drives the Jeep Wrangler with Ellie and an injured Malcolm in the back; the T. rex bursts through the trees and chases them down the road. Malcolm's "Must go faster", the side-mirror close-up with the rex in it ("Objects in mirror are closer than they appear"), and the fallen-tree moment. (~1:20:00–1:23:00)
-**Title bar:** `Physics Nerd reacts to` / `Jurassic Park`
-**Upload title:** `Could The T. Rex ACTUALLY Catch The Jeep? 🦖💀`
-**Length target:** ~60s
+**Movie:** *Jurassic Park (1993)*  
+**Scene:** Muldoon drives the Jeep with Ellie and an injured Malcolm in the back. The T. rex bursts out of the trees and chases them down the road: Malcolm's "Must go faster", the side-mirror shot ("Objects in mirror are closer than they appear"), then the Jeep pulls away.  
+**Timestamps:** Roughly **1:05:30–1:07:30** of the ~127 min cut. All PLAY timestamps below are approximate and must be confirmed against the rip when cutting (the v1 header said ~1:20:00, which looks too late).  
+**Title bar:** `Physics Nerd reacts to` / `Jurassic Park`  
+**Upload title:** `Could A T. Rex ACTUALLY Catch That Jeep? 💀`  
+**Coverage check:** Not covered by Scene Mechanics or Michael Ross (STYLE_GUIDE §2). This is the only fresh scene of the five, so it goes first.  
+**Status:** draft v2, waiting on the user's approval. **No voice generated.**
 
-## Numbers (checked off-screen, never shown as citations)
-- Adult T. rex mass: **~8 t**. Published estimates for big adults (e.g. "Sue") run roughly 6–9 t; 8 t is a fair round middle.
-- The old "fast T. rex" idea: ~**45 mph ≈ 72 km/h** (1980s claims). VO says "seventy kilometers an hour".
-- Why not: a muscle-requirement model (Hutchinson & Garcia, 2002) found that running at ~20 m/s would need roughly **86% of body mass** as leg-extensor muscle (≈43% per leg). VO hedges it as "more than eighty percent". Real animals don't come close.
-- Modern top-speed estimates: mostly **~5–11 m/s ≈ 18–40 km/h**. A widely cited middle value is ~8 m/s ≈ **29 km/h** (VO: "call it thirty").
-- Bones: a skeletal-stress simulation (2017) suggested running loads would break the leg bones and capped it near a fast walk, **~5 m/s ≈ 19 km/h**. VO hedges: "some studies think", "basically a power walk". This is still debated, so keep it hedged.
-- Usain Bolt's peak speed (2009, 100 m world record): ~12.4 m/s ≈ **44.7 km/h**, VO "about forty-four". Above even the top of the T. rex range, so "he'd probably win" is safe.
-- Jeep: a Jeep Wrangler of that era (4.0 L straight-six) tops out well over 140 km/h. Doing **50–60 km/h** on a dirt road is easy, so a 20–40 km/h animal doesn't catch it unless the Jeep slows or stops. We don't claim a speed for the Jeep in the film, only what it can do.
-- Twist (optics): mirrors that carry "objects in mirror are closer than they appear" are **convex**. A convex mirror forms a smaller virtual image, which widens the field of view. The brain reads "smaller" as "farther", so things really are closer than they look. The prop warning is physically correct.
-- Closer: at ~30 km/h, a Wrangler in **2nd gear** is well inside its normal range (2nd gear on that era's manual box covers roughly 15–50 km/h), so "second gear would've been fine" holds up.
-- Not used: the film's own "we clocked the T. rex at thirty-two miles an hour" line. I couldn't confirm the exact wording or who says it, so it stays out.
+## Numbers (off-screen, checked; 2 spoken numbers)
 
-## Script (VO = AI voice · MOVIE = let the film's audio play)
+- **"Over eighty percent leg muscle"** (said once). Hutchinson & Garcia (2002) modelled how much leg-extensor muscle a T. rex needs to run at ~20 m/s (≈72 km/h, the old "45 mph" claim): ≈86% of body mass (≈43% per leg). "Run like a car" = that ~70 km/h case. Real fast runners carry well under that. Assumption: the scene presents the rex keeping pace with a Jeep at roughly car speed.
+- **"About thirty kilometres an hour"** (said once). Modern top-speed estimates are mostly 5–11 m/s (18–40 km/h); ~8 m/s ≈ 29 km/h is a common middle. A 2017 bone-stress study argued for even less (~5 m/s, a fast walk), so "about thirty" is generous to the dinosaur.
+- Not a spoken number, but checked: Usain Bolt's peak speed (100 m WR, 2009) ≈ 12.4 m/s ≈ 44.7 km/h, above any credible T. rex estimate, so "Bolt would be in front of the Jeep" holds if the Jeep is only doing rex speed.
+- "School-zone speed": school-zone limits are typically 30 km/h (much of Europe) or 20–25 mph (≈32–40 km/h, US). Joke-level, not a claim.
+- Mirror: mirrors that carry "objects in mirror are closer than they appear" are **convex**. A convex mirror forms a smaller virtual image to widen the field of view, and the brain reads smaller as farther away. So the sticker is physically correct.
 
-| # | Clip / visual | Line | On-screen overlays |
-|---|---|---|---|
-| 1 | Malcolm in the back seat, rex behind | VO: "Must go faster. But did they actually need to? Let's talk about it." | — |
-| 2 | Rex bursting through the trees, roar | MOVIE (~3s) | — |
-| 3 | Full shot of the rex running | VO: "An adult T. rex weighed around eight tons. Older ideas had it running seventy kilometers an hour." | `8 TONS`, then `70 KM/H?` |
-| 4 | Rex legs, low angle | VO: "Modern biomechanics says no way. To run that fast, more than eighty percent of its body would have to be leg muscle." | `> 80% MUSCLE`, ✗ `NO WAY` |
-| 5 | Rex running, wide | VO: "Most estimates land between twenty and forty kilometers an hour. Call it thirty." | `20–40 KM/H`, then `~30` |
-| 6 | Rex stride, close | VO: "And some studies think its bones couldn't even handle running. Basically a power walk." | arrow on the leg, meme cut-in 🚶 |
-| 7 | VS card over the chase | VO: "Usain Bolt peaks at about forty-four. He'd probably win." | `44` vs `30` |
-| 8 | Jeep from the front, bouncing | VO: "Now the Jeep. Even on a dirt road, it can easily do fifty or sixty." | `50–60 KM/H` |
-| 9 | Jeep pulling away | VO: "So that T. rex isn't catching anyone. Unless the Jeep stops." | VS `30` vs `55`, ✗ `CAN'T CATCH` |
-| 10 | "Objects in mirror" close-up | MOVIE (~3s) | — |
-| 11 | Mirror shot again | VO: "But here's the twist. The mirror is the most accurate thing in this scene." | arrow to the mirror text |
-| 12 | Mirror, slow push-in | VO: "Any mirror with that warning is convex. It shrinks the image to show more road, so everything looks farther away than it is." | `CONVEX`, `SMALLER = FARTHER` |
-| 13 | Rex filling the mirror | VO: "So that T. rex really was closer than it appeared." | ✅ `ACCURATE` |
-| 14 | Malcolm / Muldoon, gearshift | VO: "Must go faster? Honestly... second gear would've been fine." | meme cut-in 🫠 |
+## Beat table
 
-## Voiceover text (what gets sent to ElevenLabs, in one take)
-Must go faster. But did they actually need to? Let's talk about it.
-An adult T-rex weighed around eight tons. Older ideas had it running seventy kilometers an hour.
-Modern biomechanics says no way. To run that fast, more than eighty percent of its body would have to be leg muscle.
-Most estimates land between twenty and forty kilometers an hour. Call it thirty.
-And some studies think its bones couldn't even handle running. Basically a power walk.
-Usain Bolt peaks at about forty-four. He'd probably win.
-Now the Jeep. Even on a dirt road, it can easily do fifty or sixty.
-So that T-rex isn't catching anyone. Unless the Jeep stops.
-But here's the twist. The mirror is the most accurate thing in this scene.
-Any mirror with that warning is convex. It shrinks the image to show more road, so everything looks farther away than it is.
-So that T-rex really was closer than it appeared.
-Must go faster? Honestly... second gear would've been fine.
+Every PAUSE starts with a spacebar-style click and every resume gets one too. VO plays only over frozen frames.
+
+| # | PLAY/PAUSE | Movie timestamp / what's on screen | VO line (eleven_v4 tags) | Overlay / SFX | Est. s |
+|---|---|---|---|---|---|
+| 1 | **PLAY** | ~1:06:00. The T. rex smashes out of the trees behind the Jeep and roars. | — (movie audio only) | Click on the cut to freeze at the end. | 3.5 |
+| 2 | **PAUSE** | Freeze: rex mid-roar, filling the frame behind the Jeep. | [incredulous] Hold on. They're losing a race... [short pause] [deadpan] to a lizard. On foot. | Click. No overlay, let the face carry it. | 4.6 |
+| 3 | **PLAY** | ~1:06:05. Malcolm in the back: "Must go faster… must go faster." Rex gaining. | — (movie audio only) | Click (resume). | 5.0 |
+| 4 | **PAUSE** | Freeze: rex mid-stride, the legs in frame. | [sarcastic] To run like a car, it would need to be over eighty percent leg muscle. [short pause] [deadpan] That's two drumsticks with a face. | Click. Pop `80% LEG MUSCLE?` on the legs (whoosh). 1 s drumstick meme cut-in on "drumsticks". | 8.5 |
+| 5 | **PLAY** | ~1:06:15. Rex running alongside, Jeep bouncing down the dirt road. | — (movie audio only) | Click (resume). | 5.0 |
+| 6 | **PAUSE** | Freeze: Muldoon at the wheel, teeth gritted. | [deadpan] Real estimates? About thirty kilometers an hour. [short pause] [sarcastic] They're fleeing for their lives... [short pause] at school-zone speed. [deadpan] Usain Bolt would be in front of the Jeep. [short pause] Filming. | Click. Pop `~30 KM/H` (whoosh), then a `30` school-zone sign graphic. 1 s "running man filming on phone" cut-in on "Filming". | 10.0 |
+| 7 | **PLAY** | ~1:06:25. Side-mirror close-up: the rex lunges into "OBJECTS IN MIRROR ARE CLOSER THAN THEY APPEAR". | — (movie audio only) | Click (resume). Let the roar play loud. | 5.0 |
+| 8 | **PAUSE** | Freeze: the mirror, rex in it, sticker readable. | [sighs] Credit where it's due: that mirror's convex. Things really are closer than they appear. [short pause] [deadpan] The sticker is the smartest thing in this park. | Click. Arrow to the sticker, `CONVEX`, then green `✅ ACCURATE` stamp on "smartest". | 9.2 |
+| 9 | **PLAY** | ~1:06:40. The Jeep pulls away; the rex drops back and gives up. | — (movie audio only) | Click (resume). | 4.5 |
+| 10 | **PAUSE** | Freeze: Malcolm looking back over his shoulder. | [deadpan] Must go faster? [short pause] Sir. It wasn't chasing you. [short pause] [sarcastic] It was escorting you. | Click. Record-scratch under "escorting". | 5.0 |
+| 11 | **PLAY** | ~1:06:45. End on the Jeep speeding off. | — (movie audio only) | Click (resume), hard cut to end. | 3.0 |
+
+## Timing check
+
+- VO: **92 words** (tags not counted) ÷ 2.6 w/s ≈ 35.4 s, plus 0.4 s click/breath per pause = **37.3 s frozen**
+- Movie playing alone: **26.0 s**
+- Total: **63.3 s**, movie alone **41%**
+- Longest stretch of narration: 9.6 s (limit ~12 s). One spoken number per pause at most.
+- Estimated cost: 92 words × ~6 credits ≈ **552 credits** for 1 take.
+
+## Alternatives (swap in if you prefer; timing changes by ±1 s)
+
+**Hook A (in the script):** [incredulous] Hold on. They're losing a race... [short pause] [deadpan] to a lizard. On foot.
+**Hook B:** [sighs] Muldoon. You are driving a car. [short pause] [deadpan] It's the one advantage you have. (12 words)
+**Hook C:** [deadpan] Ah yes. Jurassic Park's famous drag race. [short pause] [sarcastic] Car versus lizard. (10 words)
+
+**Closer A (in the script):** [deadpan] Must go faster? [short pause] Sir. It wasn't chasing you. [short pause] [sarcastic] It was escorting you.
+**Closer B:** [deadpan] Must go faster? [short pause] Honestly... second gear would've been fine. (9 words)
+**Closer C:** [deadpan] Must go faster? Nope. [short pause] [laughs softly] Subscribe. I also run at school-zone speed... but at least my arms work. (17 words)
+
+## VO text block (exactly what goes to ElevenLabs: Arthur, eleven_v4, 1 take)
+
+```
+[incredulous] Hold on. They're losing a race... [short pause] [deadpan] to a lizard. On foot.
+[long pause]
+[sarcastic] To run like a car, it would need to be over eighty percent leg muscle. [short pause] [deadpan] That's two drumsticks with a face.
+[long pause]
+[deadpan] Real estimates? About thirty kilometers an hour. [short pause] [sarcastic] They're fleeing for their lives... [short pause] at school-zone speed. [deadpan] Usain Bolt would be in front of the Jeep. [short pause] Filming.
+[long pause]
+[sighs] Credit where it's due: that mirror's convex. Things really are closer than they appear. [short pause] [deadpan] The sticker is the smartest thing in this park.
+[long pause]
+[deadpan] Must go faster? [short pause] Sir. It wasn't chasing you. [short pause] [sarcastic] It was escorting you.
+```
