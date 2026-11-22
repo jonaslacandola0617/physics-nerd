@@ -1,66 +1,23 @@
-# EP03 — Civil War: Cap holds the helicopter (v2 reaction script)
+# EP03 v3 — Civil War: holding the helicopter (Gemini draft, Claude fact-checked)
 
-**Movie:** *Captain America: Civil War (2016)*  
-**Scene:** The Berlin rooftop escape. Bucky tries to fly off in a helicopter; Cap grabs it with one hand and holds the roof ledge with the other (the bicep-flex shot), then pulls it down and it goes over the edge into the water.  
-**Timestamps:** Roughly **1:07:00–1:09:00** of the ~147 min cut. PLAY timestamps below are approximate and must be confirmed against the rip.  
-**Title bar:** `Physics Nerd reacts to` / `Civil War`  
-**Upload title:** `Captain America's Helicopter Scene Is Wrong For The WRONG Reason 💀`  
-**Coverage check:** ⚠️ Scene Mechanics has covered Civil War physics (STYLE_GUIDE §2). Our angle is the twist: the rotor carries the helicopter, so the impossible part is the bent arm.  
-**Status:** draft v2, waiting on the user's approval. **No voice generated.**
+- **Upload title:** Captain America's Helicopter Scene Is Wrong For The WRONG Reason 💀
+- **Words:** ~134 · **Status:** ✅ fact-checked with 2 footage checks pending, ⏳ waiting on approval, not voiced. Needs the Civil War movie.
 
-## Numbers (off-screen, checked; 2 spoken numbers)
+## Fact-check (Claude)
+- The rotor carries the aircraft's weight, so Cap only fights the excess thrust. "Over a thousand pounds" ✅ (conservative)
+- Anchoring: 1,000+ lb up vs. a ~240 lb man means he gets lifted unless he's anchored. ✅ Physically sound, and the best angle in the set.
+- The guardrail code minimum is 200 lb (concentrated load, OSHA / IBC). ✅ Phrased as "only requires", which is correct.
+- ⚠️ **Check against the footage when cutting:** (1) what Cap's left hand actually grabs (a railing or a concrete ledge), and (2) whether he jumps or grabs the skid from the pad. If it's a ledge, swap the guardrail line for a concrete-ledge line. The voice must match the picture.
 
-- Helicopter: a light helicopter of this size, ~2.5–3 t; assume **3 t**.
-- **"About seven hundred kilos"**. The rotor already carries the weight; Cap only fights the excess thrust. Assume ~25% margin at full power, so 3 t × 0.25 ≈ 750 kg-force, said as "about seven hundred". A Smart ForTwo weighs ~730–900 kg, so "a Smart car" fits.
-- **"About six tons on one bicep tendon"**. With the elbow at ~90°, the biceps inserts ~4–5 cm from the elbow and the hand is ~35 cm out, roughly an **8:1 lever**. 700–750 kg × 8 ≈ 5.6–6 t-f. (A heavy 50 kg curl loads that tendon with ~400 kg, for scale.)
-- "That's the trailer shot": the helicopter grab was in the film's first trailer. **Check before voicing**; if it's wrong, use alt closer 1.
+## Clean VO
+```text
+Wait—why does Hollywood think a good bicep curl can just cancel out basic physics?
 
-## Beat table
+Look, everyone gets the math wrong here first. The rotors are already carrying the helicopter's own weight, so Cap isn't lifting the whole thing—he's only fighting the extra upward pull. Still, that's easily over a thousand pounds. Now, fine—say the Super Soldier Serum gave Steve titanium tendons so his arms don't rip off. There's still a way bigger problem: anchoring. Steve only weighs about two hundred and forty pounds.
 
-Every PAUSE starts with a spacebar-style click and every resume gets one too. VO plays only over frozen frames.
+Without being bolted to the floor, over a thousand pounds of upward lift just turns Captain America into a very muscular keychain.
 
-| # | PLAY/PAUSE | Movie timestamp / what's on screen | VO line (eleven_v4 tags) | Overlay / SFX | Est. s |
-|---|---|---|---|---|---|
-| 1 | **PLAY** | ~1:07:40. Bucky lifts off in the helicopter; Cap leaps and grabs it. | — (movie audio only) | Click on the freeze. | 4.0 |
-| 2 | **PAUSE** | Freeze: Cap mid-grab, one hand on the helicopter. | [incredulous] Steve. Buddy. [short pause] [deadpan] That's a helicopter. Not a dog on a leash. | Click. 1 s dog-on-leash cut-in on "leash". | 4.6 |
-| 3 | **PLAY** | ~1:07:45. The bicep-flex shot: ledge in one hand, helicopter in the other, rotor roaring. | — (movie audio only) | Click (resume). Rotor roar loud. | 5.0 |
-| 4 | **PAUSE** | Freeze: wide shot, Cap stretched between ledge and helicopter. | [sarcastic] Plot twist: the rotor's carrying the weight. Cap's only fighting the extra pull. About seven hundred kilos. [short pause] [deadpan] So... a Smart car. Trying to fly away. | Click. Up-arrow on the rotor `LIFT = WEIGHT`, then `~700 KG` (whoosh). Smart-car picture on "Smart car". | 10.0 |
-| 5 | **PLAY** | ~1:07:52. Bucky throttles up; the helicopter strains and Cap's arm bends. | — (movie audio only) | Click (resume). | 5.0 |
-| 6 | **PAUSE** | Freeze: close on the bent arm. | [incredulous] But look at that arm. Bent. [short pause] [deadpan] Leverage turns that into about six tons on one bicep tendon. [short pause] [sarcastic] His chiropractor just retired. | Click. Arrows at elbow and hand `8 : 1`, then big red `~6 TONS`. Bass drop under "retired". | 8.5 |
-| 7 | **PLAY** | ~1:08:00. Cap hauls the helicopter down onto the roof edge. | — (movie audio only) | Click (resume). | 5.0 |
-| 8 | **PAUSE** | Freeze: helicopter tipping on the edge. | [sighs] Honestly? The helicopter is the easy part. [short pause] [deadpan] The flex is the impossible part. And of course... that's the trailer shot. | Click. `✅ HELICOPTER` then `✗ ARM` stamps. | 8.1 |
-| 9 | **PLAY** | ~1:08:08. The helicopter goes over the edge into the water. | — (movie audio only) | Click (resume). | 4.5 |
-| 10 | **PAUSE** | Freeze: mid-fall, just before the splash. | [deadpan] Verdict? Peak human apparently means hydraulic press. [short pause] [sarcastic] Subscribe. My biceps have never been in danger. | Click. 1 s hydraulic-press cut-in on "hydraulic press". Optional CTA card. | 6.2 |
-| 11 | **PLAY** | ~1:08:12. The splash. | — (movie audio only) | Click (resume), hard cut to end. | 2.5 |
+So he grabs the rooftop railing. Here's the thing—building code only requires a guardrail like that to hold two hundred pounds of force. Basically enough to stop someone from tripping off the roof.
 
-## Timing check
-
-- VO: **92 words** (tags not counted) ÷ 2.6 w/s ≈ 35.4 s, plus 0.4 s click/breath per pause = **37.4 s frozen**
-- Movie playing alone: **26.0 s**
-- Total: **63.4 s**, movie alone **41%**
-- Longest stretch of narration: 9.6 s (limit ~12 s). One spoken number per pause at most.
-- Estimated cost: 92 words × ~6 credits ≈ **552 credits** for 1 take.
-
-## Alternatives (swap in if you prefer; timing changes by ±1 s)
-
-**Hook A (in the script):** [incredulous] Steve. Buddy. [short pause] [deadpan] That's a helicopter. Not a dog on a leash.
-**Hook B:** [deadpan] Ah yes. Tug of war. [short pause] [sarcastic] With a helicopter. (8 words)
-**Hook C:** [sighs] Somewhere, a helicopter insurance agent just felt a chill. (9 words)
-
-**Closer A (in the script):** [deadpan] Verdict? Peak human apparently means hydraulic press. [short pause] [sarcastic] Subscribe. My biceps have never been in danger.
-**Closer B:** [deadpan] Verdict: helicopter, fine. [short pause] Bicep tendon? [sarcastic] Legally a hydraulic press. (9 words)
-**Closer C:** [deadpan] Bucky didn't need a getaway helicopter. [short pause] [sarcastic] He needed a getaway from Steve's arm. (13 words)
-
-## VO text block (exactly what goes to ElevenLabs: Arthur, eleven_v4, 1 take)
-
-```
-[incredulous] Steve. Buddy. [short pause] [deadpan] That's a helicopter. Not a dog on a leash.
-[long pause]
-[sarcastic] Plot twist: the rotor's carrying the weight. Cap's only fighting the extra pull. About seven hundred kilos. [short pause] [deadpan] So... a Smart car. Trying to fly away.
-[long pause]
-[incredulous] But look at that arm. Bent. [short pause] [deadpan] Leverage turns that into about six tons on one bicep tendon. [short pause] [sarcastic] His chiropractor just retired.
-[long pause]
-[sighs] Honestly? The helicopter is the easy part. [short pause] [deadpan] The flex is the impossible part. And of course... that's the trailer shot.
-[long pause]
-[deadpan] Verdict? Peak human apparently means hydraulic press. [short pause] [sarcastic] Subscribe. My biceps have never been in danger.
+Putting over a thousand pounds of helicopter pull straight through it? Forget his shield—whoever welded that railing is the strongest Avenger.
 ```

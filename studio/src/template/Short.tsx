@@ -85,6 +85,17 @@ const TitleBar: React.FC<{lines: [string, string]}> = ({lines}) => (
   </div>
 );
 
+/** On a PAUSE beat the frozen frame eases to slightly desaturated and darker, so "paused" reads at a glance. */
+const FreezeTint: React.FC<{active: boolean; children: React.ReactNode}> = ({active, children}) => {
+  const frame = useCurrentFrame();
+  const k = active ? interpolate(frame, [0, 5], [0, 1], {extrapolateRight: 'clamp'}) : 0;
+  return (
+    <AbsoluteFill style={{filter: k ? `saturate(${1 - 0.35 * k}) brightness(${1 - 0.08 * k}) contrast(${1 + 0.05 * k})` : undefined}}>
+      {children}
+    </AbsoluteFill>
+  );
+};
+
 /** Little player glyph (❚❚ / ▶) that flashes when the video is paused or resumed, like a real viewer. */
 const PlayerGlyph: React.FC<{paused: boolean}> = ({paused}) => {
   const frame = useCurrentFrame();
@@ -120,7 +131,7 @@ const BeatView: React.FC<{beat: Beat; prev?: Beat; ep: Episode; words: Word[]; f
   const overlays = (beat.overlays ?? []).map((o) => ({...o, at: resolveAt(o.at, local)}) as Overlay & {at: number});
   const playsMovieAudio = beat.kind === 'movie' || beat.kind === 'play';
   const frozen = beat.kind === 'pause';
-  const resumed = beat.kind === 'play' && prev?.kind === 'pause';
+  const resumed = (beat.kind === 'play' || beat.kind === 'vo') && prev?.kind === 'pause';
 
   const sfx: {name: SfxName; at: number; volume?: number}[] = [];
   if (frozen) sfx.push({name: 'click', at: 0});
@@ -136,7 +147,9 @@ const BeatView: React.FC<{beat: Beat; prev?: Beat; ep: Episode; words: Word[]; f
       <ClipView clip={beat.clip} muted blurred frozen={frozen} durationInFrames={frames} />
       {/* sharp clip box */}
       <div style={{position: 'absolute', top: LAYOUT.boxTop, left: 0, width: 1080, height: LAYOUT.boxHeight, overflow: 'hidden'}}>
-        <ClipView clip={beat.clip} muted={!playsMovieAudio} frozen={frozen} durationInFrames={frames} />
+        <FreezeTint active={frozen}>
+          <ClipView clip={beat.clip} muted={!playsMovieAudio} frozen={frozen} durationInFrames={frames} />
+        </FreezeTint>
         {(frozen || resumed) && <PlayerGlyph paused={frozen} />}
         {overlays.map((o, i) => (
           <OverlayView key={i} o={o} />

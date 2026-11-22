@@ -1,9 +1,9 @@
 import {Episode} from '../template/types';
 import words from './ep01.words.json';
 
-// EP01 v2 — Interstellar docking, reaction format. Script: episodes/01-interstellar-docking/script.md
-// PLAY = movie with its own audio. PAUSE = click, freeze on clip.start, voiceover slice [from, to] (seconds in vo.mp3).
-// Overlay `at` can be a word from that pause's voiceover. Clips come from episodes/01-interstellar-docking/cut_clips.py.
+// EP01 v3 — Interstellar docking (Gemini script, fact-checked). Script: episodes/01-interstellar-docking/script.md
+// Voice: breath-trimmed + roomified take (tools/tighten_vo.py, tools/roomify.py). from/to = seconds in that take.
+// play = movie with its own audio · vo = narration over moving (muted) footage · pause = click + freeze + narration.
 
 const C = (name: string) => `ep01/clips/${name}.mp4`;
 
@@ -12,54 +12,88 @@ export const ep01: Episode = {
   title: ['Physics Nerd reacts to', 'Interstellar'],
   voiceover: 'ep01/vo.mp3',
   words,
-  captionFixes: {'Gs.': "G's", 'in!': 'in.'},
+  captionFixes: {Case: 'CASE', "Bran's": "Brand's", Bran: 'Brand', 'just�': 'just...', Gs: "G's", 'Gs.': "G's."},
   beats: [
-    {kind: 'play', dur: 3.5, clip: {file: C('01-spin-topdown'), start: 0, label: 'Endurance spinning, top-down', zoom: 0.05}},
-    {
-      kind: 'pause', from: 0, to: 4.75,
-      clip: {file: C('01-spin-topdown'), start: 3.45, label: 'Freeze: ring mid-spin', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🌀', at: 'tumble', dur: 1.0}],
-    },
+    // 1. movie open
+    {kind: 'play', dur: 1.0, clip: {file: C('01-spin-topdown'), start: 0, label: 'Endurance spinning'}},
     {kind: 'play', dur: 3.9, clip: {file: C('02-not-possible'), start: 0, label: '"It\'s not possible." / "No. It\'s necessary."'}},
+    // 2. hook on a freeze
     {
-      kind: 'pause', from: 5.58, to: 14.5,
-      clip: {file: C('02-not-possible'), start: 3.6, label: "Freeze: Cooper's face", zoom: 0.08},
+      kind: 'pause', from: 0, to: 7.55,
+      clip: {file: C('01-spin-topdown'), start: 3.45, label: 'Freeze: station spinning', zoom: 0.06},
+      overlays: [{type: 'spin', cx: 50, cy: 45, r: 26, at: 'spinning', dur: 2.4}],
+    },
+    // 3. explanation over moving footage
+    {
+      kind: 'vo', from: 7.55, to: 11.3,
+      clip: {file: C('04-from-ranger'), start: 0, label: 'Ranger closing in'},
+      overlays: [{type: 'pop', text: '68 RPM', x: 50, y: 28, at: '68', dur: 1.8, color: '#FFD60A', size: 170}],
+    },
+    {
+      kind: 'vo', from: 11.3, to: 16.33,
+      clip: {file: C('08-spin-far'), start: 0, label: 'Endurance spinning, side view'},
+      overlays: [{type: 'radius', cx: 50, cy: 50, r: 32, at: 'wide', dur: 1.6, label: '~32 m'}],
+    },
+    // 4. the 150 G point
+    {
+      kind: 'vo', from: 16.33, to: 21.45,
+      clip: {file: C('03-modules-close'), start: 0, label: 'Spinning modules'},
       overlays: [
-        {type: 'arrow', x1: 50, y1: 45, x2: 88, y2: 18, at: '150', dur: 3},
-        {type: 'arrow', x1: 50, y1: 45, x2: 12, y2: 18, at: '150', dur: 3},
-        {type: 'pop', text: '~150 G', x: 50, y: 40, at: '150', dur: 3.2, color: '#FF3B30', size: 220},
-        {type: 'sfx', name: 'boom', at: 'complaint'},
+        {type: 'arrow', x1: 50, y1: 50, x2: 88, y2: 20, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 50, x2: 12, y2: 20, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 50, x2: 88, y2: 80, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 50, x2: 12, y2: 80, at: 'outer', dur: 3.4},
+        {type: 'pop', text: '~150 G', x: 50, y: 45, at: '150', dur: 2.2, color: '#FF3B30', size: 220},
       ],
     },
-    {kind: 'play', dur: 4.8, clip: {file: C('07-modules-boom'), start: 0, label: 'Modules sweeping past the Ranger'}},
     {
-      kind: 'pause', from: 15.3, to: 22.37,
-      clip: {file: C('07-modules-boom'), start: 4.7, label: 'Freeze: Ranger on the axis', zoom: 0.06},
+      kind: 'vo', from: 21.45, to: 26.0,
+      clip: {file: C('05-modules-zoom'), start: 0, label: 'Modules spinning, hub centred'},
+      overlays: [{type: 'pop', text: '✈️ 9 G', x: 50, y: 28, at: '9', dur: 1.8, color: '#FFD60A', size: 150}],
+    },
+    {
+      kind: 'vo', from: 26.0, to: 30.35,
+      clip: {file: C('01-spin-topdown'), start: 0, label: 'Endurance spinning, top-down'},
+      overlays: [{type: 'versus', left: '9 G', leftSub: 'fighter jet design', right: '150 G', rightSub: 'Endurance ring', at: 'nowhere', dur: 2.2}],
+    },
+    // 5. punchline on a freeze
+    {
+      kind: 'pause', from: 30.35, to: 37.5,
+      clip: {file: C('13-ring-close'), start: 3.0, label: 'Freeze: damaged outer module', zoom: 0.08},
       overlays: [
-        {type: 'arrow', x1: 8, y1: 50, x2: 92, y2: 50, at: 'middle', dur: 2.6, label: 'spin axis', color: '#FFD60A'},
-        {type: 'pop', text: '~5 G', x: 50, y: 30, at: '5', dur: 2.6, color: '#FFD60A', size: 200},
-        {type: 'meme', emoji: '🎢', at: 'roller', dur: 1.2},
+        {type: 'meme', emoji: '💥', at: 'shrapnel', dur: 1.0},
+        {type: 'sfx', name: 'boom', at: 'shrapnel'},
       ],
     },
-    {kind: 'play', dur: 5.2, clip: {file: C('06-cooper-brand'), start: 0, label: 'Cooper and Brand straining'}},
+    // 6. movie burst
+    {kind: 'play', dur: 2.0, clip: {file: C('10-blackout'), start: 0, label: 'Brand blacking out'}},
+    // 7. "to be fair" over moving footage
     {
-      kind: 'pause', from: 23.4, to: 31.1,
-      clip: {file: C('06-cooper-brand'), start: 5.0, label: "Freeze: Brand's strained face", zoom: 0.08},
+      kind: 'vo', from: 37.5, to: 41.45,
+      clip: {file: C('06-cooper-brand'), start: 0, label: 'Cooper straining'},
+      overlays: [{type: 'stamp', text: 'ACCURATE', good: true, at: 'nailed', dur: 1.8}],
+    },
+    {
+      kind: 'vo', from: 41.45, to: 47.85,
+      clip: {file: C('09-thrusters-axis'), start: 0, label: 'Ranger on the hub, spin axis'},
       overlays: [
-        {type: 'stamp', text: 'ACCURATE', good: true, at: 'nolan', dur: 1.6},
-        {type: 'pop', text: '🎊', x: 50, y: 40, at: 'confetti', dur: 1.2, size: 260},
+        {type: 'arrow', x1: 8, y1: 50, x2: 92, y2: 50, at: 'center', dur: 2.4, label: 'spin axis', color: '#FFD60A'},
+        {type: 'pop', text: '≈ 4–5 G', x: 50, y: 28, at: 'few', dur: 2.0, color: '#34C759', size: 170},
       ],
     },
-    {kind: 'play', dur: 3.6, clip: {file: C('11-clamps-lock'), start: 0, label: 'Clamp closes: "...locked!"'}},
+    {kind: 'vo', from: 47.85, to: 49.7, clip: {file: C('06-cooper-brand'), start: 3.0, label: 'Brand straining'}},
+    // 8. closer on a freeze
     {
-      kind: 'pause', from: 31.74, to: 41.94,
-      clip: {file: C('11-clamps-lock'), start: 3.4, label: 'Freeze: Ranger clamped in the port', zoom: 0.06},
+      kind: 'pause', from: 49.7, to: 57.25,
+      clip: {file: C('11-clamps-lock'), start: 3.4, label: 'Freeze: Ranger clamped in', zoom: 0.07},
       overlays: [
-        {type: 'stamp', text: 'COOPER', good: true, at: 'survivable', dur: 1.3},
-        {type: 'stamp', text: 'SHIP', good: false, at: 'held', dur: 2.6},
-        {type: 'pop', text: 'SUBSCRIBE', x: 50, y: 25, at: 'subscribe', dur: 2.8, color: '#FFD60A', size: 120},
+        {type: 'stamp', text: 'COOPER', good: true, at: 'sense', dur: 1.4},
+        {type: 'stamp', text: 'SHIP', good: false, at: 'surviving?', dur: 1.4},
+        {type: 'pop', text: 'PLOT ARMOR', x: 50, y: 30, at: 'plot', dur: 1.6, color: '#FFD60A', size: 150},
+        {type: 'sfx', name: 'boom', at: 'armor'},
       ],
     },
-    {kind: 'play', dur: 3.0, clip: {file: C('12-survivable'), start: 2.05, label: 'The shredded ring'}},
+    // 9. end on the movie
+    {kind: 'play', dur: 2.0, clip: {file: C('12-survivable'), start: 2.05, label: 'The shredded ring'}},
   ],
 };

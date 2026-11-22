@@ -1,65 +1,40 @@
-# EP01 — Interstellar: the 68 RPM docking (v2 reaction script)
+# EP01 v3 — Interstellar: the 68 RPM docking (Gemini draft, Claude fact-checked)
 
-**Movie:** *Interstellar (2014)*  
-**Scene:** After the explosion, the Endurance is tumbling at 68 RPM over Mann's planet. Cooper matches the spin in the Ranger and docks ("It's not possible." / "No. It's necessary."), with Cooper and Brand close to blacking out.  
-**Timestamps:** **2:08:10–2:13:00**. These timestamps are exact film seconds taken from `cut_clips.py`, so the clips already exist.  
-**Title bar:** `Physics Nerd reacts to` / `Interstellar`  
-**Upload title:** `Interstellar's Docking Scene Should've Ripped The Ship Apart 💀`  
-**Coverage check:** ⚠️ Scene Mechanics has already covered this scene (STYLE_GUIDE §2). Ship it anyway because the footage is already cut, but our angle is the ship surviving 150 g, with Cooper as the minor problem.  
-**Status:** draft v2, waiting on the user's approval. **No voice generated.**
+- **Upload title:** Why Interstellar's Docking Scene Should've Shredded The Ship 💀
+- **Title bar:** `Physics Nerd reacts to` / `Interstellar`
+- **Words:** ~134 · **Est. runtime:** ~60–63 s (after breath trimming)
+- **Status:** ✅ fact-checked, ⏳ waiting on the user's approval. **Not voiced.** Est. cost ~950–1,000 credits (1 take, no tags).
 
-## Numbers (off-screen, checked; 2 spoken numbers)
+## Fact-check (Claude)
+- 68 RPM: in the film, CASE reads out "67, 68 RPM". ✅
+- ~150 G at the ring: ω = 7.12 rad/s, r ≈ 30–32 m, so ω²r ≈ 155–165 g. "Over a hundred and fifty" ✅
+- A fighter is designed around ~9 g for the pilot, with a ~1.5× ultimate airframe margin, so nowhere near 150. ✅ (phrased correctly now)
+- Near the axis: ~1 m off-axis gives ~5 g, enough to grey or black out an untrained person, and survivable. "A few Gs… make Brand black out" ✅
+- "Flying across the galaxy like shrapnel" is obvious hyperbole. The modules would really leave at ~770 km/h tangentially. Fine as a joke.
 
-- **"About a hundred and fifty g's"** at the ring. 68 RPM = 7.12 rad/s, so ω² = 50.7 s⁻². Assumed ring radius ≈ 30 m (the ship is ~60 m across). ω²r = 1,521 m/s² ≈ **155 g**, rounded down to "a hundred and fifty".
-- **"About five g's"** for Cooper. 1 m off the spin axis gives ω²·1 m = 50.7 m/s² ≈ **5.2 g** (2 m would be ~10 g). The Ranger docks on the hub, so the crew sit roughly 1 m off the axis. Untrained people grey out around 4–6 g, which matches what the film shows, so "Nolan nailed it" is fair.
-- Tumble-dryer comparison: domestic dryer drums turn at about 50–60 RPM, so "spinning like a tumble dryer" is literally the right ballpark (a washing machine on spin is ~1,000+ RPM, so that would be wrong).
+## Beats (clips in `studio/public/ep01/clips/`)
 
-## Beat table
+| # | Type | Clip / visual | Line |
+|---|---|---|---|
+| 1 | PLAY | `01-spin-topdown` → `02-not-possible` ("It's not possible." / "No. It's necessary.") | (movie audio) |
+| 2 | PAUSE | Freeze: `01-spin-topdown`, Endurance spinning | Wait—the entire space station is spinning like a broken ceiling fan, and Cooper's big plan is to just… park inside it? |
+| 3 | VO | `04-from-ranger` → `08-spin-far`; pop `68 RPM` | Look, CASE literally calls out sixty-eight RPM. That doesn't sound insane until you remember how wide this ring actually is. |
+| 4 | VO | `03-modules-close` → `05-modules-zoom`; outward arrows, pop `~150+ G` | At that speed, the outer ring is pulling over a hundred and fifty Gs of outward force. For context, a modern fighter jet is designed around nine Gs for the pilot—and even with its structural safety margin, it's nowhere near a hundred and fifty. |
+| 5 | PAUSE | Freeze: `13-ring-close`, outer modules | That station wasn't built to survive a hundred and fifty Gs. Those outer modules should be flying across the galaxy like shrapnel. |
+| 6 | PLAY | `10-blackout` | (movie audio) |
+| 7 | VO | `06-cooper-brand` → `09-thrusters-axis`; circle on the hub, pop `CENTER AXIS ≈ 4–5 G` | To be fair, Nolan actually nailed Cooper and Brand's side of the math. Because they're docking right at the center axis, they're only feeling a few Gs—heavy enough to make Brand black out, sure, but completely survivable. |
+| 8 | PAUSE | Freeze: `11-clamps-lock`; pop `OUTER RING = PLOT ARMOR` | So yeah, Cooper surviving makes total sense. The ship surviving? That's held together by Hans Zimmer's organ and pure plot armor. |
+| 9 | PLAY | `12-survivable` | (movie audio) |
 
-Every PAUSE starts with a spacebar-style click and every resume gets one too. VO plays only over frozen frames.
+## Clean VO (exactly what goes to ElevenLabs)
+```text
+Wait—the entire space station is spinning like a broken ceiling fan, and Cooper's big plan is to just... park inside it?
 
-| # | PLAY/PAUSE | Movie timestamp / what's on screen | VO line (eleven_v4 tags) | Overlay / SFX | Est. s |
-|---|---|---|---|---|---|
-| 1 | **PLAY** | **2:08:10.7–2:08:15.2** (7690.7 s; `04-from-ranger` seg 1). Top-down: the Ranger closing on the spinning Endurance, CASE reading out the spin (~2:08:14). | — (movie audio only) | Click on the freeze. | 4.5 |
-| 2 | **PAUSE** | Freeze: ring mid-spin, Ranger tiny next to it. | [deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in. | Click. 1 s tumble-dryer cut-in on "tumble dryer". | 5.0 |
-| 3 | **PLAY** | **2:08:19.5–2:08:24.1** (`02-not-possible`). "It's not possible." / "No. It's necessary." | — (movie audio only) | Click (resume). | 4.6 |
-| 4 | **PAUSE** | Freeze: Cooper's face right after "necessary". | [sarcastic] Necessary. Sure. [short pause] [deadpan] At this spin, the outer ring is pulling about a hundred and fifty g's. [short pause] Every bolt on that ring just filed a complaint. | Click. Big red `~150 g` on the rim with outward arrows (whoosh). Bass drop under "complaint". | 10.0 |
-| 5 | **PLAY** | **2:09:35.9–2:09:40.9** (`07-modules-boom` seg 1). The spinning modules sweep past the Ranger. | — (movie audio only) | Click (resume). | 5.0 |
-| 6 | **PAUSE** | Freeze: Ranger on the axis, modules blurred. | [deadpan] Cooper's near the middle, so he only gets about five g's. [short pause] [sarcastic] Only. [short pause] That's a roller coaster with no exit. | Click. Axis line through the Ranger, `~5 g` pop. 1 s roller-coaster scream cut-in on "no exit". | 7.7 |
-| 7 | **PLAY** | **2:09:48.5–2:09:53.7** (`06-cooper-brand`). Cooper, then Brand, straining against the spin. | — (movie audio only) | Click (resume). | 5.2 |
-| 8 | **PAUSE** | Freeze: Cooper's strained face. | [sighs] Fair. That face? Textbook five g's. Nolan nailed it. [short pause] [deadpan] The ship, however, should be confetti. | Click. Green `✅ ACCURATE` on the face, then a `🎊` confetti pop on "confetti". | 6.2 |
-| 9 | **PLAY** | **2:10:26.4–2:10:30.0** (`11-clamps-lock`). The clamp closes: "...locked!" | — (movie audio only) | Click (resume). Clamp clunk at full volume. | 3.6 |
-| 10 | **PAUSE** | Freeze: the Ranger clamped in the port. | [deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair. | Click. `COOPER ✅` / `SHIP ✗` stamps. Optional CTA card. | 8.9 |
-| 11 | **PLAY** | **2:12:56.9–2:12:59.9** (`12-survivable` seg 2). The shredded ring. | — (movie audio only) | Click (resume), end on the wreckage. | 3.0 |
+Look, CASE literally calls out sixty-eight RPM. That doesn't sound insane until you remember how wide this ring actually is. At that speed, the outer ring is pulling over a hundred and fifty Gs of outward force. For context, a modern fighter jet is designed around nine Gs for the pilot—and even with its structural safety margin, it's nowhere near a hundred and fifty.
 
-## Timing check
+That station wasn't built to survive a hundred and fifty Gs. Those outer modules should be flying across the galaxy like shrapnel.
 
-- VO: **93 words** (tags not counted) ÷ 2.6 w/s ≈ 35.8 s, plus 0.4 s click/breath per pause = **37.8 s frozen**
-- Movie playing alone: **25.9 s**
-- Total: **63.7 s**, movie alone **41%**
-- Longest stretch of narration: 9.6 s (limit ~12 s). One spoken number per pause at most.
-- Estimated cost: 93 words × ~6 credits ≈ **558 credits** for 1 take.
+To be fair, Nolan actually nailed Cooper and Brand's side of the math. Because they're docking right at the center axis, they're only feeling a few Gs—heavy enough to make Brand black out, sure, but completely survivable.
 
-## Alternatives (swap in if you prefer; timing changes by ±1 s)
-
-**Hook A (in the script):** [deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in.
-**Hook B:** [deadpan] Cooper saw a spinning space station and thought... [short pause] [sarcastic] I can park that. (12 words)
-**Hook C:** [incredulous] The ship just exploded. [short pause] [deadpan] And he wants to... dock with it? (11 words)
-
-**Closer A (in the script):** [deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair.
-**Closer B:** [deadpan] Whoever welded that ring... [short pause] NASA needs your number. (8 words)
-**Closer C:** [deadpan] Cooper survived five g's. The ring survived a hundred and fifty. [short pause] [sarcastic] Wrong guy got the hero shot. (17 words)
-
-## VO text block (exactly what goes to ElevenLabs: Arthur, eleven_v4, 1 take)
-
-```
-[deadpan] The ship is spinning like a tumble dryer. [short pause] [sarcastic] Cooper's plan? Climb in.
-[long pause]
-[sarcastic] Necessary. Sure. [short pause] [deadpan] At this spin, the outer ring is pulling about a hundred and fifty g's. [short pause] Every bolt on that ring just filed a complaint.
-[long pause]
-[deadpan] Cooper's near the middle, so he only gets about five g's. [short pause] [sarcastic] Only. [short pause] That's a roller coaster with no exit.
-[long pause]
-[sighs] Fair. That face? Textbook five g's. Nolan nailed it. [short pause] [deadpan] The ship, however, should be confetti.
-[long pause]
-[deadpan] Verdict. Cooper? Survivable. [short pause] The ship? Held together by plot armor and one heroic welder. [laughs softly] Subscribe. I get dizzy on an office chair.
+So yeah, Cooper surviving makes total sense. The ship surviving? That's held together by Hans Zimmer's organ and pure plot armor.
 ```
