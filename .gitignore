@@ -1,0 +1,20 @@
+# Full movies and reference downloads never leave this laptop.
+# Only the short cut clips in studio/public/epNN/clips/ get pushed (a few MB each).
+videos/
+*.mkv
+*.avi
+*.m2ts
+
+# Meme staging folder (copy the ones an episode uses into studio/public/epNN/memes/)
+memes/
+
+# Build stuff
+studio/node_modules/
+studio/out/
+studio/build/
+node_modules/
+__pycache__/
+
+# Local test renders (the cloud renderer writes final videos to renders/)
+episodes/**/*-final.mp4
+*.tmp

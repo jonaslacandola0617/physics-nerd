@@ -1,0 +1,36 @@
+# Physics Nerd: cloud render instructions
+
+This repo holds everything needed to render an episode except the full movies. The laptop finds the scenes and cuts them into short clips (`studio/public/epNN/clips/*.mp4`, H.264, a few MB each), pushes them, and the cloud renders.
+
+## For the cloud render session: "render epNN"
+
+1. Pull the latest `main`.
+2. Install, once per machine:
+   ```bash
+   cd studio
+   npm ci
+   # Remotion downloads its own headless Chrome. On a bare Linux box it may need:
+   # sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
+   #   libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
+   ```
+3. Check that the episode is complete: every beat in `studio/src/episodes/epNN.ts` has a `clip.file`, and each file exists under `studio/public/`. If any are missing, **stop and report which ones**. Don't render placeholders.
+4. Typecheck: `npx tsc --noEmit`
+5. Render:
+   ```bash
+   npx remotion render epNN ../renders/epNN.mp4 --crf 20
+   ```
+6. Spot-check: extract a frame every ~8s with ffmpeg and look at them. Confirm the audio track exists and the duration matches the composition.
+7. Commit **only** `renders/epNN.mp4` to `main` with the message `render: epNN`, and push.
+8. Report: the duration, file size, and anything that looked wrong.
+
+## Rules
+- Never commit the full movie files (`videos/` is git-ignored for a reason; the repo must stay private).
+- Keep every file under 90 MB (GitHub's hard limit is 100 MB per file).
+- Don't edit episode content (scripts, timelines, voiceovers). Rendering only, unless asked.
+
+## Layout
+- `episodes/NN-name/`: script.md, the voiceover takes (take-A/B.mp3), word timings
+- `studio/`: the Remotion project (template in `src/template/`, one data file per episode in `src/episodes/`)
+- `studio/public/epNN/`: vo.mp3, clips/, memes/
+- `tools/fetch_vo.py`: downloads ElevenLabs takes and transcribes them (laptop side)
+- `renders/`: finished videos from the cloud
