@@ -38,8 +38,8 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 | Ep | Scene | Script | Voice | Clips | Render |
 |---|---|---|---|---|---|
 | 01 | Interstellar docking | ✅ | ✅ **re-voiced with Google Vids** (ElevenLabs take kept in `elevenlabs/`) | ✅ | ⏳ ready for re-render (timeline re-timed, cuts checked) |
-| 02 | Spider-Man 2 train | ✅ | ✅ (862 cr) | ✅ | ✅ rendered (`renders/ep02.mp4`, with photo cutaways) |
-| 05 | Jurassic Park T. rex vs Jeep | ✅ | ✅ (844 cr) | ✅ | ✅ rendered (`renders/ep05.mp4`) |
+| 02 | Spider-Man 2 train | ✅ | ✅ **re-voiced with Google Vids** (ElevenLabs take in `elevenlabs/`) | ✅ | ⏳ ready for re-render |
+| 05 | Jurassic Park T. rex vs Jeep | ✅ | ✅ **re-voiced with Google Vids** (ElevenLabs take in `elevenlabs/`; 0.25 s pause inserted after "head.") | ✅ | ⏳ ready for re-render |
 | 04 | Fast Five vault | ✅ approved | ✅ Google Vids (old ElevenLabs v2 take in `old-v2/`) | ✅ cut (vault slides flat: sparks at 1:48:10) | ⏳ **ready to render** |
 | 03 | Civil War helicopter | ✅ Gemini v3; **check footage: railing or ledge?** | ❌ | ❌ **skipped for now** (no footage) | — |
 | 06 | Iron Man tank shot | ✅ v3.1 | ✅ Google Vids | ✅ cut (tank hit 1:18:35, lands in rubble) | ⏳ **ready to render** (~55 s) |

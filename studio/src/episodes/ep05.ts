@@ -15,9 +15,9 @@ export const ep05: Episode = {
   captionFixes: {jeep: 'Jeep', T: 'T.', '-Rex?': 'rex?', 'T-Rex?': 'T. rex?'},
   beats: [
     {kind: 'play', dur: 3.5, clip: {file: C('01-chase-start'), start: 0, label: 'Rex emerges from the trees, chase begins'}},
-    {kind: 'pause', from: 0, to: 3.24, clip: {file: C('02-rex-roar'), start: 1.0, label: 'Freeze: rex mid-roar behind the Jeep', zoom: 0.08}},
+    {kind: 'pause', from: 0, to: 3.93, clip: {file: C('02-rex-roar'), start: 1.0, label: 'Freeze: rex mid-roar behind the Jeep', zoom: 0.08}},
     {
-      kind: 'vo', from: 3.25, to: 15.7,
+      kind: 'vo', from: 3.94, to: 17.70,
       clip: {file: C('03-rex-legs'), start: 0, label: 'Rex running, legs pumping (muted)'},
       overlays: [
         {type: 'pop', text: '~6 TONS', x: 50, y: 28, at: '6', dur: 1.8, color: '#FFD60A', size: 160},
@@ -26,13 +26,13 @@ export const ep05: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 15.8, to: 19.20,
+      kind: 'pause', from: 17.83, to: 20.5,
       clip: {file: C('03-rex-legs'), start: 3.4, label: 'Freeze: rex legs mid-stride', zoom: 0.08},
       overlays: [{type: 'meme', file: 'ep05/assets/chicken-legs.jpg', emoji: '', at: 'legs', dur: 1.4}],
     },
     {kind: 'play', dur: 3.0, clip: {file: C('04-must-go-faster'), start: 0, label: 'Malcolm: "Must go faster."'}},
     {
-      kind: 'vo', from: 19.35, to: 26.29,
+      kind: 'vo', from: 20.55, to: 27.79,
       clip: {file: C('05-jeep-gaining'), start: 0, label: 'Rex gaining, Jeep bouncing (muted)'},
       overlays: [
         {type: 'pop', text: '~28 KM/H', x: 50, y: 28, at: '28', dur: 2.2, color: '#FFD60A', size: 170},
@@ -40,7 +40,7 @@ export const ep05: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 26.4, to: 31.04,
+      kind: 'pause', from: 27.81, to: 32.48,
       clip: {file: C('06-muldoon'), start: 0.6, label: 'Freeze: Muldoon at the wheel', zoom: 0.06},
       overlays: [
         {type: 'pop', text: '×2', x: 50, y: 30, at: 'double', dur: 1.2, color: '#34C759', size: 200},
@@ -49,7 +49,7 @@ export const ep05: Episode = {
     },
     {kind: 'play', dur: 3.0, clip: {file: C('07-mirror'), start: 0, label: 'Mirror shot: rex lunges, roar'}},
     {
-      kind: 'pause', from: 31.11, to: 36.9,
+      kind: 'pause', from: 32.48, to: 38.12,
       clip: {file: C('07-mirror'), start: 1.3, label: 'Freeze: mirror + "OBJECTS IN MIRROR..." sticker', zoom: 0.08},
       overlays: [
         {type: 'pop', text: 'CONVEX', x: 50, y: 25, at: 'convex', dur: 1.8, color: '#FFD60A', size: 150},
@@ -57,7 +57,7 @@ export const ep05: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 37.02, to: 41.27,
+      kind: 'pause', from: 38.28, to: 42.5,
       clip: {file: C('08-malcolm'), start: 1.5, label: 'Freeze: Malcolm looking back', zoom: 0.08},
       overlays: [
         {type: 'sfx', name: 'boom', at: 'escorting'},
