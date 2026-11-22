@@ -9,6 +9,10 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 - `cut_clips.py` files find ffmpeg on their own (`imageio_ffmpeg` or `ffmpeg` on PATH).
 
 ## Google Drive folders (from 2026-11-22)
+- **Trimmed scene files (user cuts them with ffmpeg -c copy):** https://drive.google.com/drive/folders/140akuguZYs5zRXVnCVg0-2RJwY-q4GP6
+  Have: Fast Five (movie 1:43-2:05), Iron Man (1:08-1:20), Ant-Man (0:28-0:45, 0:55-1:15, 1:35-1:55; HDR, tonemap when cutting).
+  ⚠️ Fast Five's mp4 seeks inaccurately for previews: pick times from a full-decode `select` contact sheet (`%{pts}` labels), not `-ss` before `-i`.
+- Google Vids takes for EP02/03/05/07/08/09 are saved in `episodes/_vids_takes/` (not processed yet). All checked word for word against their scripts.
 - **Voiceovers (Google Vids exports):** https://drive.google.com/drive/folders/1Zj2a2np450RrhKrmpiAfQBOqz3EI_X1N
 - **Clips & other files (the user screen-records the scenes):** https://drive.google.com/drive/folders/1YeR6FiPNFc78i7PWgdVBq1xDPNNODgPp
 - Both are "Anyone with the link". List with `gdown <folder-url>` (it lists then fails on the googleusercontent redirect), then download each file with
@@ -36,8 +40,9 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 | 01 | Interstellar docking | ✅ | ✅ **re-voiced with Google Vids** (ElevenLabs take kept in `elevenlabs/`) | ✅ | ⏳ ready for re-render (timeline re-timed, cuts checked) |
 | 02 | Spider-Man 2 train | ✅ | ✅ (862 cr) | ✅ | ✅ rendered (`renders/ep02.mp4`, with photo cutaways) |
 | 05 | Jurassic Park T. rex vs Jeep | ✅ | ✅ (844 cr) | ✅ | ✅ rendered (`renders/ep05.mp4`) |
-| 04 | Fast Five vault | ✅ **approved by user** (closer: "Friction: zero. Family: undefeated.") | ❌ **next**: 873 chars vs 857 credits, see below | ❌ user is uploading the movie (50 GB) to Drive | — |
+| 04 | Fast Five vault | ✅ approved | ✅ Google Vids (old ElevenLabs v2 take in `old-v2/`) | ✅ cut (vault slides flat: sparks at 1:48:10) | ⏳ **ready to render** |
 | 03 | Civil War helicopter | ✅ Gemini v3; **check footage: railing or ledge?** | ❌ | ❌ **skipped for now** (no footage) | — |
+| 06 | Iron Man tank shot | ✅ v3.1 | ✅ Google Vids | ✅ cut (tank hit 1:18:35, lands in rubble) | ⏳ **ready to render** (~55 s) |
 | 06–10 | Season 2 slate | v3.1 in `episodes/physics_nerd_scripts_ep06_to_ep10.md`, review in `episodes/SCRIPTS_S2_REVIEW.md` | ❌ | ❌ | — |
 
 **EP04 voicing, pending the user's choice:** (a) on the paid account, drop "easily", "casually", "absolutely" (846 chars, fits 857), or (b) wait for the 2026-12-16 refill and voice it word for word. The approved text is in `episodes/04-fastfive-vault/script.md`, with the closer replaced by "Friction: zero. Family: undefeated."
