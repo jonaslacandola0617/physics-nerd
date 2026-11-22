@@ -53,7 +53,7 @@ export const ep02: Episode = {
     },
     // 4. punchline on a freeze
     {
-      kind: 'pause', from: 24.47, to: 33.61,
+      kind: 'pause', from: 24.47, to: 33.57,
       clip: {file: C('07-strain-face'), start: 2.0, label: 'Freeze: teeth gritted', zoom: 0.07},
       overlays: [
         {type: 'versus', left: '½ T', leftSub: 'deadlift world record', right: '10 T', rightSub: 'per arm', at: 'deadlift', dur: 2.6},
@@ -64,13 +64,13 @@ export const ep02: Episode = {
     {kind: 'play', dur: 3.0, clip: {file: C('02-wall-rips'), start: 1.5, label: 'Window frame rips out of the wall'}},
     // 6. "to be fair" over moving footage
     {
-      kind: 'vo', from: 33.61, to: 40.44,
+      kind: 'vo', from: 33.57, to: 40.41,
       clip: {file: C('03-webs-fire'), start: 1.0, label: 'Web lines streaming to the buildings'},
       overlays: [{type: 'stamp', text: 'WEBS', good: true, at: 'handle', dur: 1.8}],
     },
     // 7. closer on a freeze
     {
-      kind: 'pause', from: 40.44, to: 46.68,
+      kind: 'pause', from: 40.41, to: 46.68,
       clip: {file: C('06-scream'), start: 1.0, label: 'Freeze: screaming, arms pinned', zoom: 0.07},
       overlays: [
         {type: 'stamp', text: 'SHOULDERS', good: false, at: 'shoulders', dur: 1.4},
@@ -79,7 +79,7 @@ export const ep02: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 46.68, to: 51.02,
+      kind: 'vo', from: 46.68, to: 51.20,
       clip: {file: C('08-pass-out'), start: 1.0, label: 'Eyes roll back, collapses'},
       overlays: [{type: 'stamp', text: 'REALISTIC', good: true, at: 'realistic', dur: 1.6}],
     },

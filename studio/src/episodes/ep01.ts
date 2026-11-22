@@ -52,13 +52,13 @@ export const ep01: Episode = {
       overlays: [{type: 'meme', file: 'ep01/assets/fighter-jet-9g.jpg', emoji: '', at: 'fighter', dur: 2.2}],
     },
     {
-      kind: 'vo', from: 26.0, to: 30.35,
+      kind: 'vo', from: 26.0, to: 30.52,
       clip: {file: C('03-modules-close'), start: 0, label: 'Spinning modules'},
       overlays: [{type: 'versus', left: '9 G', leftSub: 'fighter jet design', leftImg: 'ep01/assets/fighter-jet-9g.jpg', right: '150 G', rightSub: 'Endurance ring', at: 'nowhere', dur: 2.2}],
     },
     // 5. punchline on a freeze
     {
-      kind: 'pause', from: 30.35, to: 37.5,
+      kind: 'pause', from: 30.52, to: 37.5,
       clip: {file: C('13-ring-close'), start: 3.0, label: 'Freeze: damaged outer module', zoom: 0.08},
       overlays: [
         {type: 'meme', file: 'ep01/assets/station-shrapnel.jpg', emoji: '', at: 'shrapnel', dur: 2.2},

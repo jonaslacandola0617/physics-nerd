@@ -14,6 +14,11 @@ This repo holds everything needed to render an episode except the full movies. T
    #   libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
    ```
 3. Check that the episode is complete: every beat in `studio/src/episodes/epNN.ts` has a `clip.file`, and each file exists under `studio/public/`. If any are missing, **stop and report which ones**. Don't render placeholders.
+   Then check that no beat cuts off a word (from the repo root):
+   ```bash
+   python3 -I tools/check_vo_cuts.py epNN
+   ```
+   It measures the real voiceover audio at every pause/play cut. If it reports a cut into the voice, run it again with `--fix` (moves the cut into the nearest silence between the same two words), check the diff of `studio/src/episodes/epNN.ts`, and commit that fix with the render. Never render with this check failing: Whisper's word end times are early, so a `to:` copied from them clips the end of the word.
 4. Typecheck: `npx tsc --noEmit`
 5. Render:
    ```bash
