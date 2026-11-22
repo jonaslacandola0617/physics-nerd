@@ -8,10 +8,18 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 - The cloud session cuts clips, builds timelines, checks stills **and renders** (see `RENDER.md`). Commit the cut clips (`studio/public/epNN/clips/`) like EP01/02/05. Never commit the full movies.
 - `cut_clips.py` files find ffmpeg on their own (`imageio_ffmpeg` or `ffmpeg` on PATH).
 
+## Google Drive folders (from 2026-11-22)
+- **Voiceovers (Google Vids exports):** https://drive.google.com/drive/folders/1Zj2a2np450RrhKrmpiAfQBOqz3EI_X1N
+- **Clips & other files (the user screen-records the scenes):** https://drive.google.com/drive/folders/1YeR6FiPNFc78i7PWgdVBq1xDPNNODgPp
+- Both are "Anyone with the link". List with `gdown <folder-url>` (it lists then fails on the googleusercontent redirect), then download each file with
+  `curl -L -o out.mp4 "https://drive.usercontent.google.com/download?id=<FILE_ID>&export=download&confirm=t"`.
+- Whisper needs the Hugging Face hosts (already allowed in the `physics-nerd` environment); run fetch_vo with `HF_HUB_DISABLE_XET=1`.
+
 ## Workflow (agreed)
 1. **Gemini writes the script.** It follows its v3 rules: no emotion tags, no subscribe-joke closers (end on the punchline), punchy incredulous hook, a "to be fair" beat, ~130–150 words.
 2. **Claude fact-checks every number** and checks every line against the actual footage (contact sheets of the scene). Nothing gets voiced until the **user approves the final text in chat**.
-3. **Voice:** ElevenLabs "Arthur" (`sfJopaWaOtauCD3HKX6Q`), `eleven_v4`, flow `er3VTfNjK6PbhZUWbToa` (paid workspace), **1 take, no tags**. Cost = 1 credit per character (EP02: 862 chars → 862 cr). Always run an `estimate_only` first.
+3. **Voice (NEW, 2026-11-22): Google Vids voiceover**, exported by the user to the voiceover Drive folder; no credits. Must read the approved script word for word. Then `python -I tools/fetch_vo.py episodes/NN-x epNN <downloaded file>` (local files OK).
+   _Old:_ ElevenLabs "Arthur" (`sfJopaWaOtauCD3HKX6Q`), `eleven_v4`, flow `er3VTfNjK6PbhZUWbToa` (paid workspace), **1 take, no tags**. Cost = 1 credit per character (EP02: 862 chars → 862 cr). Always run an `estimate_only` first.
 4. **Audio post:** `python -I tools/fetch_vo.py episodes/NN-x epNN <url>` → `python -I tools/tighten_vo.py NN-x epNN` (trims breaths) → `python -I tools/roomify.py NN-x epNN` (room sound).
 5. **Timeline:** `studio/src/episodes/epNN.ts` with beat kinds `play` (movie audio), `vo` (narration over moving footage), and `pause` (click + desaturated freeze + narration). Overlays can be timed to a spoken word (`at: 'word'`, or `'word#2'`). Image cutaways go in `studio/public/epNN/assets/` (downscale to 1024px).
 6. **Movie timing:** 2–3 s movie open, narration over moving footage, punchlines on freezes, 2–3 short movie bursts. Target 55–68 s.
@@ -25,7 +33,7 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 ## Episodes
 | Ep | Scene | Script | Voice | Clips | Render |
 |---|---|---|---|---|---|
-| 01 | Interstellar docking | ✅ | ✅ (977 cr) | ✅ | ✅ rendered, approved |
+| 01 | Interstellar docking | ✅ | ✅ **re-voiced with Google Vids** (ElevenLabs take kept in `elevenlabs/`) | ✅ | ⏳ ready for re-render (timeline re-timed, cuts checked) |
 | 02 | Spider-Man 2 train | ✅ | ✅ (862 cr) | ✅ | ✅ rendered (`renders/ep02.mp4`, with photo cutaways) |
 | 05 | Jurassic Park T. rex vs Jeep | ✅ | ✅ (844 cr) | ✅ | ✅ rendered (`renders/ep05.mp4`) |
 | 04 | Fast Five vault | ✅ **approved by user** (closer: "Friction: zero. Family: undefeated.") | ❌ **next**: 873 chars vs 857 credits, see below | ❌ user is uploading the movie (50 GB) to Drive | — |
