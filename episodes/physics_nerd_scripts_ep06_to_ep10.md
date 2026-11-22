@@ -133,7 +133,7 @@ Still, walking away from a Mach ten breakup in nothing but a dusty pressure suit
 | 5 | PAUSE | Freeze on the streetlight pole holding the cable taut. Red shear arrows at the base bolts. Text: `WIND BOLTS vs 15 TONS` | A city streetlight is held down by a few anchor bolts rated for wind, not for stopping fifteen tons of truck. Those bolts would snap clean off and rip both poles out long before the trailer ever flipped. | 11.5 |
 | 6 | PLAY | The truck slams upside down onto the asphalt in a shower of sparks. | *(movie audio)* | 2.5 |
 | 7 | VO | Moving footage: wide shot of the upside-down truck on LaSalle Street. Cutaway: `nitrogen-piston-rig.jpg` | To be fair, Christopher Nolan actually flipped a real semi-truck on a real Chicago street with zero CGI—they hid a massive nitrogen piston inside the trailer to launch it. | 9.5 |
-| 8 | PAUSE | Freeze on the Joker crawling out of the wrecked cab. Text: `GOTHAM LAMPOSTS > STEEL BRIDGES` | So the flip itself is completely real. The cables? Pure fiction. Gotham’s city planners apparently built their streetlights stronger than suspension bridges. | 8.0 |
+| 8 | PAUSE | Freeze on the Joker crawling out of the wrecked cab. Text: `LAMPPOSTS > BANK VAULTS` | So the flip itself is completely real. The cables? Pure fiction. Gotham apparently bolts its streetlights down tighter than its banks. | 8.0 |
 
 ### Clean VO Copy (ElevenLabs)
 
@@ -146,7 +146,7 @@ A city streetlight is held down by a few anchor bolts rated for wind, not for st
 
 To be fair, Christopher Nolan actually flipped a real semi-truck on a real Chicago street with zero CGI—they hid a massive nitrogen piston inside the trailer to launch it.
 
-So the flip itself is completely real. The cables? Pure fiction. Gotham’s city planners apparently built their streetlights stronger than suspension bridges.
+So the flip itself is completely real. The cables? Pure fiction. Gotham apparently bolts its streetlights down tighter than its banks.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep08/assets/`)
@@ -174,7 +174,7 @@ So the flip itself is completely real. The cables? Pure fiction. Gotham’s city
 | # | Type | Clip / Visual Cue | Line | ~s |
 |---|---|---|---|---|
 | 1 | PLAY | *John Wick: Chapter 4* — Wick pulls his tailored jacket over his face and takes a hail of gunfire, sparks flying off the fabric. | *(movie audio)* | 3.0 |
-| 2 | PAUSE | Freeze right as sparks bounce off his suit jacket. | Hold on—in John Wick Chapter Four, he’s basically using a tailored suit jacket as a riot shield, and he barely even flinches? | 6.0 |
+| 2 | PAUSE | Freeze right as sparks bounce off his suit jacket. | Hold on—he’s basically using a tailored suit jacket as a riot shield, and he barely even flinches? | 6.0 |
 | 3 | VO | Moving footage: Wick taking shots to the chest and pushing forward. Cutaway: `real-bulletproof-suit.jpg` | First, credit where it’s due—real bulletproof suits actually exist. Tailors have lined real jackets with thin Kevlar layers that can genuinely stop handgun rounds. | 9.0 |
 | 4 | VO | Moving footage: Wick taking multiple rounds at point-blank range. Cutaway: `kevlar-backface-clay.jpg` + Pop-up: `Backface Deformation` | Here’s the physics problem the movie completely ignores. Stopping a bullet from piercing your skin doesn’t make it disappear. That impact still has to go somewhere. | 9.0 |
 | 5 | PAUSE | Freeze on Wick’s chest taking a round. Red inward-dent arrow + text: `BLUNT-FORCE TRAUMA` | With soft body armor, the fabric dents straight inward into your chest—it’s called backface deformation. Taking one round feels like getting swung at with a baseball bat. | 9.0 |
@@ -185,7 +185,7 @@ So the flip itself is completely real. The cables? Pure fiction. Gotham’s city
 ### Clean VO Copy (ElevenLabs)
 
 ```text
-Hold on—in John Wick Chapter Four, he’s basically using a tailored suit jacket as a riot shield, and he barely even flinches?
+Hold on—he’s basically using a tailored suit jacket as a riot shield, and he barely even flinches?
 
 First, credit where it’s due—real bulletproof suits actually exist. Tailors have lined real jackets with thin Kevlar layers that can genuinely stop handgun rounds. Here’s the physics problem the movie completely ignores. Stopping a bullet from piercing your skin doesn’t make it disappear. That impact still has to go somewhere.
 
@@ -203,48 +203,49 @@ So yeah, the suit stopping the bullets is actually half-believable. John Wick wa
 
 ---
 
-## EP10: Ant-Man (2015) — The 30-Ton Keychain Tank
+## EP10: Ant-Man (2015) — The Flying Ant (v4 rewrite, approved 2026-11-22)
 
-- **File:** `episodes/10-antman-tank/script.md`
+- **File:** `episodes/10-antman-ant/script.md`
 - **Upload Title:** Ant-Man Broke Its OWN Physics Rule In The Same Movie 💀
 - **Top Banner:** `PHYSICS NERD REACTS TO ANT-MAN`
-- **Core Physics:** Conservation of mass & extreme surface pressure ($P = F / A$)
+- **Core Physics:** Conservation of mass (Pym Particles only change atomic spacing) vs. ant lift capacity
 
-### Numbers & Fixes Applied
-- **Age fix:** Changed *"eighty-year-old Hank Pym"* to *"seventy-year-old Hank Pym"* (Michael Douglas was 70 in 2015).
-- **Footage check (IMPORTANT before voicing):**
-  1. Confirm the Pym Tech escape shot where Hank pulls the keychain tank from his pocket, enlarges it, and drives it through the wall.
-  2. Confirm the exact tank model shown (Soviet T-34, $\sim 30\text{ tons}$ / $60{,}000\text{ lbs}$).
-  3. Confirm the early bathtub/tile-crack shot in Scott's first shrink scene—if it's a bathtub dent rather than a bathroom tile crack, tweak that one phrase to match what's on screen.
+### Why the rewrite
+The old tank-keychain beats (Hank enlarging it at Pym Tech, smiling in the hatch) could not be found in the movie and the T-34 model was unverified. Rewritten around scenes confirmed in the user's footage (times = movie time):
+- 0:30:20–0:31:30 Scott's first shrink (bathtub)
+- 0:37:10–0:38:45 Scott riding flying ant 247 through the city
+- 0:41:44–0:41:47 Hank: "Ants can lift objects 50 times their weight."
+- 0:42:31–0:42:38 Hank: "I learned how to change the distance between atoms."
+
+### Numbers (Claude)
+- Same atoms → same mass. Scott + suit ≈ 200 lb (~90 kg).
+- Large winged carpenter ant ≈ 20–30 mg (grain of rice ≈ 25 mg). 90 kg ÷ 25–30 mg ≈ 3–3.6 million. "Around three million" ✅
+- "50 times" is the movie's own line (real ants ~10–50×).
+- ❓ Footage check before cutting: one shot of tiny Scott punching like a full-size man (training file, ~0:55–1:15).
 
 ### Beat Sheet
 
-| # | Type | Clip / Visual Cue | Line | ~s |
-|---|---|---|---|---|
-| 1 | PLAY | Hank Pym pulls the tiny tank keychain out of his pocket, enlarges it, and drives it straight through the Pym Tech wall. | *(movie audio)* | 3.0 |
-| 2 | PAUSE | Freeze right on the tiny tank dangling from Hank Pym’s keychain. | Wait—did Hank Pym just casually pull a thirty-ton Soviet tank out of his pants pocket? | 5.0 |
-| 3 | VO | Moving footage: Hank explaining Pym Particles to Scott earlier in the movie. Pop-up: `Same Mass · Smaller Size` | Look, I don’t mind comic-book science—as long as you follow your own rules. Earlier in this exact movie, Hank explains that shrinking only reduces the space between atoms. Your mass stays the exact same. | 11.5 |
-| 4 | VO | Moving footage: tiny Ant-Man crashing into the bathroom tile / tub and cracking it. | To be fair, they actually remember this rule for like ten minutes—that’s why tiny Scott cracks a bathroom tile just by falling onto it, and still punches like a full-grown man. | 9.5 |
-| 5 | PAUSE | Freeze back on the keychain tank in Hank’s hand. Cutaway: `t34-tank-real.jpg` + Pop-up: `T-34 Tank ≈ 30 Tons` | Which brings us to this keychain. That’s a Soviet T-thirty-four tank. It weighs around thirty tons. If its mass never changed, that little keychain still weighs sixty thousand pounds. | 10.5 |
-| 6 | PLAY | Hank casually holding/tossing the keychain like a plastic toy. | *(movie audio)* | 2.0 |
-| 7 | VO | Cutaway: `floor-crushed-keychain.jpg` with downward red weight arrow. | Hank shouldn’t be able to lift it, his pockets shouldn’t hold it, and the second he drops it, that tiny tank should punch straight through the concrete floor into the basement. | 9.5 |
-| 8 | PAUSE | Freeze on Hank smiling proudly in the tank hatch. Text: `HANK PYM = STRONGEST AVENGER` | Either Pym Particles completely ignore their own rules... or seventy-year-old Hank Pym has been casually deadlifting thirty tons with two fingers. | 7.5 |
+| # | Type | Clip / Visual Cue | Line |
+|---|---|---|---|
+| 1 | PLAY | 0:37:20 Scott on flying ant 247 taking off | *(movie audio)* |
+| 2 | PAUSE | Freeze: Scott riding the ant over the street | Wait—Scott Lang is the size of an ant, and he's riding a flying ant through the city like it's a motorcycle? |
+| 3 | VO | 0:42:31 Hank explaining atoms. Pop-up: `SAME ATOMS = SAME MASS` | Look, the movie actually gives us the rule. Hank says it himself: Pym Particles change the distance between atoms. Same atoms, same mass. So tiny Scott still weighs about two hundred pounds, suit included. |
+| 4 | VO | 0:41:44 ants carrying the sugar cube. Pop-up: `50× (Hank's number)` | And Hank also tells us ants can lift fifty times their own weight. A big flying ant weighs about as much as a grain of rice. |
+| 5 | PAUSE | Freeze: ant 247 carrying Scott. Pop-up: `~3,000,000×` | So this ant isn't lifting fifty times its weight. It's lifting around three million times its weight. |
+| 6 | PLAY | Ant ride burst (0:38:00) | *(movie audio)* |
+| 7 | VO | Tiny Scott punching (training) | To be fair, the movie does use the rule when it wants to. That's why tiny Scott can punch like a full-size man—all that mass is packed into a fist the size of a pinhead. |
+| 8 | PAUSE | Freeze: Scott on the ant. Text: `ANT > AVENGERS` | That's two hundred pounds of Paul Rudd casually riding a bug. Forget Scott—put that ant on the Avengers. |
 
-### Clean VO Copy (ElevenLabs)
+### Clean VO Copy
 
 ```text
-Wait—did Hank Pym just casually pull a thirty-ton Soviet tank out of his pants pocket?
+Wait—Scott Lang is the size of an ant, and he's riding a flying ant through the city like it's a motorcycle?
 
-Look, I don’t mind comic-book science—as long as you follow your own rules. Earlier in this exact movie, Hank explains that shrinking only reduces the space between atoms. Your mass stays the exact same. To be fair, they actually remember this rule for like ten minutes—that’s why tiny Scott cracks a bathroom tile just by falling onto it, and still punches like a full-grown man.
+Look, the movie actually gives us the rule. Hank says it himself: Pym Particles change the distance between atoms. Same atoms, same mass. So tiny Scott still weighs about two hundred pounds, suit included.
 
-Which brings us to this keychain. That’s a Soviet T-thirty-four tank. It weighs around thirty tons. If its mass never changed, that little keychain still weighs sixty thousand pounds.
+And Hank also tells us ants can lift fifty times their own weight. A big flying ant weighs about as much as a grain of rice. So this ant isn't lifting fifty times its weight. It's lifting around three million times its weight.
 
-Hank shouldn’t be able to lift it, his pockets shouldn’t hold it, and the second he drops it, that tiny tank should punch straight through the concrete floor into the basement.
+To be fair, the movie does use the rule when it wants to. That's why tiny Scott can punch like a full-size man—all that mass is packed into a fist the size of a pinhead.
 
-Either Pym Particles completely ignore their own rules... or seventy-year-old Hank Pym has been casually deadlifting thirty tons with two fingers.
+That's two hundred pounds of Paul Rudd casually riding a bug. Forget Scott—put that ant on the Avengers.
 ```
-
-### Suggested Cutaway Assets (`studio/public/ep10/assets/`)
-1. `t34-tank-real.jpg` — Dramatic low-angle photo of a massive weathered Soviet T-34 steel battle tank.
-2. `floor-crushed-keychain.jpg` — Tiny metal toy-sized tank on a keychain sinking deeply into a cracked concrete floor under impossible weight.
-3. `atom-spacing-diagram.jpg` — Clean glowing cyan/white scientific visualization of atoms compressing closer together.
