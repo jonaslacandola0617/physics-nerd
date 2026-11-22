@@ -1,5 +1,6 @@
 import React from 'react';
-import {Composition} from 'remotion';
+import {Composition, Still} from 'remotion';
+import {Avatar, Banner} from './brand/Brand';
 import {ep01} from './episodes/ep01';
 import {ep02} from './episodes/ep02';
 import {ep03} from './episodes/ep03';
@@ -24,5 +25,7 @@ export const Root: React.FC = () => (
         height={1920}
       />
     ))}
+    <Still id="avatar" component={Avatar} width={800} height={800} />
+    <Still id="banner" component={Banner} width={2560} height={1440} />
   </>
 );
