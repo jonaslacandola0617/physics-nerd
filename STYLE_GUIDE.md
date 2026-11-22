@@ -1,3 +1,5 @@
+> ⚠️ **Outdated (v2 rules).** The current rules are in PROJECT_STATUS.md (Gemini v3 style + Claude fact-check).
+
 # Physics Nerd — Reaction Style Guide (v2)
 
 v1 failed: our scripts were **explainers with movie wallpaper**. About 165 words of nonstop narration in 63 s, only ~7 s of actual movie, and no real reactions. These are **reaction videos**. The physics is the excuse; the entertainment is the reaction.
