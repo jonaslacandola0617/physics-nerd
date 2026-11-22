@@ -1,7 +1,7 @@
 # EP04 v3 — Fast Five: dragging the vault (Gemini draft, Claude fact-checked)
 
 - **Upload title:** Why Fast Five's Vault Chase Makes Zero Sense 💀
-- **Words:** ~128 · **Status:** ✅ fact-checked, ⏳ waiting on approval, not voiced. Needs the Fast Five movie.
+- **Words:** ~128 · **Status:** ✅ fact-checked, **approved by the user 2026-11-23** (closer: "Friction: zero. Family: undefeated."), not voiced yet (873 chars; paid account has 857, see PROJECT_STATUS.md).
 
 ## Fact-check (Claude)
 - 10 t vault, steel on asphalt μ ≈ 0.5, so ~5 t of pull. ✅
@@ -19,5 +19,5 @@ In real life, those two cars wouldn't budge that vault an inch. You'd just get a
 
 To be fair, if you somehow did get a ten-ton steel cube swinging at highway speed, yeah—it would absolutely flatten every cop car in Rio.
 
-So how did two muscle cars beat basic tire friction? Simple. Friction isn't family.
+So how did two muscle cars beat basic tire friction? Simple. Friction: zero. Family: undefeated.
 ```

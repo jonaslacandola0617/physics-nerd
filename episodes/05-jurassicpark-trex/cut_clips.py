@@ -6,7 +6,12 @@ Run:  python -I cut_clips.py [clip names...]
 """
 import glob, os, subprocess, sys
 
-FF = r"C:\Users\ReysaL\AppData\Local\Programs\Python\Python312\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v9.0.2.exe"
+try:
+    import imageio_ffmpeg
+    FF = imageio_ffmpeg.get_ffmpeg_exe()
+except ImportError:
+    import shutil
+    FF = shutil.which("ffmpeg") or "ffmpeg"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MOVIE = (glob.glob(os.path.join(ROOT, "videos", "jurassicpark", "*.mkv"))
          or glob.glob(os.path.join(ROOT, "videos", "Jurassic Park*.mkv")))[0]
