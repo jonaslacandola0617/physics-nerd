@@ -23,3 +23,4 @@ episodes/**/*-final.mp4
 failed/*.mp4
 failed/**/*.mp4
 failed/**/*.mp3
+episodes/**/assets-src/

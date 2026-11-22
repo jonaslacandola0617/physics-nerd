@@ -75,9 +75,10 @@ const Arrow: React.FC<Extract<Overlay, {type: 'arrow'}>> = ({x1, y1, x2, y2, at,
         <div
           style={{
             position: 'absolute',
-            left: `${x2}%`,
-            top: `${y2}%`,
-            transform: 'translate(-50%, 30%)',
+            // label sits near the arrow head but is clamped so it never runs off the frame
+            left: `${Math.min(Math.max(x1 + (x2 - x1) * 0.75, 18), 82)}%`,
+            top: `${Math.min(Math.max(y1 + (y2 - y1) * 0.75, 8), 88)}%`,
+            transform: 'translate(-50%, 35%)',
             fontFamily: BODY_FONT,
             fontWeight: 900,
             fontSize: 52,
@@ -193,13 +194,21 @@ const Stamp: React.FC<Extract<Overlay, {type: 'stamp'}>> = ({text, good, at, dur
   );
 };
 
-const Versus: React.FC<Extract<Overlay, {type: 'versus'}>> = ({left, leftSub, right, rightSub, at, dur = DEFAULT_DUR}) => {
+const Versus: React.FC<Extract<Overlay, {type: 'versus'}>> = ({left, leftSub, right, rightSub, leftImg, rightImg, at, dur = DEFAULT_DUR}) => {
   const {visible, local, fps, out} = useEnvelope(at, dur);
   if (!visible) return null;
   const l = spring({frame: local, fps, config: {damping: 12}});
   const r = spring({frame: local - 10, fps, config: {damping: 9, stiffness: 160}});
-  const side = (big: string, sub: string, color: string, s: number, scale: number): React.ReactNode => (
-    <div style={{flex: 1, textAlign: 'center', transform: `scale(${s * scale})`}}>
+  const thumb = (img?: string) =>
+    img ? (
+      <Img
+        src={staticFile(img)}
+        style={{width: 220, height: 220, objectFit: 'cover', borderRadius: 20, border: '5px solid #fff', boxShadow: '0 10px 30px rgba(0,0,0,0.6)', marginBottom: 16}}
+      />
+    ) : null;
+  const side = (big: string, sub: string, color: string, s: number, scale: number, img?: string): React.ReactNode => (
+    <div style={{flex: 1, textAlign: 'center', transform: `scale(${s * scale})`, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      {thumb(img)}
       <div style={{fontFamily: TITLE_FONT, fontSize: 190, color, lineHeight: 1, ...outlined}}>{big}</div>
       <div style={{fontFamily: BODY_FONT, fontWeight: 800, fontSize: 40, color: COLORS.white, marginTop: 12, ...outlined, WebkitTextStroke: '6px #000'}}>
         {sub}
@@ -208,9 +217,9 @@ const Versus: React.FC<Extract<Overlay, {type: 'versus'}>> = ({left, leftSub, ri
   );
   return (
     <AbsoluteFill style={{background: `rgba(5,8,13,${0.78 * out})`, opacity: out, flexDirection: 'row', alignItems: 'center', padding: 40}}>
-      {side(left, leftSub, COLORS.white, l, 0.85)}
+      {side(left, leftSub, COLORS.white, l, 0.85, leftImg)}
       <div style={{fontFamily: TITLE_FONT, fontSize: 90, color: COLORS.accent, ...outlined}}>VS</div>
-      {side(right, rightSub, COLORS.danger, r, 1.1)}
+      {side(right, rightSub, COLORS.danger, r, 1.1, rightImg)}
     </AbsoluteFill>
   );
 };

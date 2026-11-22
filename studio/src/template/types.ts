@@ -24,7 +24,7 @@ export type Overlay =
   | {type: 'radius'; cx: number; cy: number; r: number; at: At; dur?: number; label: string}
   | {type: 'spin'; cx: number; cy: number; r: number; at: At; dur?: number; label?: string}
   | {type: 'stamp'; text: string; good: boolean; at: At; dur?: number}
-  | {type: 'versus'; left: string; leftSub: string; right: string; rightSub: string; at: At; dur?: number}
+  | {type: 'versus'; left: string; leftSub: string; right: string; rightSub: string; leftImg?: string; rightImg?: string; at: At; dur?: number}
   | {type: 'meme'; file?: string; emoji: string; at: At; dur?: number}
   | {type: 'sfx'; name: SfxName; at: At; volume?: number};
 

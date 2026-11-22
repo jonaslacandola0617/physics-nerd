@@ -37,31 +37,31 @@ export const ep01: Episode = {
     // 4. the 150 G point
     {
       kind: 'vo', from: 16.33, to: 21.45,
-      clip: {file: C('03-modules-close'), start: 0, label: 'Spinning modules'},
+      clip: {file: C('01-spin-topdown'), start: 0, label: 'Wide top-down: the whole ring spinning'},
       overlays: [
-        {type: 'arrow', x1: 50, y1: 50, x2: 88, y2: 20, at: 'outer', dur: 3.4},
-        {type: 'arrow', x1: 50, y1: 50, x2: 12, y2: 20, at: 'outer', dur: 3.4},
-        {type: 'arrow', x1: 50, y1: 50, x2: 88, y2: 80, at: 'outer', dur: 3.4},
-        {type: 'arrow', x1: 50, y1: 50, x2: 12, y2: 80, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 48, x2: 90, y2: 14, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 48, x2: 10, y2: 14, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 48, x2: 90, y2: 84, at: 'outer', dur: 3.4},
+        {type: 'arrow', x1: 50, y1: 48, x2: 10, y2: 84, at: 'outer', dur: 3.4},
         {type: 'pop', text: '~150 G', x: 50, y: 45, at: '150', dur: 2.2, color: '#FF3B30', size: 220},
       ],
     },
     {
       kind: 'vo', from: 21.45, to: 26.0,
       clip: {file: C('05-modules-zoom'), start: 0, label: 'Modules spinning, hub centred'},
-      overlays: [{type: 'pop', text: '✈️ 9 G', x: 50, y: 28, at: '9', dur: 1.8, color: '#FFD60A', size: 150}],
+      overlays: [{type: 'meme', file: 'ep01/assets/fighter-jet-9g.jpg', emoji: '', at: 'fighter', dur: 2.2}],
     },
     {
       kind: 'vo', from: 26.0, to: 30.35,
-      clip: {file: C('01-spin-topdown'), start: 0, label: 'Endurance spinning, top-down'},
-      overlays: [{type: 'versus', left: '9 G', leftSub: 'fighter jet design', right: '150 G', rightSub: 'Endurance ring', at: 'nowhere', dur: 2.2}],
+      clip: {file: C('03-modules-close'), start: 0, label: 'Spinning modules'},
+      overlays: [{type: 'versus', left: '9 G', leftSub: 'fighter jet design', leftImg: 'ep01/assets/fighter-jet-9g.jpg', right: '150 G', rightSub: 'Endurance ring', at: 'nowhere', dur: 2.2}],
     },
     // 5. punchline on a freeze
     {
       kind: 'pause', from: 30.35, to: 37.5,
       clip: {file: C('13-ring-close'), start: 3.0, label: 'Freeze: damaged outer module', zoom: 0.08},
       overlays: [
-        {type: 'meme', emoji: '💥', at: 'shrapnel', dur: 1.0},
+        {type: 'meme', file: 'ep01/assets/station-shrapnel.jpg', emoji: '', at: 'shrapnel', dur: 2.2},
         {type: 'sfx', name: 'boom', at: 'shrapnel'},
       ],
     },
@@ -87,8 +87,9 @@ export const ep01: Episode = {
       kind: 'pause', from: 49.7, to: 57.25,
       clip: {file: C('11-clamps-lock'), start: 3.4, label: 'Freeze: Ranger clamped in', zoom: 0.07},
       overlays: [
-        {type: 'stamp', text: 'COOPER', good: true, at: 'sense', dur: 1.4},
-        {type: 'stamp', text: 'SHIP', good: false, at: 'surviving?', dur: 1.4},
+        {type: 'stamp', text: 'COOPER', good: true, at: 'cooper', dur: 1.6},
+        {type: 'stamp', text: 'SHIP', good: false, at: 'ship', dur: 1.4},
+        {type: 'meme', file: 'ep01/assets/space-pipe-organ.jpg', emoji: '', at: 'organ', dur: 1.2},
         {type: 'pop', text: 'PLOT ARMOR', x: 50, y: 30, at: 'plot', dur: 1.6, color: '#FFD60A', size: 150},
         {type: 'sfx', name: 'boom', at: 'armor'},
       ],

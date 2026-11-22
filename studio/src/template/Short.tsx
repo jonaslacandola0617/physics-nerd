@@ -43,10 +43,15 @@ const beatWords = (b: Beat, words: Word[]): Word[] => {
   return words.filter((w) => w.s >= b.from - 0.05 && w.s < b.to).map((w) => ({...w, s: w.s - b.from + l, e: w.e - b.from + l}));
 };
 
-/** `at` can be seconds or a word in the beat's voiceover ("complaint" -> when that word starts). */
+/**
+ * `at` can be seconds or a word in the beat's voiceover ("complaint" -> when that word starts).
+ * Use "word#2" for the 2nd occurrence when a word repeats inside the beat.
+ */
 const resolveAt = (at: At, local: Word[]): number => {
   if (typeof at === 'number') return at;
-  const hit = local.find((w) => norm(w.w).startsWith(norm(at)));
+  const [word, nth] = at.split('#');
+  const hits = local.filter((w) => norm(w.w).startsWith(norm(word)));
+  const hit = hits[Math.max(0, (Number(nth) || 1) - 1)];
   return hit ? hit.s : 0;
 };
 
