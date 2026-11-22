@@ -49,7 +49,7 @@ export const ep06: Episode = {
       clip: {file: C('03-helmet'), start: 2.9, label: 'Freeze: rigid helmet', zoom: 0.08},
       overlays: [
         {type: 'stamp', text: 'NO CRUMPLE ZONE', good: false, at: 'rigid', dur: 1.6},
-        {type: 'meme', emoji: '🥚', at: 'egg', dur: 1.6},
+        {type: 'meme', file: 'ep06/assets/egg-can.jpg', emoji: '', at: 'egg', dur: 1.6},
       ],
     },
     // 7. movie burst: stands up, wrist missile
