@@ -1,7 +1,7 @@
 """Download ElevenLabs takes and produce word timings for take A.
 
 Usage:
-  python -I tools/fetch_vo.py <episode_dir> <ep_id> <urlA> [<urlB> ...]
+  python -I tools/fetch_vo.py <episode_dir> <ep_id> <urlA|fileA> [<urlB|fileB> ...]
 
 Writes <episode_dir>/take-A.mp3, take-B.mp3, ..., <episode_dir>/take-A.words.json
 and copies take A to studio/public/<ep_id>/vo.mp3 and studio/src/episodes/<ep_id>.words.json
@@ -28,8 +28,16 @@ def main() -> None:
     takes = []
     for i, url in enumerate(urls):
         out = ep_dir / f"take-{chr(65 + i)}.mp3"
-        with urllib.request.urlopen(url) as r, open(out, "wb") as f:
-            shutil.copyfileobj(r, f)
+        if Path(url).exists():  # local file (e.g. a Google Vids export downloaded from Drive)
+            src = Path(url)
+            if src.suffix.lower() == ".mp3":
+                shutil.copy(src, out)
+            else:  # wav/m4a/mp4 export -> mp3
+                subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error", "-y", "-i", str(src), "-vn",
+                                "-c:a", "libmp3lame", "-b:a", "192k", str(out)], check=True)
+        else:
+            with urllib.request.urlopen(url) as r, open(out, "wb") as f:
+                shutil.copyfileobj(r, f)
         takes.append(out)
         print("saved", out, out.stat().st_size, "bytes")
 
