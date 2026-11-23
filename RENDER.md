@@ -24,6 +24,10 @@ This repo holds everything needed to render an episode except the full movies. T
    ```bash
    npx remotion render epNN ../renders/epNN.mp4 --crf 20
    ```
+   Then master the audio to YouTube loudness (−14 LUFS, −1 dBTP; video is copied untouched), from the repo root:
+   ```bash
+   python3 -I tools/master_audio.py renders/epNN.mp4
+   ```
 6. Spot-check: extract a frame every ~8s with ffmpeg and look at them. Confirm the audio track exists and the duration matches the composition.
 7. Commit **only** `renders/epNN.mp4` to `main` with the message `render: epNN`, and push.
 8. Report: the duration, file size, and anything that looked wrong.
