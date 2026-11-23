@@ -20,7 +20,7 @@ export const ep10: Episode = {
     {
       kind: 'pause', from: 0, to: 6.65,
       clip: {file: C('01-ride-close'), start: 2.2, label: 'Freeze: Scott riding the ant', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '🏍️', at: 'motorcycle', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep10/assets/motorcycle.jpg', emoji: '', at: 'motorcycle', dur: 1.4}],
     },
     // 3. the movie's own rule
     {
@@ -39,7 +39,7 @@ export const ep10: Episode = {
       clip: {file: C('04-sugar'), start: 0, label: 'Sugar cubes, ants in formation'},
       overlays: [
         {type: 'pop', text: "50× (HANK'S NUMBER)", x: 50, y: 28, at: '50', dur: 2.0, color: '#34C759', size: 110},
-        {type: 'meme', emoji: '🍚', at: 'rice', dur: 1.4},
+        {type: 'meme', file: 'ep10/assets/grain-of-rice.jpg', emoji: '', at: 'rice', dur: 1.4},
       ],
     },
     // 5. punchline on a freeze
@@ -54,7 +54,7 @@ export const ep10: Episode = {
     {
       kind: 'vo', from: 32.47, to: 41.9,
       clip: {file: C('06-punch'), start: 0, label: 'Tiny Scott decks Falcon'},
-      overlays: [{type: 'stamp', text: 'RULE USED ✓', good: true, at: 'punch', dur: 1.6}],
+      overlays: [{type: 'stamp', text: 'RULE USED', good: true, at: 'punch', dur: 1.6}],
     },
     // 8. closer on a freeze
     {
