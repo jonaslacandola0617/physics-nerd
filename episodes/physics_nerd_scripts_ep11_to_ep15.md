@@ -1,6 +1,6 @@
 # Physics Nerd — Season 3 Slate (EP11–EP15, Varied Hooks v4)
 
-> **Status:** Drafted for Claude fact-check & footage verification before voicing.
+> **Status:** ✅ Fact-checked by Claude, all fixes approved and applied 2026-11-23 (see `SCRIPTS_S3_REVIEW.md`). Footage checks still pending per episode.
 > **Key Upgrade (v4):** Built from a deeper study of `@MichaelRossAerospace` and `@SceneMechanicsYT`. Every episode uses a **distinct hook archetype** (no repeating *"Wait—"* / *"Hold on—"* disbelief openers) and a **distinct narrative sequence** (rapid-fire multi-beat roasts, "does this actually work?" flips, real-stunt vs. movie-physics splits, misdirection twists, and structural inspections).
 > **Format Rules:** 2–3s movie open -> freeze-frame hook -> narration over moving footage -> freeze-frame punchlines -> zero emotion tags, numbers written as spoken words in Clean VO, no subscribe begs.
 
@@ -13,7 +13,7 @@
 | **1st** | **EP11** | The Avengers (2012) — Iron Man & the Nuke | Nothing In This Iron Man Scene Obeys Physics 💀 | Instant Deadpan Simile | ~134 | ~60 s | ❓ Fact-check & clip cut |
 | **2nd** | **EP12** | The Martian (2015) — The Glove Thruster | Would Stabbing Your Spacesuit Actually Work In Space? 💀 | Dry Sarcastic Admiration | ~128 | ~58 s | ❓ Fact-check & clip cut |
 | **3rd** | **EP13** | Mission: Impossible – Rogue Nation (2015) — Plane Hang | What Happens If You Actually Hang Onto A Plane Taking Off 💀 | Real-World Stunt Joke | ~130 | ~59 s | ❓ Fact-check & clip cut |
-| **4th** | **EP14** | Avengers: Infinity War (2018) — Thor & the Star | Everyone Gets Thor's Star Scene Wrong For The WRONG Reason 💀 | Direct Technical Callout | ~118 | ~56 s | ❓ Fact-check & clip cut |
+| **4th** | **EP14** | Avengers: Infinity War (2018) — Thor & the Star | Why Thor's Star Scene Should've Turned Him Into Spaghetti 💀 | Direct Technical Callout | ~118 | ~56 s | ❓ Fact-check & clip cut |
 | **5th** | **EP15** | Godzilla (2014) — Walking Through San Francisco | Why Godzilla Wouldn't Survive Two Steps In San Francisco 💀 | Everyday-Consequence Opener | ~145 | ~62 s | ❓ Fact-check & clip cut |
 
 ---
@@ -41,8 +41,8 @@
 | 3 | VO | Moving footage: Tony pushing the missile upward. Pop-up: `~3,000 lbs · ~550 mph` | A real cruise missile weighs around three thousand pounds and cruises at over five hundred miles an hour. Trying to wrestle that thing sideways in mid-air isn't steering—it's just becoming a hood ornament. | 11.5 |
 | 4 | PAUSE | Freeze on Tony flying straight up toward the wormhole. Cutaway: `shopping-cart.jpg` or red thrust arrows on tail fins. | Also, notice how he turns it straight up with zero tail fins adjusting, while his hands are literally inches from rocket exhaust. Apparently that suit runs on pure confidence. | 9.5 |
 | 5 | PLAY | Suit powers down, Tony falls back through the portal, Hulk leaps and catches him mid-air. | *(movie audio)* | 2.5 |
-| 6 | VO | Moving footage: Hulk slamming into the building and crashing to the street holding Tony. White/red impact arrows. | Then his power dies, he drops like a brick, and Hulk catches him mid-air. Here's the problem—stopping someone at terminal velocity in a split second doesn't save them. | 9.5 |
-| 7 | PAUSE | Freeze on Hulk roaring in Tony's face to wake him up. Pop-up: `CONCRETE vs GREEN CONCRETE` | Hulk didn't cushion the fall. He just replaced concrete with green concrete. And somehow Tony wakes up two seconds later because Hulk yelled at him. Doctors hate this one simple trick. | 10.5 |
+| 6 | VO | Moving footage: Hulk slamming into the building and crashing to the street holding Tony. White/red impact arrows. | Then his power dies, he drops at over a hundred miles an hour, and Hulk catches him mid-air. Even with Hulk sliding down the building to slow down, that first grab still slams Tony with brutal Gs. | 9.5 |
+| 7 | PAUSE | Freeze on Hulk roaring in Tony's face to wake him up. Pop-up: `WAKE-UP METHOD: YELLING` | And somehow he wakes up two seconds later because Hulk yelled in his face. Doctors hate this one simple trick. | 10.5 |
 
 ### Clean VO Copy (ElevenLabs)
 
@@ -53,15 +53,14 @@ A real cruise missile weighs around three thousand pounds and cruises at over fi
 
 Also, notice how he turns it straight up with zero tail fins adjusting, while his hands are literally inches from rocket exhaust. Apparently that suit runs on pure confidence.
 
-Then his power dies, he drops like a brick, and Hulk catches him mid-air. Here's the problem—stopping someone at terminal velocity in a split second doesn't save them.
+Then his power dies, he drops at over a hundred miles an hour, and Hulk catches him mid-air. Even with Hulk sliding down the building to slow down, that first grab still slams Tony with brutal Gs.
 
-Hulk didn't cushion the fall. He just replaced concrete with green concrete. And somehow Tony wakes up two seconds later because Hulk yelled at him. Doctors hate this one simple trick.
+And somehow he wakes up two seconds later because Hulk yelled in his face. Doctors hate this one simple trick.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep11/assets/`)
 1. `shopping-cart.jpg` — A rogue metal shopping cart rolling wildly across an empty parking lot.
 2. `cruise-missile.jpg` — Crisp side-profile photo of a real military cruise missile flying over water.
-3. `green-concrete.jpg` — A heavy slab of bright green-tinted concrete cracking on impact.
 
 ---
 
@@ -89,7 +88,7 @@ Hulk didn't cushion the fall. He just replaced concrete with green concrete. And
 | 4 | VO | Freeze-frame on Watney's outstretched arm. Draw a white dot on his torso (`Center of Mass`) and a curved red spin arrow around him. | The problem isn't the thrust—it's steering. Because that jet is coming out of his hand instead of his center of mass, it creates massive torque. | 8.5 |
 | 5 | PAUSE | Cutaway: `deflating-balloon.jpg` (balloon spinning wildly through the air). | In real life, he wouldn't fly straight like Iron Man. He'd spin out of control like a deflated birthday balloon while blasting all his oxygen into deep space. | 8.5 |
 | 6 | PLAY | Watney tumbling and grabbing Commander Lewis's hand. | *(movie audio)* | 2.0 |
-| 7 | PAUSE | Freeze on Watney laughing inside his helmet. Pop-up: `THRUST: REAL · STEERING: CHAOS` | To be fair, the movie actually shows him spinning all over the place, so NASA has to give him partial credit. Still, cutting your own air supply is a bold way to skip a rescue mission. | 10.5 |
+| 7 | PAUSE | Freeze on Watney laughing inside his helmet. Pop-up: `THRUST: REAL · STEERING: CHAOS` | To be fair, the movie actually shows him spinning all over the place, so NASA has to give him partial credit. Still, venting your own oxygen to go faster is the most Mark Watney plan possible. | 10.5 |
 
 ### Clean VO Copy (ElevenLabs)
 
@@ -100,7 +99,7 @@ Surprisingly, the basic physics here actually works. A real spacesuit is pressur
 
 In real life, he wouldn't fly straight like Iron Man. He'd spin out of control like a deflated birthday balloon while blasting all his oxygen into deep space.
 
-To be fair, the movie actually shows him spinning all over the place, so NASA has to give him partial credit. Still, cutting your own air supply is a bold way to skip a rescue mission.
+To be fair, the movie actually shows him spinning all over the place, so NASA has to give him partial credit. Still, venting your own oxygen to go faster is the most Mark Watney plan possible.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep12/assets/`)
@@ -128,27 +127,27 @@ To be fair, the movie actually shows him spinning all over the place, so NASA ha
 | # | Type | Clip / Visual Cue | Line | ~s |
 |---|---|---|---|---|
 | 1 | PLAY | Ethan Hunt sprints onto the wing, grabs the side door, and the massive plane lifts off. | *(movie audio)* | 2.5 |
-| 2 | PAUSE | Freeze on Ethan clinging to the outside of the plane at altitude. | First off, Tom Cruise actually did this stunt for real—which means his insurance agent probably hasn't slept since twenty-fifteen. | 6.5 |
-| 3 | VO | Moving footage: plane roaring down the runway. Pop-up: `Airbus A400M · Takeoff: ~150 mph` | Here's the catch. In real life, Tom was bolted to the door with a hidden harness and wore special armored contact lenses so the wind wouldn't wreck his eyes. | 9.0 |
+| 2 | PAUSE | Freeze on Ethan clinging to the outside of the plane at altitude. | First off, Tom Cruise actually did this stunt for real—which means his insurance agent probably hasn't slept since twenty-fourteen. | 6.5 |
+| 3 | VO | Moving footage: plane roaring down the runway. Pop-up: `Airbus A400M · Takeoff: ~150 mph` | Here's the catch. In real life, Tom was bolted to the door with a hidden harness and wore special contact lenses so the wind wouldn't wreck his eyes. | 9.0 |
 | 4 | VO | Moving footage: Ethan gripping the thin door sill in a dress suit. White wind-drag arrows pushing back. | In the movie? Ethan Hunt is doing this in a tailored suit with zero harness and bare fingertips. An Airbus A-four-hundred-M takes off at around a hundred and fifty miles an hour. | 9.5 |
-| 5 | PAUSE | Freeze on Ethan's fingers gripping the metal rim. Cutaway: `category-5-hurricane.jpg` | That's basically Category Five hurricane wind slamming straight into your face while you do a fingertip pull-up on slippery painted aluminum. | 7.5 |
+| 5 | PAUSE | Freeze on Ethan's fingers gripping the metal rim. Cutaway: `category-4-hurricane.jpg` | That's basically Category Four hurricane wind slamming straight into your face while you do a fingertip pull-up on slippery painted aluminum. | 7.5 |
 | 6 | PLAY | Plane banking hard as Ethan yells into his comms. | *(movie audio)* | 2.0 |
-| 7 | PAUSE | Freeze on Ethan's hair barely even messing up. Pop-up: `HAIR GEL = AEROSPACE GRADE` | Not to mention one tiny pebble or bug at a hundred and fifty miles an hour hits like a paintball to the forehead. Forget the secret agents—give whoever styled his hair a raise. | 9.5 |
+| 7 | PAUSE | Freeze on Ethan's hair barely even messing up. Pop-up: `HAIR GEL = AEROSPACE GRADE` | Not to mention one tiny pebble at a hundred and fifty miles an hour hits like a paintball to the forehead. Forget the secret agents—give whoever styled his hair a raise. | 9.5 |
 
 ### Clean VO Copy (ElevenLabs)
 
 ```text
-First off, Tom Cruise actually did this stunt for real—which means his insurance agent probably hasn't slept since twenty-fifteen.
+First off, Tom Cruise actually did this stunt for real—which means his insurance agent probably hasn't slept since twenty-fourteen.
 
-Here's the catch. In real life, Tom was bolted to the door with a hidden harness and wore special armored contact lenses so the wind wouldn't wreck his eyes. In the movie? Ethan Hunt is doing this in a tailored suit with zero harness and bare fingertips. An Airbus A-four-hundred-M takes off at around a hundred and fifty miles an hour.
+Here's the catch. In real life, Tom was bolted to the door with a hidden harness and wore special contact lenses so the wind wouldn't wreck his eyes. In the movie? Ethan Hunt is doing this in a tailored suit with zero harness and bare fingertips. An Airbus A-four-hundred-M takes off at around a hundred and fifty miles an hour.
 
-That's basically Category Five hurricane wind slamming straight into your face while you do a fingertip pull-up on slippery painted aluminum.
+That's basically Category Four hurricane wind slamming straight into your face while you do a fingertip pull-up on slippery painted aluminum.
 
-Not to mention one tiny pebble or bug at a hundred and fifty miles an hour hits like a paintball to the forehead. Forget the secret agents—give whoever styled his hair a raise.
+Not to mention one tiny pebble at a hundred and fifty miles an hour hits like a paintball to the forehead. Forget the secret agents—give whoever styled his hair a raise.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep13/assets/`)
-1. `category-5-hurricane.jpg` — Palm trees bent completely sideways in violent, roaring hurricane-force wind and spray.
+1. `category-4-hurricane.jpg` — Palm trees bent completely sideways in violent, roaring hurricane-force wind and spray.
 2. `scleral-contact-lens.jpg` — Clean macro shot of a large clear protective contact lens balanced on a fingertip.
 
 ---
@@ -156,7 +155,7 @@ Not to mention one tiny pebble or bug at a hundred and fifty miles an hour hits 
 ## EP14: Avengers: Infinity War (2018) — Thor Taking the Full Force of a Star
 
 * **File:** `episodes/14-infinitywar-thor-star/script.md`
-* **Upload Title:** Everyone Gets Thor's Star Scene Wrong For The WRONG Reason 💀
+* **Upload Title:** Why Thor's Star Scene Should've Turned Him Into Spaghetti 💀
 * **Top Banner:** `PHYSICS NERD REACTS TO INFINITY WAR`
 * **Hook Archetype:** Direct Technical Callout (Scene Mechanics style)
 * **Sequence:** Misdirection Twist (Dismisses the obvious heat argument -> drops the neutron-star gravity bomb -> roasts the forge contractor)
@@ -174,8 +173,8 @@ Not to mention one tiny pebble or bug at a hundred and fifty miles an hour hits 
 | 1 | PLAY | Thor pulls the iris open and takes the blinding beam of the dying star straight to the back. | *(movie audio)* | 2.5 |
 | 2 | PAUSE | Freeze on Thor glowing inside the star beam. | Bro, that is not how neutron stars work—not even close. | 3.5 |
 | 3 | VO | Moving footage: wide shot of the giant metal rings around the tiny glowing star. Pop-up: `Mass: ~1.5x Sun · Width: ~12 Miles` | Everyone argues about whether Thor could survive the heat. Forget the heat—he's standing right next to a neutron star. That's more mass than our entire sun crushed into a ball about the size of a city. | 11.5 |
-| 4 | VO | Moving footage: Rocket's tiny pod pulling the rings. Red gravity arrows pulling everything inward toward the star. | The gravity that close is billions of times stronger than Earth's. Rocket's little spaceship wouldn't be towing giant metal rings—it would be shredded into space dust before they even parked. | 10.5 |
-| 5 | PAUSE | Freeze on Thor casually gripping the metal handles. Cutaway: `hydraulic-press.jpg` | Even if Thor is completely fireproof, that gravity would flatten him, the dwarf, and the whole forge into an atom-thick pancake. | 7.5 |
+| 4 | VO | Moving footage: Rocket's tiny pod pulling the rings. Red gravity arrows pulling everything inward toward the star. | The gravity that close is millions of times stronger than Earth's. Rocket's little spaceship wouldn't be towing giant metal rings—it would be shredded into space dust before they even parked. | 10.5 |
+| 5 | PAUSE | Freeze on Thor casually gripping the metal handles. Cutaway: `dry-spaghetti.jpg` | Even if Thor is completely fireproof, tidal gravity that strong doesn't just crush you—it stretches you, the dwarf, and the whole forge into a strand of cosmic spaghetti. | 7.5 |
 | 6 | PLAY | Eitri pouring the molten metal into the axe mold. | *(movie audio)* | 2.0 |
 | 7 | PAUSE | Freeze on the giant metal iris closing over the star. Pop-up: `FORGE CONTRACTOR = STRONGEST IN MCU` | So yeah, Thor's durability is impressive. But whoever built a steel garage door right next to a neutron star is the real god of the MCU. | 8.5 |
 
@@ -184,16 +183,16 @@ Not to mention one tiny pebble or bug at a hundred and fifty miles an hour hits 
 ```text
 Bro, that is not how neutron stars work—not even close.
 
-Everyone argues about whether Thor could survive the heat. Forget the heat—he's standing right next to a neutron star. That's more mass than our entire sun crushed into a ball about the size of a city. The gravity that close is billions of times stronger than Earth's. Rocket's little spaceship wouldn't be towing giant metal rings—it would be shredded into space dust before they even parked.
+Everyone argues about whether Thor could survive the heat. Forget the heat—he's standing right next to a neutron star. That's more mass than our entire sun crushed into a ball about the size of a city. The gravity that close is millions of times stronger than Earth's. Rocket's little spaceship wouldn't be towing giant metal rings—it would be shredded into space dust before they even parked.
 
-Even if Thor is completely fireproof, that gravity would flatten him, the dwarf, and the whole forge into an atom-thick pancake.
+Even if Thor is completely fireproof, tidal gravity that strong doesn't just crush you—it stretches you, the dwarf, and the whole forge into a strand of cosmic spaghetti.
 
 So yeah, Thor's durability is impressive. But whoever built a steel garage door right next to a neutron star is the real god of the MCU.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep14/assets/`)
 1. `neutron-star-city.jpg` — Dramatic sci-fi scale comparison showing a glowing dense metallic sphere the size of Manhattan floating above a city skyline.
-2. `hydraulic-press.jpg` — Close-up of a heavy industrial hydraulic press crushing a solid metal cylinder completely flat.
+2. `dry-spaghetti.jpg` — A single strand of dry spaghetti being stretched/snapped, shot clean on a dark background.
 
 ---
 
@@ -222,7 +221,7 @@ So yeah, Thor's durability is impressive. But whoever built a steel garage door 
 | 4 | VO | Freeze-frame on his legs with white vertical compression arrows. Pop-up: `Weight ∝ L³ · Bones ∝ L²` | Under the square-cube law, when you scale an animal up, its weight grows way faster than its bone strength. Real bones at that size wouldn't even let him stand up—they'd snap under his own weight. | 11.0 |
 | 5 | PAUSE | Freeze on his foot stepping onto the asphalt. Cutaway: `sinkhole-street.jpg` | And even if his skeleton is made of pure titanium, city streets aren't solid rock. They're thin asphalt over sewers and subway tunnels. One step and Godzilla punches straight through the road into the basement of a Starbucks. | 11.5 |
 | 6 | PLAY | Godzilla roaring into the sky. | *(movie audio)* | 2.0 |
-| 7 | PAUSE | Freeze on Godzilla's head way up in the clouds. Pop-up: `30-STORY BLOOD PRESSURE` | Plus his heart would have to pump blood thirty stories straight up just to keep him conscious. Honestly, the military didn't even need missiles—just let him walk two blocks and let gravity do the work. | 10.5 |
+| 7 | PAUSE | Freeze on Godzilla's head way up in the clouds. Pop-up: `15 STORIES UP · 10× A GIRAFFE` | Plus his heart would have to pump blood fifteen stories straight up just to keep him conscious—that's over ten times a giraffe's blood pressure. Honestly, the military didn't even need missiles—just let him walk two blocks and let gravity do the work. | 10.5 |
 
 ### Clean VO Copy (ElevenLabs)
 
@@ -233,7 +232,7 @@ Look, this version of Godzilla is over three hundred and fifty feet tall and wei
 
 And even if his skeleton is made of pure titanium, city streets aren't solid rock. They're thin asphalt over sewers and subway tunnels. One step and Godzilla punches straight through the road into the basement of a Starbucks.
 
-Plus his heart would have to pump blood thirty stories straight up just to keep him conscious. Honestly, the military didn't even need missiles—just let him walk two blocks and let gravity do the work.
+Plus his heart would have to pump blood fifteen stories straight up just to keep him conscious—that's over ten times a giraffe's blood pressure. Honestly, the military didn't even need missiles—just let him walk two blocks and let gravity do the work.
 ```
 
 ### Suggested Cutaway Assets (`studio/public/ep15/assets/`)

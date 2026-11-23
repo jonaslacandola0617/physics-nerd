@@ -45,3 +45,6 @@ General: no emotion tags ✅, no subscribe begs ✅, numbers spelled out ✅. Th
 | 13 | MI: Rogue Nation (2015) | 0:02:00–0:08:00 |
 | 14 | Avengers: Infinity War (2018) | 1:35:00–1:50:00 |
 | 15 | Godzilla (2014) | 1:30:00–1:55:00 |
+
+## Status
+All fixes approved by the user and applied 2026-11-23 (EP13 also: "since twenty-fourteen"). EP14 retitled.
