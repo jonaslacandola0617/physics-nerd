@@ -19,14 +19,14 @@ export const ep12: Episode = {
     {
       kind: 'pause', from: 0, to: 6.58,
       clip: {file: C('01-poke'), start: 1.5, label: 'Freeze: the glove', zoom: 0.08},
-      overlays: [{type: 'meme', emoji: '🔪', at: 'stab', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep12/assets/glove-puncture.jpg', emoji: '', at: 'stab', dur: 1.4}],
     },
     {
       kind: 'vo', from: 6.58, to: 18.28,
       clip: {file: C('02-thrust'), start: 0, label: 'Lewis waiting, Watney jets toward her'},
       overlays: [
         {type: 'pop', text: 'SUIT: ~4.3 PSI', x: 50, y: 28, at: 'four', dur: 2.2, color: '#FFD60A', size: 130},
-        {type: 'stamp', text: 'THRUST: REAL', good: true, at: 'thruster', dur: 1.4},
+        {type: 'stamp', text: 'THRUST: REAL', good: true, at: 'tiny', dur: 1.4},
       ],
     },
     {
@@ -34,19 +34,19 @@ export const ep12: Episode = {
       clip: {file: C('02-thrust'), start: 10.5, label: 'Freeze: arm out, off-centre', zoom: 0.08},
       overlays: [
         {type: 'pop', text: 'OFF-CENTRE THRUST', x: 50, y: 26, at: 'hand', dur: 2.0, color: '#FF3B30', size: 110},
-        {type: 'spin', cx: 50, cy: 50, r: 30, at: 'torque', dur: 1.8, label: 'TORQUE'},
+        {type: 'spin', cx: 50, cy: 50, r: 30, at: 'creates', dur: 1.8, label: 'TORQUE'},
       ],
     },
     {
       kind: 'vo', from: 25.81, to: 34.18,
       clip: {file: C('03-tumble'), start: 0, label: 'Tumbling over Mars'},
-      overlays: [{type: 'meme', emoji: '🎈', at: 'balloon', dur: 1.6}],
+      overlays: [{type: 'meme', file: 'ep12/assets/deflated-balloon.jpg', emoji: '', at: 'balloon', dur: 1.6}],
     },
     {kind: 'play', dur: 2.2, clip: {file: C('04-catch'), start: 0, label: 'Lewis grabs him'}},
     {
       kind: 'vo', from: 34.18, to: 39.75,
       clip: {file: C('04-catch'), start: 0.5, label: 'Catch and tether'},
-      overlays: [{type: 'stamp', text: 'SPIN: SHOWN ✓', good: true, at: 'spinning', dur: 1.4}],
+      overlays: [{type: 'stamp', text: 'SPIN: SHOWN', good: true, at: 'spinning', dur: 1.4}],
     },
     {
       kind: 'pause', from: 39.75, to: 44.9,

@@ -19,14 +19,14 @@ export const ep11: Episode = {
     {
       kind: 'pause', from: 0, to: 5.67,
       clip: {file: C('01-grab'), start: 1.5, label: 'Freeze: hugging the missile', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '🛒', at: 'shopping', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep11/assets/shopping-cart.jpg', emoji: '', at: 'shopping', dur: 1.4}],
     },
     {
       kind: 'vo', from: 5.67, to: 17.48,
       clip: {file: C('02-missile'), start: 0, label: 'Launch, intercept, the grab'},
       overlays: [
         {type: 'pop', text: '~3,000 LB · 500+ MPH', x: 50, y: 28, at: '3', dur: 2.6, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '🚗', at: 'hood', dur: 1.4},
+        {type: 'meme', file: 'ep11/assets/hood-ornament.jpg', emoji: '', at: 'becoming', dur: 1.4},
       ],
     },
     {
@@ -34,7 +34,7 @@ export const ep11: Episode = {
       clip: {file: C('03-up'), start: 1.7, label: 'Freeze: pushing it up from the tail', zoom: 0.08},
       overlays: [
         {type: 'stamp', text: 'FINS: NOT MOVING', good: false, at: 'fins', dur: 1.6},
-        {type: 'pop', text: 'RUNS ON CONFIDENCE', x: 50, y: 28, at: 'confidence', dur: 1.8, color: '#FFD60A', size: 110},
+        {type: 'pop', text: 'RUNS ON CONFIDENCE', x: 50, y: 28, at: 'runs', dur: 1.8, color: '#FFD60A', size: 110},
       ],
     },
     {kind: 'play', dur: 2.5, clip: {file: C('06-nuke'), start: 0.4, label: 'Nuke detonates in space'}},
