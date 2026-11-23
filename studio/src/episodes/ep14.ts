@@ -38,7 +38,7 @@ export const ep14: Episode = {
       clip: {file: C('04-beam'), start: 3.5, label: 'Freeze: Thor in the beam', zoom: 0.07},
       overlays: [
         {type: 'stamp', text: 'TIDAL STRETCHING', good: false, at: 'stretches', dur: 1.6},
-        {type: 'meme', emoji: '🍝', at: 'spaghetti', dur: 1.8},
+        {type: 'meme', file: 'ep14/assets/spaghetti.jpg', emoji: '', at: 'strand', dur: 1.8},
       ],
     },
     {kind: 'play', dur: 2.5, clip: {file: C('05-pour'), start: 0, label: 'The pour'}},

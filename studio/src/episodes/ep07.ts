@@ -19,7 +19,7 @@ export const ep07: Episode = {
     {
       kind: 'pause', from: 0, to: 9.01,
       clip: {file: C('06-diner'), start: 3.0, label: 'Freeze: Maverick drinking water', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '🥤', at: 'water', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep07/assets/glass-of-water.jpg', emoji: '', at: 'diner', dur: 1.4}],
     },
     {
       kind: 'vo', from: 9.01, to: 15.94,
@@ -31,7 +31,7 @@ export const ep07: Episode = {
       clip: {file: C('01-breakup'), start: 0.05, label: 'Freeze: gauge at 10.3', zoom: 0.07},
       overlays: [
         {type: 'versus', left: 'MACH 3.2', leftSub: 'SR-71 record (1966)', right: 'MACH 10.3', rightSub: 'Darkstar', at: 'fastest', dur: 3.2},
-        {type: 'stamp', text: "CREWMATE DIDN'T SURVIVE", good: false, at: 'crewmate', dur: 1.6},
+        {type: 'stamp', text: "CREWMATE DIDN'T SURVIVE", good: false, at: 'lived', dur: 1.6},
       ],
     },
     {
@@ -43,7 +43,7 @@ export const ep07: Episode = {
     {
       kind: 'vo', from: 37.44, to: 45.88,
       clip: {file: C('05-suit'), start: 0, label: 'Pressure-suit helmet'},
-      overlays: [{type: 'stamp', text: 'PRESSURE SUIT ✓', good: true, at: 'pressure', dur: 1.6}],
+      overlays: [{type: 'stamp', text: 'PRESSURE SUIT', good: true, at: 'pressure', dur: 1.6}],
     },
     {kind: 'play', dur: 3.5, clip: {file: C('06-diner'), start: 8.2, label: '"Where am I?"'}},
     {

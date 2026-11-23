@@ -19,14 +19,14 @@ export const ep03: Episode = {
     {
       kind: 'pause', from: 0, to: 5.22,
       clip: {file: C('03-hold'), start: 7.0, label: 'Freeze: the bicep curl', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '💪', at: 'bicep', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep03/assets/bicep-curl.jpg', emoji: '', at: 'bicep', dur: 1.4}],
     },
     {
       kind: 'vo', from: 5.22, to: 18.2,
       clip: {file: C('02-heli'), start: 0, label: 'Helicopter lifts, Cap pulls it down'},
       overlays: [
         {type: 'stamp', text: 'ROTORS CARRY THE WEIGHT', good: true, at: 'rotors', dur: 1.8},
-        {type: 'pop', text: '1,000+ LB', x: 50, y: 28, at: 'thousand', dur: 2.0, color: '#FF3B30', size: 170},
+        {type: 'pop', text: '1,000+ LB', x: 50, y: 28, at: 'easily', dur: 2.0, color: '#FF3B30', size: 170},
       ],
     },
     {
@@ -39,7 +39,7 @@ export const ep03: Episode = {
       clip: {file: C('03-hold'), start: 0, label: 'Holding on'},
       overlays: [
         {type: 'pop', text: '~240 LB vs 1,000+ LB', x: 50, y: 26, at: '240', dur: 2.4, color: '#FFD60A', size: 105},
-        {type: 'meme', emoji: '🔑', at: 'keychain', dur: 1.6},
+        {type: 'meme', file: 'ep03/assets/keychain.jpg', emoji: '', at: 'into', dur: 1.6},
       ],
     },
     {
@@ -56,7 +56,7 @@ export const ep03: Episode = {
       kind: 'pause', from: 46.0, to: 53.5,
       clip: {file: C('03-hold'), start: 10.5, label: 'Freeze: Cap and the railing', zoom: 0.07},
       overlays: [
-        {type: 'stamp', text: 'RAILING = STRONGEST AVENGER', good: true, at: 'strongest', dur: 1.8},
+        {type: 'stamp', text: 'RAILING = STRONGEST AVENGER', good: true, at: 'railing', dur: 1.8},
         {type: 'sfx', name: 'boom', at: 'avenger'},
       ],
     },

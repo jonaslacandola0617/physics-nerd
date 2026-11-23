@@ -19,7 +19,7 @@ export const ep13: Episode = {
     {
       kind: 'pause', from: 0, to: 7.53,
       clip: {file: C('05-airborne'), start: 6.0, label: 'Freeze: hanging above the fields', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '😰', at: 'insurance', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep13/assets/stressed-agent.jpg', emoji: '', at: 'insurance', dur: 1.4}],
     },
     {
       kind: 'vo', from: 7.53, to: 15.57,
@@ -46,7 +46,7 @@ export const ep13: Episode = {
     {
       kind: 'vo', from: 34.17, to: 39.84,
       clip: {file: C('05-airborne'), start: 2.0, label: 'Hanging high above'},
-      overlays: [{type: 'meme', emoji: '🎯', at: 'paintball', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep13/assets/paintball.jpg', emoji: '', at: 'paintball', dur: 1.4}],
     },
     {
       kind: 'pause', from: 39.84, to: 43.5,
