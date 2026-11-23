@@ -44,6 +44,8 @@ Start every new session with: **"Read PROJECT_STATUS.md and continue."**
 | 03 | Civil War helicopter | ✅ Gemini v3; **check footage: railing or ledge?** | ❌ | ❌ **skipped for now** (no footage) | — |
 | 06 | Iron Man tank shot | ✅ v3.1 | ✅ Google Vids | ✅ cut (tank hit 1:18:35, lands in rubble) | ⏳ **ready to render** (~55 s) |
 | 08/09/10 | S2 fixes approved 2026-11-22 | EP08 closer + banner, EP09 hook, EP10 full rewrite (flying ant) in `physics_nerd_scripts_ep06_to_ep10.md` | ✅ re-recorded 2026-11-23 (takes in `episodes/_vids_takes/`) | EP10 ✅ cut; EP08 ✅ cut (poles visibly ripped out before the flip); EP09 needs footage | EP08 + EP10 ⏳ **ready to render** |
+| 11 | Avengers nuke | ✅ approved fixes | ✅ Google Vids | ✅ cut | ⏳ **ready to render** (~55 s) |
+| 12 | Martian glove | ✅ approved fixes | ✅ Google Vids | ✅ cut | ⏳ **ready to render** (~54 s) |
 | 06–10 | Season 2 slate | v3.1 in `episodes/physics_nerd_scripts_ep06_to_ep10.md`, review in `episodes/SCRIPTS_S2_REVIEW.md` | ❌ | ❌ | — |
 
 **EP04 voicing, pending the user's choice:** (a) on the paid account, drop "easily", "casually", "absolutely" (846 chars, fits 857), or (b) wait for the 2026-12-16 refill and voice it word for word. The approved text is in `episodes/04-fastfive-vault/script.md`, with the closer replaced by "Friction: zero. Family: undefeated."
