@@ -46,7 +46,7 @@ export const ep14: Episode = {
       kind: 'pause', from: 34.38, to: 42.0,
       clip: {file: C('06-close'), start: 0.6, label: 'Freeze: the iris', zoom: 0.07},
       overlays: [
-        {type: 'pop', text: 'FORGE CONTRACTOR = STRONGEST IN MCU', x: 50, y: 24, at: 'whoever', dur: 2.8, color: '#FFD60A', size: 75},
+        {type: 'pop', text: 'FORGE CONTRACTOR = STRONGEST IN MCU', x: 50, y: 24, at: 'whoever', dur: 2.8, color: '#FFD60A', size: 58},
         {type: 'sfx', name: 'boom', at: 'mcu'},
       ],
     },
