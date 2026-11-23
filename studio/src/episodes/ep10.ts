@@ -39,7 +39,7 @@ export const ep10: Episode = {
       clip: {file: C('04-sugar'), start: 0, label: 'Sugar cubes, ants in formation'},
       overlays: [
         {type: 'pop', text: "50× (HANK'S NUMBER)", x: 50, y: 28, at: '50', dur: 2.0, color: '#34C759', size: 110},
-        {type: 'meme', file: 'ep10/assets/grain-of-rice.jpg', emoji: '', at: 'rice', dur: 1.4},
+        {type: 'meme', file: 'ep10/assets/grain-of-rice.jpg', emoji: '', at: 'grain', dur: 1.4},
       ],
     },
     // 5. punchline on a freeze
