@@ -19,14 +19,14 @@ export const ep15: Episode = {
     {
       kind: 'pause', from: 0, to: 5.18,
       clip: {file: C('01-tower'), start: 2.5, label: 'Freeze: between the skyscrapers', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '🚧', at: 'repair', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep15/assets/road-repair.jpg', emoji: '', at: 'repair', dur: 1.4}],
     },
     {
       kind: 'vo', from: 5.18, to: 14.65,
       clip: {file: C('02-bridge'), start: 0, label: 'Plates in the bay, at the bridge'},
       overlays: [
         {type: 'pop', text: '355 FT · 90,000 TONS', x: 50, y: 26, at: '350', dur: 2.4, color: '#FF3B30', size: 110},
-        {type: 'meme', emoji: '🚢', at: 'carrier', dur: 1.6},
+        {type: 'meme', file: 'ep15/assets/aircraft-carrier.jpg', emoji: '', at: 'carrier', dur: 1.6},
       ],
     },
     {
@@ -43,7 +43,7 @@ export const ep15: Episode = {
       clip: {file: C('04-street'), start: 4.5, label: 'Freeze: the street', zoom: 0.07},
       overlays: [
         {type: 'pop', text: 'THIN ASPHALT + TUNNELS', x: 50, y: 26, at: 'thin', dur: 2.2, color: '#FFD60A', size: 100},
-        {type: 'meme', emoji: '☕', at: 'starbucks', dur: 1.6},
+        {type: 'meme', file: 'ep15/assets/coffee-shop.jpg', emoji: '', at: 'basement', dur: 1.6},
       ],
     },
     {kind: 'play', dur: 2.5, clip: {file: C('03-walk'), start: 0, label: 'Tanks open fire'}},

@@ -19,7 +19,7 @@ export const ep09: Episode = {
     {
       kind: 'pause', from: 0, to: 6.3,
       clip: {file: C('01-shield'), start: 0.4, label: 'Freeze: jacket up as a shield', zoom: 0.08},
-      overlays: [{type: 'meme', emoji: '🛡️', at: 'shield', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep09/assets/riot-shield.jpg', emoji: '', at: 'shield', dur: 1.4}],
     },
     {
       kind: 'vo', from: 6.3, to: 16.5,
@@ -36,7 +36,7 @@ export const ep09: Episode = {
       clip: {file: C('04-floor'), start: 2.0, label: 'Freeze: Wick down on the glass', zoom: 0.07},
       overlays: [
         {type: 'pop', text: 'BACKFACE DEFORMATION', x: 50, y: 26, at: 'deformation', dur: 2.2, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '⚾', at: 'baseball', dur: 1.6},
+        {type: 'meme', file: 'ep09/assets/baseball-bat.jpg', emoji: '', at: 'swung', dur: 1.6},
       ],
     },
     {kind: 'play', dur: 2.4, clip: {file: C('05-rifles'), start: 0.2, label: 'Rifles'}},
