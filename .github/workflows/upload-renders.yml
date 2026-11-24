@@ -53,7 +53,9 @@ jobs:
           chmod 600 ~/.config/rclone/rclone.conf
 
       - name: Upload new and changed renders
-        run: rclone copy renders/ gdrive: --include "*.mp4" --checksum --verbose --stats-one-line
+        run: |
+          rclone copy renders/ gdrive: --include "*.mp4" --checksum --verbose --stats-one-line
 
       - name: List what is in the folder now
-        run: rclone lsl gdrive: --include "*.mp4"
+        run: |
+          rclone lsl gdrive: --include "*.mp4"
