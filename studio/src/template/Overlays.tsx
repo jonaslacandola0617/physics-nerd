@@ -17,10 +17,10 @@ const titleWidth = (text: string, fontSize: number, letterSpacing = 0) =>
  * Largest font size (up to `max`) at which a one-line pop at horizontal position x% stays inside the box,
  * with room for the 10px outline and the spring overshoot of the pop-in.
  */
+const popAvail = (x: number) => (BOX_W * 2 * Math.min(x, 100 - x)) / 100 - 2 * 10;
 const fitPopSize = (text: string, x: number, max: number) => {
-  const avail = (BOX_W * 2 * Math.min(x, 100 - x)) / 100 - 2 * 10;
   const width = titleWidth(text, max);
-  return Math.floor(Math.min(max, (max * avail * 0.86) / width));
+  return Math.floor(Math.min(max, (max * popAvail(x) * 0.86) / width));
 };
 
 /** Shared in/out animation: spring in, fade out over the last 0.25s. */
@@ -45,16 +45,20 @@ const outlined: React.CSSProperties = {
 const Pop: React.FC<Extract<Overlay, {type: 'pop'}>> = ({text, x, y, at, dur = DEFAULT_DUR, color, size}) => {
   const {visible, inn, out} = useEnvelope(at, dur);
   if (!visible) return null;
+  const fontSize = fitPopSize(text, x, size ?? 120);
+  // the pop-in spring overshoots to ~1.24x; cap it so a long caption never pokes past the frame edge
+  const maxScale = popAvail(x) / (titleWidth(text, fontSize) + 2 * 10);
+  const scale = Math.min(inn, Math.max(1, maxScale));
   return (
     <div
       style={{
         position: 'absolute',
         left: `${x}%`,
         top: `${y}%`,
-        transform: `translate(-50%,-50%) scale(${inn}) rotate(${(1 - inn) * -8}deg)`,
+        transform: `translate(-50%,-50%) scale(${scale}) rotate(${(1 - scale) * -8}deg)`,
         opacity: out,
         fontFamily: TITLE_FONT,
-        fontSize: fitPopSize(text, x, size ?? 120),
+        fontSize,
         color: color ?? COLORS.white,
         whiteSpace: 'nowrap',
         ...outlined,
