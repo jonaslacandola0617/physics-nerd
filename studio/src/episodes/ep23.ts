@@ -20,8 +20,8 @@ export const ep23: Episode = {
       kind: 'pause', from: 0, to: 7.2,
       clip: {file: C('01-hold'), start: 3.0, label: 'Freeze: Peter straining', zoom: 0.05},
       overlays: [
-        {type: 'meme', emoji: '🚇', at: 'subway', dur: 1.2},
-        {type: 'meme', emoji: '🎒💪', at: 'backpack', dur: 1.3},
+        {type: 'meme', file: 'ep23/assets/subway.jpg', emoji: '', at: 'subway', dur: 1.2},
+        {type: 'meme', file: 'ep23/assets/backpack.jpg', emoji: '', at: 'backpack', dur: 1.3},
       ],
     },
     {
@@ -29,7 +29,7 @@ export const ep23: Episode = {
       clip: {file: C('02-wide'), start: 0, label: 'The ferry splits open'},
       overlays: [
         {type: 'pop', text: 'STATEN ISLAND FERRY: THOUSANDS OF TONS', x: 50, y: 22, at: 'thousands', dur: 2.8, color: '#FFD60A', size: 75},
-        {type: 'pop', text: 'HELD BY: WEBS', x: 50, y: 78, at: 'nothing', dur: 1.8, color: '#FF3B30', size: 100},
+        {type: 'pop', text: 'HELD BY: WEBS', x: 50, y: 78, at: 'together', dur: 1.8, color: '#FF3B30', size: 100},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep23: Episode = {
       clip: {file: C('03-webs'), start: 2.6, label: 'Freeze: webs on the deck', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'HUNDREDS OF TONS OF PULL', x: 50, y: 24, at: 'hundreds', dur: 2.4, color: '#FF3B30', size: 95},
-        {type: 'meme', emoji: '🩹💥', at: 'Velcro', dur: 1.3},
+        {type: 'meme', file: 'ep23/assets/velcro.jpg', emoji: '', at: 'boat', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 4.0, clip: {file: C('04-ironman'), start: 0, label: 'Webs snap, Iron Man flies in'}},

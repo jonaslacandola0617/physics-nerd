@@ -20,8 +20,8 @@ export const ep21: Episode = {
       kind: 'pause', from: 0, to: 7.2,
       clip: {file: C('01-launch'), start: 3.5, label: 'Freeze: fridge over the car', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🍄‍🟫☁️', at: 'mushroom', dur: 1.3},
-        {type: 'meme', emoji: '🧊', at: 'appliance', dur: 1.2},
+        {type: 'meme', file: 'ep21/assets/mushroom-cloud.jpg', emoji: '', at: 'mushroom', dur: 1.3},
+        {type: 'meme', file: 'ep21/assets/fridge-1950s.jpg', emoji: '', at: 'appliance', dur: 1.2},
       ],
     },
     {
@@ -41,7 +41,7 @@ export const ep21: Episode = {
       clip: {file: C('02-fridge'), start: 5.3, label: 'Freeze: LEAD LINED', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'UNPADDED METAL BOX', x: 50, y: 24, at: 'unpadded', dur: 2.2, color: '#FFD60A', size: 100},
-        {type: 'meme', emoji: '🥤', at: 'smoothie', dur: 1.3},
+        {type: 'meme', file: 'ep21/assets/smoothie.jpg', emoji: '', at: 'smoothie', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 3.7, clip: {file: C('04-tumble'), start: 0, label: 'Slam, tumble, Indy rolls out'}},
@@ -49,8 +49,8 @@ export const ep21: Episode = {
       kind: 'pause', from: 37.35, to: 46.0,
       clip: {file: C('05-cloud'), start: 3.0, label: 'Freeze: Indy vs the mushroom cloud', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🧱🌀', at: 'dryer', dur: 1.3},
-        {type: 'meme', emoji: '🤠', at: 'fedora', dur: 1.2},
+        {type: 'meme', file: 'ep21/assets/dryer.jpg', emoji: '', at: 'dryer', dur: 1.3},
+        {type: 'meme', file: 'ep21/assets/fedora.jpg', emoji: '', at: 'fedora', dur: 1.2},
         {type: 'stamp', text: 'BUILT DIFFERENT', good: true, at: 'Clearly', dur: 1.6},
         {type: 'sfx', name: 'boom', at: 'used'},
       ],

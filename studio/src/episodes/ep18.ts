@@ -21,7 +21,7 @@ export const ep18: Episode = {
       clip: {file: C('01-hang'), start: 0.1, label: 'Freeze: van over the river', zoom: 0.1},
       overlays: [
         {type: 'stamp', text: 'ZERO-G: CORRECT', good: true, at: 'gravity', dur: 1.4},
-        {type: 'meme', emoji: '😴', at: 'nap', dur: 1.2},
+        {type: 'meme', file: 'ep18/assets/nap.jpg', emoji: '', at: 'feels', dur: 1.2},
       ],
     },
     {
@@ -45,7 +45,7 @@ export const ep18: Episode = {
       kind: 'pause', from: 29.15, to: 35.7,
       clip: {file: C('03-impact'), start: 2.6, label: 'Freeze: the splash', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🤕💦', at: 'belly', dur: 1.4},
+        {type: 'meme', file: 'ep18/assets/belly-flop.jpg', emoji: '', at: 'belly', dur: 1.4},
         {type: 'pop', text: '3-TON METAL BOX · NO AIRBAGS', x: 50, y: 24, at: 'three', dur: 2.6, color: '#FF3B30', size: 85},
       ],
     },
@@ -55,7 +55,7 @@ export const ep18: Episode = {
       clip: {file: C('05-wake'), start: 2.8, label: 'Freeze: Cobb unbuckling underwater', zoom: 0.07},
       overlays: [
         {type: 'pop', text: 'UNCONSCIOUS = ZERO BRACING', x: 50, y: 24, at: 'unconscious', dur: 2.6, color: '#FFD60A', size: 90},
-        {type: 'meme', emoji: '🚑', at: 'ambulance', dur: 1.3},
+        {type: 'meme', file: 'ep18/assets/ambulance.jpg', emoji: '', at: 'squad', dur: 1.3},
         {type: 'sfx', name: 'boom', at: 'ambulance'},
       ],
     },

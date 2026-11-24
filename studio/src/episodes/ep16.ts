@@ -19,7 +19,7 @@ export const ep16: Episode = {
     {
       kind: 'pause', from: 0, to: 5.3,
       clip: {file: C('01-exit'), start: 0.75, label: 'Freeze: mid-air through the glass', zoom: 0.07},
-      overlays: [{type: 'meme', emoji: '🏢📜', at: 'clause', dur: 1.6}],
+      overlays: [{type: 'meme', file: 'ep16/assets/contract.jpg', emoji: '', at: 'clause', dur: 1.6}],
     },
     {
       kind: 'vo', from: 5.3, to: 15.9,
@@ -48,7 +48,7 @@ export const ep16: Episode = {
       clip: {file: C('06-crash'), start: 0.55, label: 'Freeze: smashing into tower 2', zoom: 0.07},
       overlays: [
         {type: 'pop', text: '≈ 1½ FLOORS LOWER', x: 50, y: 24, at: 'half', dur: 2.2, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '🚽', at: 'bathroom', dur: 1.3},
+        {type: 'meme', file: 'ep16/assets/toilet.jpg', emoji: '', at: 'someone', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 2.2, clip: {file: C('06-crash'), start: 0, label: 'Into tower 2, then tower 3'}},
@@ -62,7 +62,7 @@ export const ep16: Episode = {
       clip: {file: C('08-dom'), start: 0.5, label: 'Freeze: Dom on the broken glass', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'NO BRAKES · NO GRAVITY · JUST FAMILY', x: 50, y: 22, at: 'twice', dur: 2.6, color: '#FF3B30', size: 75},
-        {type: 'stamp', text: 'GRAVITY: SCARED', good: false, at: 'scared', dur: 1.4},
+        {type: 'stamp', text: 'GRAVITY: SCARED', good: false, at: 'gravity', dur: 1.4},
         {type: 'sfx', name: 'boom', at: 'scared'},
       ],
     },

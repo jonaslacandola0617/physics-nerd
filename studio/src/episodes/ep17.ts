@@ -21,21 +21,21 @@ export const ep17: Episode = {
       clip: {file: C('05-pepper'), start: 0.3, label: 'Freeze: Pepper with the case', zoom: 0.07},
       overlays: [
         {type: 'pop', text: '~200 LB SUIT', x: 50, y: 24, at: '200', dur: 2.2, color: '#FF3B30', size: 110},
-        {type: 'meme', emoji: '🧳✈️', at: 'carry', dur: 1.3},
+        {type: 'meme', file: 'ep17/assets/carry-on.jpg', emoji: '', at: 'weekend', dur: 1.3},
       ],
     },
     {
       kind: 'vo', from: 6.85, to: 18.75,
       clip: {file: C('02-case'), start: 0, label: 'The case unfolds'},
       overlays: [
-        {type: 'meme', emoji: '🏆', at: 'Oscar', dur: 1.2},
+        {type: 'meme', file: 'ep17/assets/trophy.jpg', emoji: '', at: 'Oscar', dur: 1.2},
         {type: 'pop', text: 'FULL METAL SUIT: ~150–250 LB', x: 50, y: 24, at: 'full', dur: 3.0, color: '#FFD60A', size: 85},
       ],
     },
     {
       kind: 'pause', from: 18.75, to: 24.25,
       clip: {file: C('02-case'), start: 0.4, label: 'Freeze: the thin case on the track', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🦴💥', at: 'dislocating', dur: 1.3}],
+      overlays: [{type: 'meme', file: 'ep17/assets/shoulder-xray.jpg', emoji: '', at: 'dislocating', dur: 1.3}],
     },
     {
       kind: 'vo', from: 24.25, to: 37.1,
@@ -43,7 +43,7 @@ export const ep17: Episode = {
       overlays: [
         {type: 'pop', text: 'PAPER-THIN PLATES', x: 50, y: 24, at: 'paper', dur: 2.2, color: '#FF3B30', size: 100},
         {type: 'pop', text: 'NO ROOM: MOTORS · WIRING · PADDING', x: 50, y: 78, at: 'zero', dur: 2.6, color: '#FFD60A', size: 75},
-        {type: 'meme', emoji: '🥫', at: 'soda', dur: 1.2},
+        {type: 'meme', file: 'ep17/assets/crushed-can.jpg', emoji: '', at: 'folding', dur: 1.2},
       ],
     },
     {kind: 'play', dur: 2.2, clip: {file: C('04-done'), start: 1.9, label: 'Suited up'}},

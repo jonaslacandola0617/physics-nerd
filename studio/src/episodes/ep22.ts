@@ -39,21 +39,21 @@ export const ep22: Episode = {
       clip: {file: C('01-dodge'), start: 6.5, label: 'Freeze: heels vs torso', zoom: 0.03},
       overlays: [
         {type: 'arrow', x1: 30, y1: 34, x2: 30, y2: 86, at: 'center', dur: 4.0, label: 'CENTER OF MASS', color: '#FF3B30'},
-        {type: 'pop', text: 'NOTHING HOLDING YOU UP', x: 50, y: 16, at: 'nothing', dur: 2.0, color: '#FFD60A', size: 90},
+        {type: 'pop', text: 'NOTHING HOLDING YOU UP', x: 50, y: 16, at: 'heels', dur: 2.0, color: '#FFD60A', size: 90},
       ],
     },
     {
       kind: 'vo', from: 33.15, to: 39.35,
       clip: {file: C('05-fall'), start: 0, label: 'Neo drops onto the roof'},
-      overlays: [{type: 'meme', emoji: '🪩🕺', at: 'limbo', dur: 1.2}],
+      overlays: [{type: 'meme', file: 'ep22/assets/limbo.jpg', emoji: '', at: 'failed', dur: 1.2}],
     },
     {kind: 'play', dur: 2.2, clip: {file: C('05-fall'), start: 3.0, label: 'Flat on the roof'}},
     {
       kind: 'pause', from: 39.35, to: 45.6,
       clip: {file: C('06-look'), start: 1.2, label: 'Freeze: Neo, surprised', zoom: 0.05},
       overlays: [
-        {type: 'meme', emoji: '💪', at: 'core', dur: 1.2},
-        {type: 'stamp', text: 'REAL SUPERPOWER: CORE', good: true, at: 'superpower', dur: 1.4},
+        {type: 'meme', file: 'ep22/assets/plank.jpg', emoji: '', at: 'core', dur: 1.2},
+        {type: 'stamp', text: 'REAL SUPERPOWER: CORE', good: true, at: 'floor', dur: 1.4},
         {type: 'sfx', name: 'boom', at: 'superpower'},
       ],
     },
