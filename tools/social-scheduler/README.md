@@ -10,11 +10,12 @@ A free tool that puts the Physics Nerd shorts on your **Facebook Page** and your
 1. **Google Chrome**.
 2. **Node.js**, the free "LTS" version from https://nodejs.org.
 3. **This folder**, extracted somewhere like `Documents\physics-nerd-social`.
-4. **The 15 videos:** copy `ep01.mp4` … `ep15.mp4` (the files from the zips) into the `videos` folder.
+
+You don't need to copy the videos: the tool **downloads them by itself** (about 30–50 MB each) into its `videos` folder, and skips any it already has.
 
 ## First time
 
-1. Double-click **`0-SETUP.bat`**. It installs the tool and checks the schedule. It tells you if any video is missing from the `videos` folder.
+1. Double-click **`0-SETUP.bat`**. It installs the tool, downloads the 15 videos (about 600 MB in total, so give it a few minutes) and checks the schedule. If the download is interrupted, run it again: it carries on where it stopped.
 2. Double-click **`1-LOGIN.bat`**. Chrome opens with two tabs:
    - **Tab 1 (Business Suite):** sign in to Facebook with the account that manages the Physics Nerd Page. If you manage more than one Page, switch to Physics Nerd at the top left.
    - **Tab 2 (Instagram):** sign in to the Physics Nerd Instagram account and tick "Save login info".

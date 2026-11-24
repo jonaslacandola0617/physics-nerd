@@ -8,6 +8,7 @@
   "scripts": {
     "login": "node src/cli.mjs login",
     "plan": "node src/cli.mjs plan",
+    "download": "node src/cli.mjs download",
     "check": "node src/cli.mjs check",
     "facebook": "node src/cli.mjs facebook",
     "instagram": "node src/cli.mjs instagram",

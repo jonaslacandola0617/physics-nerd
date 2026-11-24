@@ -7,8 +7,11 @@
 //                                  schedule the Facebook Reels in Business Suite (they post themselves later)
 //   instagram [--auto] [--ep N] [--all-due]
 //                                  post the Instagram Reel that is due today (Instagram's website can't schedule)
+//   download [--all]               download the videos (the tool also does this by itself when one is missing)
 //   status                         show what is scheduled / posted
 import fs from 'node:fs';
+import { Readable } from 'node:stream';
+import { pipeline } from 'node:stream/promises';
 import {
   VIDEOS_DIR, humanPause, loadSchedule, loadState, localTime, markState, phDate, saveSchedule, videoPath,
 } from './util.mjs';
@@ -41,7 +44,7 @@ function problems(schedule) {
       if (!x.publishAt) warn.push(`${tag}: no ${p} date yet (run plan).`);
       else if (Number.isNaN(Date.parse(x.publishAt))) out.push(`${tag}: ${p} time "${x.publishAt}" is not a valid date/time.`);
     }
-    if (!fs.existsSync(videoPath(e))) warn.push(`${tag}: video missing: put ${e.file} in the videos folder.`);
+    if (!fs.existsSync(videoPath(e))) warn.push(`${tag}: video not downloaded yet (the tool downloads it when needed).`);
   }
   return { out, warn };
 }
@@ -100,8 +103,26 @@ function status() {
   }
 }
 
-function needVideo(e) {
-  if (!fs.existsSync(videoPath(e))) throw new Error(`Video missing for Episode ${e.ep}: put ${e.file} in ${VIDEOS_DIR}`);
+// ---------- download ----------
+/** Download the videos that are missing (or incomplete) into the videos folder. */
+async function download(eps) {
+  const schedule = loadSchedule();
+  fs.mkdirSync(VIDEOS_DIR, { recursive: true });
+  for (const e of eps) {
+    const dest = videoPath(e);
+    const url = schedule.videoSource + encodeURIComponent(e.file);
+    const head = await fetch(url, { method: 'HEAD' });
+    if (!head.ok) throw new Error(`can't reach the video for Episode ${e.ep} (${head.status}): ${url}`);
+    const size = Number(head.headers.get('content-length'));
+    if (fs.existsSync(dest) && (!size || fs.statSync(dest).size === size)) { console.log(`✓ have Episode ${e.ep}`); continue; }
+    process.stdout.write(`↓ Episode ${e.ep} (${(size / 1e6).toFixed(0)} MB)… `);
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`download failed (${r.status}) for ${url}`);
+    await pipeline(Readable.fromWeb(r.body), fs.createWriteStream(dest + '.part'));
+    fs.renameSync(dest + '.part', dest);
+    if (size && fs.statSync(dest).size !== size) throw new Error(`Episode ${e.ep}: download incomplete, run again`);
+    console.log('done');
+  }
 }
 
 // ---------- facebook ----------
@@ -121,6 +142,7 @@ async function facebook() {
   console.log(`To schedule on Facebook (next ${days} days):`);
   for (const e of todo) console.log(`  ${phDate(e.facebook.publishAt)}  Episode ${e.ep}  ${e.film}`);
 
+  await download(todo.filter((e) => Date.parse(e.facebook.publishAt) <= Date.now() + MAX_DAYS * DAY));
   const { openChrome } = await import('./chrome.mjs');
   const { scheduleFacebook } = await import('./facebook.mjs');
   const { context } = await openChrome();
@@ -129,7 +151,6 @@ async function facebook() {
     const at = Date.parse(e.facebook.publishAt);
     if (at > Date.now() + MAX_DAYS * DAY) { console.log(`\nEpisode ${e.ep}: more than ${MAX_DAYS} days ahead; run again closer to the date.`); continue; }
     if (at < Date.now() + 30 * 60e3) { console.log(`\nEpisode ${e.ep}: too close to now, skipped.`); continue; }
-    needVideo(e);
     console.log(`\n▶ Episode ${e.ep} on Facebook: ${localTime(e.facebook.publishAt).label}`);
     try {
       const r = await scheduleFacebook(context, e, videoPath(e), { auto: Boolean(flags.auto) });
@@ -172,8 +193,8 @@ async function instagram() {
       console.log(`Episode ${e.ep} is already recorded as ${state[e.ep].instagram.status}. Not posting it twice.`);
       continue;
     }
-    needVideo(e);
   }
+  await download(todo);
   const { openChrome } = await import('./chrome.mjs');
   const { postInstagram } = await import('./instagram.mjs');
   const { context } = await openChrome();
@@ -202,6 +223,11 @@ try {
     console.log('Tab 2: sign in to the Physics Nerd Instagram account. Tick "Save login info" if asked.');
     console.log('Set both to English (the tool reads the English labels). Then close Chrome. You only need to do this once.');
   } else if (cmd === 'plan') plan();
+  else if (cmd === 'download') {
+    const s = loadSchedule();
+    const st = loadState();
+    await download(flags.all ? s.episodes : s.episodes.filter((e) => !['posted', 'check'].includes(st[e.ep]?.instagram?.status) || st[e.ep]?.facebook?.status !== 'scheduled'));
+  }
   else if (cmd === 'check') {
     const { out, warn } = problems(loadSchedule());
     for (const w of warn) console.log('note: ' + w);
