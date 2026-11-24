@@ -1,0 +1,20 @@
+{
+  "name": "physics-nerd-social-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Schedules Physics Nerd Reels on Facebook (Meta Business Suite) and posts them on Instagram by driving your own Chrome.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "login": "node src/cli.mjs login",
+    "plan": "node src/cli.mjs plan",
+    "check": "node src/cli.mjs check",
+    "facebook": "node src/cli.mjs facebook",
+    "instagram": "node src/cli.mjs instagram",
+    "status": "node src/cli.mjs status",
+    "test": "node src/selftest.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

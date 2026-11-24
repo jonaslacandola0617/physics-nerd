@@ -1,0 +1,30 @@
+<!doctype html><html><body>
+<!-- Fake instagram.com create flow, shaped like the 2025-26 web layout. Test use only. -->
+<div id="notif" style="position:fixed;inset:0;background:rgba(0,0,0,.4)"><div style="background:#fff;padding:10px;width:220px">Turn on notifications<button>Not now</button></div></div>
+<nav><a role="link" href="#" id="create" aria-label="New post"><svg aria-label="New post" width="10" height="10"></svg><span>Create</span></a></nav>
+<div id="menu" hidden><a role="link" href="#" id="post">Post</a><a role="link" href="#">Live video</a></div>
+<div role="dialog" id="dlg" hidden>
+  <div id="hdr"><span id="title">Create new post</span> <div role="button" id="next" hidden>Next</div> <div role="button" id="share" hidden>Share</div></div>
+  <div id="pick"><button>Select from computer</button><input type="file" accept="video/*" style="display:none" id="file"></div>
+  <div id="reelnote" hidden>Video posts are now shared as reels <button id="ok">OK</button></div>
+  <div id="crop" hidden><button aria-label="Select crop"><svg aria-label="Select crop" width="8" height="8"></svg></button><div id="ratios" hidden><span id="orig">Original</span><span>1:1</span></div></div>
+  <div id="edit" hidden>Trim</div>
+  <div id="capstep" hidden><div contenteditable="true" role="textbox" aria-label="Write a caption..." style="min-height:40px;border:1px solid #ccc"></div><div>Advanced settings</div></div>
+  <div id="sharing" hidden>Sharing</div>
+  <div id="done" hidden>Your reel has been shared.<button aria-label="Close">x</button></div>
+</div>
+<script>
+let stage='', ratio='1:1';
+document.querySelector('#notif button').onclick=()=>notif.remove();
+create.onclick=e=>{e.preventDefault();menu.hidden=false};
+post.onclick=e=>{e.preventDefault();menu.hidden=true;dlg.hidden=false};
+document.querySelector('#pick button').onclick=()=>file.click();
+file.onchange=()=>{pick.hidden=true;reelnote.hidden=false};
+ok.onclick=()=>{reelnote.hidden=true;crop.hidden=false;next.hidden=false;stage='crop'};
+document.querySelector('[aria-label="Select crop"]').onclick=()=>ratios.hidden=false;
+orig.onclick=()=>{ratio='original';ratios.hidden=true};
+const cap=document.querySelector('[contenteditable]');
+cap.addEventListener('paste',e=>{e.preventDefault();document.execCommand('insertText',false,e.clipboardData.getData('text/plain'))});
+next.onclick=()=>{ if(stage==='crop'){crop.hidden=true;edit.hidden=false;stage='edit'} else if(stage==='edit'){edit.hidden=true;capstep.hidden=false;next.hidden=true;share.hidden=false;stage='cap'} };
+share.onclick=()=>{capstep.hidden=true;share.hidden=true;sharing.hidden=false;console.log('IG:'+JSON.stringify({cap:cap.innerText,ratio}));setTimeout(()=>{sharing.hidden=true;done.hidden=false},1500)};
+</script></body></html>

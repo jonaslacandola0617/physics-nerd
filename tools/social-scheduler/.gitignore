@@ -1,0 +1,6 @@
+node_modules/
+videos/*.mp4
+state.json
+debug/
+test/fake.mp4
+instagram-log.txt
