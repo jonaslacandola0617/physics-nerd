@@ -13,7 +13,7 @@ export const ep23: Episode = {
   title: ['Physics Nerd reacts to', 'Spider-Man: Homecoming'],
   voiceover: 'ep23/vo.mp3',
   words,
-  captionFixes: {pole: 'pull', ferry: 'Ferry'},
+  captionFixes: {pole: 'pull'},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-hold'), start: 0, label: 'Spidey between the two halves'}},
     {
