@@ -73,7 +73,7 @@ function plan() {
   const state = loadState();
   const byEp = new Map(schedule.episodes.map((e) => [e.ep, e]));
   const done = (e) => state[e.ep]?.facebook?.status === 'scheduled' || ['posted', 'check'].includes(state[e.ep]?.instagram?.status);
-  const order = parseOrder(flags.order, schedule.episodes.map((e) => e.ep)).filter((n) => byEp.has(n));
+  const order = parseOrder(flags.order || schedule.defaults.order, schedule.episodes.map((e) => e.ep)).filter((n) => byEp.has(n));
   let day = new Date(`${start}T00:00:00Z`);
   const nextPostingDay = () => { while (!on.includes(names[day.getUTCDay()])) day = new Date(day.getTime() + DAY); };
   for (const n of order) {
@@ -89,6 +89,7 @@ function plan() {
   }
   schedule.defaults.time = time;
   schedule.defaults.on = on.join(',');
+  if (flags.order) schedule.defaults.order = String(flags.order);
   saveSchedule(schedule);
   console.log(`\nSaved schedule.json (Philippine time). Run "npm run check" to double-check it.`);
   console.log('If the Instagram autopilot is on, run 4-INSTAGRAM-AUTOPILOT-ON.bat again so its daily time matches.');

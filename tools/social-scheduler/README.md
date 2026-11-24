@@ -23,7 +23,7 @@ You don't need to copy the videos: the tool **downloads them by itself** (about 
 
 ## The schedule
 
-One Reel at **6:00 am Philippine time** every **Monday, Wednesday and Friday**, Episodes 1 to 15, from **Wednesday 25 November** to **Monday 28 December 2026**. It's the same day on Facebook and Instagram. The captions are the Facebook posts we wrote. The Instagram ones have extra tags like `#reels`. You can edit any caption in `schedule.json` with Notepad.
+One Reel at **6:00 am Philippine time** every **Monday, Wednesday and Friday**, in the order from the Google Doc (EP01, 06, 02, 03, 11, 10, 07, 04, 09, 13, 08, 12, 14, 05, 15), from **Wednesday 25 November** to **Monday 28 December 2026**. It's the same day on Facebook and Instagram. The captions are the Facebook posts from the Google Doc "Physics Nerd – Posts EP01–EP15". The Instagram ones have extra tags like `#reels`. You can edit any caption in `schedule.json` with Notepad.
 
 To change it, open a Command Prompt in this folder and run, for example:
 
