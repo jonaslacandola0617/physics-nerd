@@ -1,0 +1,59 @@
+# Copies finished renders to the "Final Output" folder in Google Drive.
+#
+# Runs whenever a push to main changes renders/*.mp4, or by hand from the Actions tab.
+# rclone compares MD5 checksums, so only new or re-rendered episodes are uploaded;
+# a re-rendered episode replaces the old copy instead of adding a duplicate.
+#
+# Needs one repository secret: RCLONE_DRIVE_TOKEN (see RENDER.md, "Google Drive upload").
+
+name: Upload renders to Google Drive
+
+on:
+  push:
+    branches: [main]
+    paths: ['renders/**.mp4']
+  workflow_dispatch:
+
+concurrency:
+  group: upload-renders
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  DRIVE_FOLDER_ID: 1VXnVPYebKt1mF4-qK0yPfPBqSK_fEb9p # "Final Output"
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install rclone
+        run: curl -fsSL https://rclone.org/install.sh | sudo bash
+
+      - name: Write rclone config
+        env:
+          RCLONE_DRIVE_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+        run: |
+          if [ -z "$RCLONE_DRIVE_TOKEN" ]; then
+            echo "::error::Repository secret RCLONE_DRIVE_TOKEN is not set. See RENDER.md, 'Google Drive upload'."
+            exit 1
+          fi
+          mkdir -p ~/.config/rclone
+          {
+            echo "[gdrive]"
+            echo "type = drive"
+            echo "scope = drive"
+            echo "root_folder_id = $DRIVE_FOLDER_ID"
+            echo "token = $RCLONE_DRIVE_TOKEN"
+          } > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+
+      - name: Upload new and changed renders
+        run: rclone copy renders/ gdrive: --include "*.mp4" --checksum --verbose --stats-one-line
+
+      - name: List what is in the folder now
+        run: rclone lsl gdrive: --include "*.mp4"

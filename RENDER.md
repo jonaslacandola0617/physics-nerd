@@ -32,6 +32,18 @@ This repo holds everything needed to render an episode except the full movies. T
 7. Commit **only** `renders/epNN.mp4` to `main` with the message `render: epNN`, and push.
 8. Report: the duration, file size, and anything that looked wrong.
 
+## Google Drive upload (automatic)
+`.github/workflows/upload-renders.yml` copies `renders/*.mp4` to the Drive folder "Final Output" every time a push to `main` changes a render. Nothing to do in the render session: pushing the render is enough. Only new or changed files are uploaded, and a re-render replaces the old copy. To re-sync everything by hand: GitHub, Actions tab, "Upload renders to Google Drive", Run workflow.
+
+One-time setup (on the laptop):
+1. Install rclone: https://rclone.org/downloads/ (Windows: `winget install Rclone.Rclone`).
+2. Run `rclone authorize "drive"`. A browser opens: sign in with the Google account that owns "Final Output" and allow access.
+3. The terminal prints a token between `--->` and `<---End paste`. Copy the whole `{...}` line.
+4. On GitHub: repo Settings, Secrets and variables, Actions, New repository secret. Name `RCLONE_DRIVE_TOKEN`, value: that `{...}` line.
+5. Actions tab, "Upload renders to Google Drive", Run workflow, to upload the existing renders.
+
+The token gives full access to that Google Drive, so keep it only in the GitHub secret. To revoke it: https://myaccount.google.com/permissions, remove "rclone".
+
 ## Rules
 - Never commit the full movie files (`videos/` is git-ignored for a reason; the repo must stay private).
 - Keep every file under 90 MB (GitHub's hard limit is 100 MB per file).
