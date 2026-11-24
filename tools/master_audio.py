@@ -30,12 +30,21 @@ def master(path):
     out = subprocess.run([FF, "-hide_banner", "-i", path, "-af", f"loudnorm={TARGET}:print_format=json",
                           "-f", "null", "-"], capture_output=True, text=True).stderr
     m = json.loads(out[out.rfind("{"):out.rfind("}") + 1])
-    af = (f"loudnorm={TARGET}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
-          f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true,"
-          "aresample=48000")
     tmp = path + ".mastering.mp4"
-    subprocess.run([FF, "-hide_banner", "-loglevel", "error", "-y", "-i", path, "-map", "0:v", "-map", "0:a",
-                    "-c:v", "copy", "-af", af, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", tmp], check=True)
+    # loudnorm's linear mode can still push a loud movie clip past full scale, and a clip that was
+    # already clipped at the source overshoots again when AAC rebuilds it. So: limit, encode, measure,
+    # and lower the limiter ceiling until the encoded true peak is under -1 dBTP.
+    ceiling = 0.84
+    for _ in range(6):
+        af = (f"loudnorm={TARGET}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
+              f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true,"
+              f"aresample=48000,alimiter=limit={ceiling:.3f}:level=false")
+        subprocess.run([FF, "-hide_banner", "-loglevel", "error", "-y", "-i", path, "-map", "0:v", "-map", "0:a",
+                        "-c:v", "copy", "-af", af, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", tmp], check=True)
+        tp = loudness(tmp)[1]
+        if tp <= -1.0:
+            break
+        ceiling = max(0.3, ceiling * 10 ** ((-1.2 - tp) / 20))
     os.replace(tmp, path)
     after = loudness(path)
     print(f"{path}: {before[0]:.1f} LUFS -> {after[0]:.1f} LUFS (true peak {after[1]:.1f} dBTP)")

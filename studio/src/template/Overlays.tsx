@@ -228,10 +228,13 @@ const Versus: React.FC<Extract<Overlay, {type: 'versus'}>> = ({left, leftSub, ri
         style={{width: 220, height: 220, objectFit: 'cover', borderRadius: 20, border: '5px solid #fff', boxShadow: '0 10px 30px rgba(0,0,0,0.6)', marginBottom: 16}}
       />
     ) : null;
+  // each side gets half of what's left after padding and the VS; shrink the number to stay on one line inside it
+  const column = (BOX_W - 2 * 40 - titleWidth('VS', 90)) / 2;
+  const bigSize = (big: string, scale: number) => Math.floor(Math.min(190, (190 * column * 0.92) / (scale * titleWidth(big, 190))));
   const side = (big: string, sub: string, color: string, s: number, scale: number, img?: string): React.ReactNode => (
-    <div style={{flex: 1, textAlign: 'center', transform: `scale(${s * scale})`, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    <div style={{flex: '1 1 0', minWidth: 0, textAlign: 'center', transform: `scale(${s * scale})`, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       {thumb(img)}
-      <div style={{fontFamily: TITLE_FONT, fontSize: 190, color, lineHeight: 1, ...outlined}}>{big}</div>
+      <div style={{fontFamily: TITLE_FONT, fontSize: bigSize(big, scale), color, lineHeight: 1, whiteSpace: 'nowrap', ...outlined}}>{big}</div>
       <div style={{fontFamily: BODY_FONT, fontWeight: 800, fontSize: 40, color: COLORS.white, marginTop: 12, ...outlined, WebkitTextStroke: '6px #000'}}>
         {sub}
       </div>
