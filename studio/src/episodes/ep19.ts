@@ -18,13 +18,13 @@ export const ep19: Episode = {
     {
       kind: 'pause', from: 0, to: 6.6,
       clip: {file: C('02-held'), start: 0.7, label: 'Freeze: Gipsy holding the ship like a bat', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '⚾', at: 'baseball', dur: 1.3}],
+      overlays: [{type: 'meme', file: 'ep19/assets/baseball-bat.jpg', emoji: '', at: 'baseball', dur: 1.3}],
     },
     {
       kind: 'vo', from: 6.6, to: 19.8,
       clip: {file: C('03-ship'), start: 0, label: 'The swing'},
       overlays: [
-        {type: 'meme', emoji: '🎬', at: 'coolest', dur: 1.2},
+        {type: 'meme', file: 'ep19/assets/clapperboard.jpg', emoji: '', at: 'coolest', dur: 1.2},
         {type: 'pop', text: 'HOLLOW STEEL SHELL · THOUSANDS OF TONS', x: 50, y: 22, at: 'hollow', dur: 3.0, color: '#FFD60A', size: 75},
       ],
     },
@@ -41,7 +41,7 @@ export const ep19: Episode = {
       clip: {file: C('04-hull'), start: 0.6, label: 'Freeze: the hull overhead', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'BENDING FORCE → SNAP', x: 50, y: 24, at: 'bending', dur: 2.4, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '🐻🥖', at: 'breadstick', dur: 1.4},
+        {type: 'meme', file: 'ep19/assets/breadstick.jpg', emoji: '', at: 'bear', dur: 1.4},
       ],
     },
     {kind: 'play', dur: 2.0, clip: {file: C('01-swing'), start: 0.3, label: 'Clean across the jaw'}},

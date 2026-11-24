@@ -19,6 +19,8 @@ This repo holds everything needed to render an episode except the full movies. T
    python3 -I tools/check_vo_cuts.py epNN
    ```
    It measures the real voiceover audio at every pause/play cut. If it reports a cut into the voice, run it again with `--fix` (moves the cut into the nearest silence between the same two words), check the diff of `studio/src/episodes/epNN.ts`, and commit that fix with the render. Never render with this check failing: Whisper's word end times are early, so a `to:` copied from them clips the end of the word.
+   **The video must show the moment it reacts to.** Before rendering, look at the opening `play` beat's clip (a frame every 0.5 s) and confirm it plays the actual event the episode is about (the shot being fired, the car flying, the wave), with its own movie audio, not setup or a reaction shot. If it doesn't, open on the clip that shows the event. If no clip in `studio/public/epNN/clips/` shows it, **stop and report** which shot is missing (it has to be cut from the movie on the laptop); don't render around it.
+   **No emoji cards.** Every `meme` overlay uses a photo (`file: 'epNN/assets/…'`). If an episode still has emoji, list the photos needed and wait for them.
 4. Typecheck: `npx tsc --noEmit`
 5. Render:
    ```bash

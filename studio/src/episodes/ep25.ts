@@ -19,7 +19,7 @@ export const ep25: Episode = {
     {
       kind: 'pause', from: 0, to: 6.0,
       clip: {file: C('01-runway'), start: 3.0, label: 'Freeze: cars under the plane', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🏆🧱', at: 'Nobel', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep25/assets/wet-concrete.jpg', emoji: '', at: 'Nobel', dur: 1.4}],
     },
     {
       kind: 'vo', from: 6.0, to: 19.05,
@@ -34,7 +34,7 @@ export const ep25: Episode = {
       clip: {file: C('04-lights'), start: 0.6, label: 'Freeze: runway lights to the horizon', zoom: 0.05},
       overlays: [
         {type: 'versus', left: '3.4 MI', leftSub: 'longest real runway', right: '~26 MI', rightSub: 'Fast 6 runway', at: 'longest', dur: 4.0},
-        {type: 'meme', emoji: '🏃‍♂️🏅', at: 'marathon', dur: 1.3},
+        {type: 'meme', file: 'ep25/assets/marathon.jpg', emoji: '', at: 'length', dur: 1.3},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep25: Episode = {
       clip: {file: C('05-harpoon'), start: 0, label: 'Harpoon guns fired into the plane'},
       overlays: [
         {type: 'pop', text: '~400-TON CARGO PLANE', x: 50, y: 24, at: '400', dur: 2.4, color: '#FF3B30', size: 95},
-        {type: 'meme', emoji: '🐕🐕✈️', at: 'golden', dur: 1.5},
+        {type: 'meme', file: 'ep25/assets/golden-retrievers.jpg', emoji: '', at: 'golden', dur: 1.5},
       ],
     },
     {kind: 'play', dur: 4.2, clip: {file: C('06-boom'), start: 0, label: 'The plane goes up'}},
@@ -50,7 +50,7 @@ export const ep25: Episode = {
       kind: 'pause', from: 39.76, to: 48.63,
       clip: {file: C('07-out'), start: 5.0, label: 'Freeze: driving out of the fire', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🥫💒', at: 'wedding', dur: 1.3},
+        {type: 'meme', file: 'ep25/assets/wedding-cans.jpg', emoji: '', at: 'wedding', dur: 1.3},
         {type: 'stamp', text: 'AERODYNAMICS: OPTIONAL', good: false, at: 'aerodynamics', dur: 1.5},
         {type: 'sfx', name: 'boom', at: 'asphalt'},
       ],

@@ -28,8 +28,8 @@ export const ep24: Episode = {
       kind: 'vo', from: 9.0, to: 22.45,
       clip: {file: C('03-ties'), start: 0, label: 'TIE fighters vs asteroids'},
       overlays: [
-        {type: 'meme', emoji: '🚗💥🚙', at: 'bumper', dur: 1.3},
-        {type: 'pop', text: 'REAL SPACING: ~600,000 MILES', x: 50, y: 24, at: '600', dur: 3.0, color: '#34C759', size: 90},
+        {type: 'meme', file: 'ep24/assets/bumper-cars.jpg', emoji: '', at: 'bumper', dur: 1.3},
+        {type: 'pop', text: 'REAL SPACING: ~600,000 MILES', x: 50, y: 24, at: 'major', dur: 3.0, color: '#34C759', size: 90},
       ],
     },
     {
@@ -37,7 +37,7 @@ export const ep24: Episode = {
       clip: {file: C('03-ties'), start: 2.0, label: 'Freeze: the "crowded" field', zoom: 0.05},
       overlays: [
         {type: 'versus', left: '239,000 MI', leftSub: 'Earth → Moon', right: '~600,000 MI', rightSub: 'between asteroids', at: 'twice', dur: 3.6},
-        {type: 'meme', emoji: '🔭', at: 'telescope', dur: 1.2},
+        {type: 'meme', file: 'ep24/assets/telescope.jpg', emoji: '', at: 'without', dur: 1.2},
       ],
     },
     {
@@ -45,7 +45,7 @@ export const ep24: Episode = {
       clip: {file: C('04-surface'), start: 0, label: 'Skimming the asteroid surface'},
       overlays: [
         {type: 'pop', text: '12+ PROBES · 0 DODGES NEEDED', x: 50, y: 24, at: 'NASA', dur: 2.8, color: '#34C759', size: 85},
-        {type: 'meme', emoji: '😴🙈', at: 'blindfolded', dur: 1.4},
+        {type: 'meme', file: 'ep24/assets/blindfold.jpg', emoji: '', at: 'blindfolded', dur: 1.4},
       ],
     },
     {kind: 'play', dur: 4.4, clip: {file: C('05-odds'), start: 0, label: '"Never tell me the odds."'}},
@@ -54,7 +54,7 @@ export const ep24: Episode = {
       clip: {file: C('05-odds'), start: 1.5, label: 'Freeze: C-3PO', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'PACKED THAT TIGHT → SPACE DUST', x: 50, y: 24, at: 'smash', dur: 2.6, color: '#FFD60A', size: 80},
-        {type: 'stamp', text: "DROID'S MATH: TERRIBLE", good: false, at: 'terrible', dur: 1.4},
+        {type: 'stamp', text: "DROID'S MATH: TERRIBLE", good: false, at: 'droid', dur: 1.4},
         {type: 'sfx', name: 'boom', at: 'terrible'},
       ],
     },

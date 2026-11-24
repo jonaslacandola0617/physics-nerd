@@ -1,9 +1,27 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {measureText} from '@remotion/layout-utils';
 import {BODY_FONT, COLORS, TITLE_FONT} from './fonts';
 import {At, Overlay} from './types';
 
 const DEFAULT_DUR = 2.5;
+
+/** Width of the clip box the overlays are drawn in. */
+const BOX_W = 1080;
+
+/** Width of `text` set in the title font at `fontSize`, in px (letterSpacing in px). */
+const titleWidth = (text: string, fontSize: number, letterSpacing = 0) =>
+  measureText({text, fontFamily: TITLE_FONT, fontSize, letterSpacing: `${letterSpacing}px`, validateFontIsLoaded: true}).width;
+
+/**
+ * Largest font size (up to `max`) at which a one-line pop at horizontal position x% stays inside the box,
+ * with room for the 10px outline and the spring overshoot of the pop-in.
+ */
+const fitPopSize = (text: string, x: number, max: number) => {
+  const avail = (BOX_W * 2 * Math.min(x, 100 - x)) / 100 - 2 * 10;
+  const width = titleWidth(text, max);
+  return Math.floor(Math.min(max, (max * avail * 0.86) / width));
+};
 
 /** Shared in/out animation: spring in, fade out over the last 0.25s. */
 const useEnvelope = (atIn: At, dur: number) => {
@@ -36,7 +54,7 @@ const Pop: React.FC<Extract<Overlay, {type: 'pop'}>> = ({text, x, y, at, dur = D
         transform: `translate(-50%,-50%) scale(${inn}) rotate(${(1 - inn) * -8}deg)`,
         opacity: out,
         fontFamily: TITLE_FONT,
-        fontSize: size ?? 120,
+        fontSize: fitPopSize(text, x, size ?? 120),
         color: color ?? COLORS.white,
         whiteSpace: 'nowrap',
         ...outlined,
@@ -171,6 +189,10 @@ const Stamp: React.FC<Extract<Overlay, {type: 'stamp'}>> = ({text, good, at, dur
   const {visible, inn, out} = useEnvelope(at, dur);
   if (!visible) return null;
   const c = good ? COLORS.good : COLORS.danger;
+  // One line, sized so the settled, 10-degree-rotated stamp (border + padding included) fits the box width.
+  const label = `${good ? '✓ ' : '✗ '}${text}`;
+  const perPx = titleWidth(label, 120, 4) / 120;
+  const fontSize = Math.floor(Math.min(120, (BOX_W * 0.9 - 0.985 * 116 - 0.174 * 60) / (0.985 * perPx + 0.174 * 1.25)));
   return (
     <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', opacity: out}}>
       <div
@@ -181,14 +203,14 @@ const Stamp: React.FC<Extract<Overlay, {type: 'stamp'}>> = ({text, good, at, dur
           borderRadius: 24,
           padding: '16px 44px',
           fontFamily: TITLE_FONT,
-          fontSize: 120,
+          fontSize,
           color: c,
           background: 'rgba(0,0,0,0.45)',
           letterSpacing: 4,
+          whiteSpace: 'nowrap',
         }}
       >
-        {good ? '✓ ' : '✗ '}
-        {text}
+        {label}
       </div>
     </AbsoluteFill>
   );

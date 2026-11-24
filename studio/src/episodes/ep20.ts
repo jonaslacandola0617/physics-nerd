@@ -15,13 +15,13 @@ export const ep20: Episode = {
   words,
   captionFixes: {ranger: 'Ranger'},
   beats: [
-    {kind: 'play', dur: 5.3, clip: {file: C('01-waves'), start: 0, label: '"Those aren\'t mountains, they\'re waves."'}},
+    {kind: 'play', dur: 3.5, clip: {file: C('02-wall'), start: 7.5, label: 'The Ranger tipped up the face of the giant wave'}},
     {
       kind: 'pause', from: 0, to: 7.75,
       clip: {file: C('02-wall'), start: 1.0, label: 'Freeze: the Ranger on the wall of water', zoom: 0.06},
       overlays: [
         {type: 'pop', text: '1 HOUR = 7 YEARS', x: 50, y: 24, at: 'hour', dur: 2.2, color: '#FFD60A', size: 100},
-        {type: 'meme', emoji: '🏔️🌊', at: 'Everest', dur: 1.3},
+        {type: 'meme', file: 'ep20/assets/everest.jpg', emoji: '', at: 'suddenly', dur: 1.3},
       ],
     },
     {
@@ -45,7 +45,7 @@ export const ep20: Episode = {
     {
       kind: 'pause', from: 40.7, to: 46.85,
       clip: {file: C('03-rolling'), start: 14.0, label: 'Freeze: the crest', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🥫', at: 'soda', dur: 1.3}],
+      overlays: [{type: 'meme', file: 'ep20/assets/crushed-can.jpg', emoji: '', at: 'stepping', dur: 1.3}],
     },
     {kind: 'play', dur: 3.6, clip: {file: C('05-over'), start: 0, label: 'Off the back of the wave, upright'}},
     {
@@ -53,7 +53,7 @@ export const ep20: Episode = {
       clip: {file: C('06-drain'), start: 0.8, label: 'Freeze: draining the flooded engines', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'ONE BAD WAVE AWAY', x: 50, y: 24, at: 'one', dur: 2.2, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '🥞', at: 'pancake', dur: 1.3},
+        {type: 'meme', file: 'ep20/assets/pancakes.jpg', emoji: '', at: 'pancake', dur: 1.3},
         {type: 'sfx', name: 'boom', at: 'pancake'},
       ],
     },

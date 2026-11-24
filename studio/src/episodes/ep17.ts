@@ -15,7 +15,7 @@ export const ep17: Episode = {
   words,
   captionFixes: {"Soldier's": 'Soldier', V: 'Five'},
   beats: [
-    {kind: 'play', dur: 2.75, clip: {file: C('01-toss'), start: 0, label: '"In the case, please!" Pepper throws it'}},
+    {kind: 'play', dur: 2.8, clip: {file: C('03-plates'), start: 0.5, label: 'The case wraps around Tony: plates snap on'}},
     {
       kind: 'pause', from: 0, to: 6.85,
       clip: {file: C('05-pepper'), start: 0.3, label: 'Freeze: Pepper with the case', zoom: 0.07},
