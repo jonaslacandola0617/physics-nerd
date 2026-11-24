@@ -1,6 +1,6 @@
 {
   "about": "Physics Nerd Facebook + Instagram Reels schedule. Times are Philippine time (+08:00). Edit captions freely; run `npm run check` after editing.",
-  "videoSource": "https://raw.githubusercontent.com/jonaslacandola0617/physics-nerd/2f85c97e7968d7fd8ae07af6bcfd61e8ff6d195c/renders/",
+  "videoSource": "https://raw.githubusercontent.com/jonaslacandola0617/physics-nerd/1cd66de3f44994ecc6ba4aa40cd84b1807eb57d8/renders/",
   "defaults": {
     "time": "19:00",
     "utcOffset": "+08:00"
