@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Physics Nerd Facebook + Instagram Reels tool. Commands:
 //   login                          open Chrome so you can sign in to Facebook (Business Suite) and Instagram (once)
-//   plan --start YYYY-MM-DD [--time 19:00] [--every 1] [--order 1-15]
+//   plan --start YYYY-MM-DD [--time 06:00] [--on mon,wed,fri] [--order 1-15]
 //   check                          check the schedule and the videos folder
 //   facebook [--days 60] [--max-days 28] [--ep N] [--auto]
 //                                  schedule the Facebook Reels in Business Suite (they post themselves later)
@@ -60,33 +60,37 @@ function parseOrder(spec, all) {
   });
 }
 
-/** One Reel every --every days from --start, same day and time on Facebook and Instagram. Finished ones keep their dates. */
+/** One Reel per posting weekday (--on, Philippine dates) from --start, same day and time on Facebook and Instagram. Finished ones keep their dates. */
 function plan() {
   const schedule = loadSchedule();
   const start = flags.start;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(start || '')) throw new Error('Give a start date: --start 2026-11-25');
   const time = flags.time || schedule.defaults.time;
-  if (!/^\d{2}:\d{2}$/.test(time)) throw new Error('Give the time as HH:MM (24-hour), e.g. --time 19:00');
-  const every = Number(flags.every || 1);
+  if (!/^\d{2}:\d{2}$/.test(time)) throw new Error('Give the time as HH:MM (24-hour), e.g. --time 06:00');
+  const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+  const on = String(flags.on || schedule.defaults.on || 'mon,tue,wed,thu,fri,sat,sun').toLowerCase().split(',').map((d) => d.trim().slice(0, 3));
+  if (!on.length || on.some((d) => !names.includes(d))) throw new Error('Give the posting days like --on mon,wed,fri');
   const state = loadState();
   const byEp = new Map(schedule.episodes.map((e) => [e.ep, e]));
   const done = (e) => state[e.ep]?.facebook?.status === 'scheduled' || ['posted', 'check'].includes(state[e.ep]?.instagram?.status);
   const order = parseOrder(flags.order, schedule.episodes.map((e) => e.ep)).filter((n) => byEp.has(n));
   let day = new Date(`${start}T00:00:00Z`);
-  const names = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const nextPostingDay = () => { while (!on.includes(names[day.getUTCDay()])) day = new Date(day.getTime() + DAY); };
   for (const n of order) {
     const e = byEp.get(n);
-    if (done(e)) { console.log(`           Episode ${String(n).padStart(2)}  ${e.film}   (already done, kept)`); continue; }
+    if (done(e)) { console.log(`               Episode ${String(n).padStart(2)}  ${e.film}   (already done, kept)`); continue; }
+    nextPostingDay();
     const ymd = day.toISOString().slice(0, 10);
     const at = `${ymd}T${time}:00${schedule.defaults.utcOffset}`;
     e.facebook.publishAt = at;
     e.instagram.publishAt = at;
-    console.log(`${ymd} ${names[day.getUTCDay()]}  Episode ${String(n).padStart(2)}  ${e.film}`);
-    day = new Date(day.getTime() + every * DAY);
+    console.log(`${ymd} ${names[day.getUTCDay()]}  ${time}  Episode ${String(n).padStart(2)}  ${e.film}`);
+    day = new Date(day.getTime() + DAY);
   }
   schedule.defaults.time = time;
+  schedule.defaults.on = on.join(',');
   saveSchedule(schedule);
-  console.log(`\nSaved schedule.json (Philippine time, ${time}). Run "npm run check" to double-check it.`);
+  console.log(`\nSaved schedule.json (Philippine time). Run "npm run check" to double-check it.`);
   console.log('If the Instagram autopilot is on, run 4-INSTAGRAM-AUTOPILOT-ON.bat again so its daily time matches.');
 }
 

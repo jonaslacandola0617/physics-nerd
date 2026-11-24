@@ -2,8 +2,9 @@
   "about": "Physics Nerd Facebook + Instagram Reels schedule. Times are Philippine time (+08:00). Edit captions freely; run `npm run check` after editing.",
   "videoSource": "https://raw.githubusercontent.com/jonaslacandola0617/physics-nerd/1cd66de3f44994ecc6ba4aa40cd84b1807eb57d8/renders/",
   "defaults": {
-    "time": "19:00",
-    "utcOffset": "+08:00"
+    "time": "06:00",
+    "utcOffset": "+08:00",
+    "on": "mon,wed,fri"
   },
   "episodes": [
     {
@@ -11,11 +12,11 @@
       "film": "Interstellar",
       "file": "ep01.mp4",
       "facebook": {
-        "publishAt": "2026-11-25T19:00:00+08:00",
+        "publishAt": "2026-11-25T06:00:00+08:00",
         "caption": "That station is spinning at 68 RPM. The outer ring is pulling 150+ G's.\n\n68 RPM sounds harmless until you do the math on a ring that wide: over 150 G's at the edge. Cooper and Brand at the hub? Fine. The ship itself? Held together by Hans Zimmer's organ.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #interstellar #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-25T19:00:00+08:00",
+        "publishAt": "2026-11-25T06:00:00+08:00",
         "caption": "That station is spinning at 68 RPM. The outer ring is pulling 150+ G's.\n\n68 RPM sounds harmless until you do the math on a ring that wide: over 150 G's at the edge. Cooper and Brand at the hub? Fine. The ship itself? Held together by Hans Zimmer's organ.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #interstellar #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -24,11 +25,11 @@
       "film": "Spider-Man 2",
       "file": "ep02.mp4",
       "facebook": {
-        "publishAt": "2026-11-26T19:00:00+08:00",
+        "publishAt": "2026-11-27T06:00:00+08:00",
         "caption": "20 world-record deadlifts. Per shoulder. At the same time.\n\nA packed subway train at 70 mph needs ~20 tons of braking force. That's 10 tons on each arm. The webs could actually handle it. Peter's shoulders could not.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #spiderman #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-26T19:00:00+08:00",
+        "publishAt": "2026-11-27T06:00:00+08:00",
         "caption": "20 world-record deadlifts. Per shoulder. At the same time.\n\nA packed subway train at 70 mph needs ~20 tons of braking force. That's 10 tons on each arm. The webs could actually handle it. Peter's shoulders could not.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #spiderman #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -37,11 +38,11 @@
       "film": "Captain America: Civil War",
       "file": "ep03.mp4",
       "facebook": {
-        "publishAt": "2026-11-27T19:00:00+08:00",
+        "publishAt": "2026-11-30T06:00:00+08:00",
         "caption": "Forget Cap's biceps. Look at what he's holding on to.\n\nEveryone argues about Cap's strength. The real problem: he's anchored to a railing that building code only requires to hold 200 lb. Over 1,000 lb of helicopter pull goes straight through it.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #captainamerica #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-27T19:00:00+08:00",
+        "publishAt": "2026-11-30T06:00:00+08:00",
         "caption": "Forget Cap's biceps. Look at what he's holding on to.\n\nEveryone argues about Cap's strength. The real problem: he's anchored to a railing that building code only requires to hold 200 lb. Over 1,000 lb of helicopter pull goes straight through it.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #captainamerica #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -50,11 +51,11 @@
       "film": "Fast Five",
       "file": "ep04.mp4",
       "facebook": {
-        "publishAt": "2026-11-28T19:00:00+08:00",
+        "publishAt": "2026-12-02T06:00:00+08:00",
         "caption": "Two Chargers vs. a 10-ton vault with no wheels.\n\nDragging a 10-ton steel vault flat on asphalt takes ~5 tons of pull. A Charger's tires give up under one ton. Real life: a massive burnout and the cops walking up. Movie: Friction: zero. Family: undefeated.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #fastfive #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-28T19:00:00+08:00",
+        "publishAt": "2026-12-02T06:00:00+08:00",
         "caption": "Two Chargers vs. a 10-ton vault with no wheels.\n\nDragging a 10-ton steel vault flat on asphalt takes ~5 tons of pull. A Charger's tires give up under one ton. Real life: a massive burnout and the cops walking up. Movie: Friction: zero. Family: undefeated.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #fastfive #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -63,11 +64,11 @@
       "film": "Jurassic Park",
       "file": "ep05.mp4",
       "facebook": {
-        "publishAt": "2026-11-29T19:00:00+08:00",
+        "publishAt": "2026-12-04T06:00:00+08:00",
         "caption": "Scientists ran the numbers on this chase. The Jeep wins easily.\n\nTo run as fast as a car, a 6-ton T. rex would need ~86% of its body to be leg muscle. Newer studies put its top speed around 28 km/h. That Jeep is being chased by a guy on a bicycle.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #jurassicpark #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-29T19:00:00+08:00",
+        "publishAt": "2026-12-04T06:00:00+08:00",
         "caption": "Scientists ran the numbers on this chase. The Jeep wins easily.\n\nTo run as fast as a car, a 6-ton T. rex would need ~86% of its body to be leg muscle. Newer studies put its top speed around 28 km/h. That Jeep is being chased by a guy on a bicycle.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #jurassicpark #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -76,11 +77,11 @@
       "film": "Iron Man",
       "file": "ep06.mp4",
       "facebook": {
-        "publishAt": "2026-11-30T19:00:00+08:00",
+        "publishAt": "2026-12-07T06:00:00+08:00",
         "caption": "The tank shell isn't what kills him. The landing is.\n\n100 mph to zero in three feet of dirt is 100+ G's. Race cars survive that because they crumple. A rigid metal suit doesn't. The armor looks spotless. Tony doesn't.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #ironman #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-11-30T19:00:00+08:00",
+        "publishAt": "2026-12-07T06:00:00+08:00",
         "caption": "The tank shell isn't what kills him. The landing is.\n\n100 mph to zero in three feet of dirt is 100+ G's. Race cars survive that because they crumple. A rigid metal suit doesn't. The armor looks spotless. Tony doesn't.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #ironman #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -89,11 +90,11 @@
       "film": "Top Gun: Maverick",
       "file": "ep07.mp4",
       "facebook": {
-        "publishAt": "2026-12-01T19:00:00+08:00",
+        "publishAt": "2026-12-09T06:00:00+08:00",
         "caption": "The fastest breakup anyone has ever survived was Mach 3.\n\nMach 10 is ~3x faster than a rifle bullet, and wind blast scales with speed squared. The SR-71 pilot who survived Mach 3 in 1966 lost his crewmate. Maverick walks into a diner for water.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #topgun #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-01T19:00:00+08:00",
+        "publishAt": "2026-12-09T06:00:00+08:00",
         "caption": "The fastest breakup anyone has ever survived was Mach 3.\n\nMach 10 is ~3x faster than a rifle bullet, and wind blast scales with speed squared. The SR-71 pilot who survived Mach 3 in 1966 lost his crewmate. Maverick walks into a diner for water.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #topgun #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -102,11 +103,11 @@
       "film": "The Dark Knight",
       "file": "ep08.mp4",
       "facebook": {
-        "publishAt": "2026-12-02T19:00:00+08:00",
+        "publishAt": "2026-12-11T06:00:00+08:00",
         "caption": "The flip was real. The cables were not.\n\nNolan flipped a real semi on a real Chicago street with a nitrogen piston, zero CGI. But streetlight bolts are rated for wind, not 15 tons of truck. Gotham apparently bolts its streetlights down tighter than its banks.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #thedarkknight #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-02T19:00:00+08:00",
+        "publishAt": "2026-12-11T06:00:00+08:00",
         "caption": "The flip was real. The cables were not.\n\nNolan flipped a real semi on a real Chicago street with a nitrogen piston, zero CGI. But streetlight bolts are rated for wind, not 15 tons of truck. Gotham apparently bolts its streetlights down tighter than its banks.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #thedarkknight #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -115,11 +116,11 @@
       "film": "John Wick: Chapter 4",
       "file": "ep09.mp4",
       "facebook": {
-        "publishAt": "2026-12-03T19:00:00+08:00",
+        "publishAt": "2026-12-14T06:00:00+08:00",
         "caption": "Bulletproof suits are real. The physics problem isn't the bullet.\n\nKevlar-lined suits genuinely exist. But stopping a bullet doesn't make it disappear: every hit dents inward like a baseball bat. Fifteen of those and you're not doing judo.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #johnwick #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-03T19:00:00+08:00",
+        "publishAt": "2026-12-14T06:00:00+08:00",
         "caption": "Bulletproof suits are real. The physics problem isn't the bullet.\n\nKevlar-lined suits genuinely exist. But stopping a bullet doesn't make it disappear: every hit dents inward like a baseball bat. Fifteen of those and you're not doing judo.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #johnwick #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -128,11 +129,11 @@
       "film": "Ant-Man",
       "file": "ep10.mp4",
       "facebook": {
-        "publishAt": "2026-12-04T19:00:00+08:00",
+        "publishAt": "2026-12-16T06:00:00+08:00",
         "caption": "Hank's own rule: same atoms, same mass.\n\nTiny Scott still weighs ~200 lb. A flying ant weighs about as much as a grain of rice. That ant isn't lifting 50x its weight. It's lifting about 3 million times its weight.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #antman #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-04T19:00:00+08:00",
+        "publishAt": "2026-12-16T06:00:00+08:00",
         "caption": "Hank's own rule: same atoms, same mass.\n\nTiny Scott still weighs ~200 lb. A flying ant weighs about as much as a grain of rice. That ant isn't lifting 50x its weight. It's lifting about 3 million times its weight.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #antman #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -141,11 +142,11 @@
       "film": "The Avengers",
       "file": "ep11.mp4",
       "facebook": {
-        "publishAt": "2026-12-05T19:00:00+08:00",
+        "publishAt": "2026-12-18T06:00:00+08:00",
         "caption": "He grabbed a live nuke like a runaway shopping cart.\n\nA cruise missile is ~3,000 lb at 500+ mph. He steers it straight up with the fins not moving, hands inches from the exhaust. Then Hulk catches a 100 mph fall, and Tony wakes up because Hulk yelled at him.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #avengers #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-05T19:00:00+08:00",
+        "publishAt": "2026-12-18T06:00:00+08:00",
         "caption": "He grabbed a live nuke like a runaway shopping cart.\n\nA cruise missile is ~3,000 lb at 500+ mph. He steers it straight up with the fins not moving, hands inches from the exhaust. Then Hulk catches a 100 mph fall, and Tony wakes up because Hulk yelled at him.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #avengers #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -154,11 +155,11 @@
       "film": "The Martian",
       "file": "ep12.mp4",
       "facebook": {
-        "publishAt": "2026-12-06T19:00:00+08:00",
+        "publishAt": "2026-12-21T06:00:00+08:00",
         "caption": "Surprisingly, the thrust part is real.\n\nA spacesuit holds ~4.3 psi, and in a vacuum a leak really does work as a thruster. The problem is steering: thrust from your hand, not your center of mass, means torque. You spin like a deflating balloon.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #themartian #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-06T19:00:00+08:00",
+        "publishAt": "2026-12-21T06:00:00+08:00",
         "caption": "Surprisingly, the thrust part is real.\n\nA spacesuit holds ~4.3 psi, and in a vacuum a leak really does work as a thruster. The problem is steering: thrust from your hand, not your center of mass, means torque. You spin like a deflating balloon.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #themartian #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -167,11 +168,11 @@
       "film": "Mission: Impossible – Rogue Nation",
       "file": "ep13.mp4",
       "facebook": {
-        "publishAt": "2026-12-07T19:00:00+08:00",
+        "publishAt": "2026-12-23T06:00:00+08:00",
         "caption": "Tom Cruise really did this. Ethan Hunt really shouldn't have.\n\nIn real life: a hidden harness and special contact lenses. In the movie: a suit and bare fingertips at ~150 mph, which is Category 4 hurricane wind. And his hair barely moves.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #missionimpossible #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-07T19:00:00+08:00",
+        "publishAt": "2026-12-23T06:00:00+08:00",
         "caption": "Tom Cruise really did this. Ethan Hunt really shouldn't have.\n\nIn real life: a hidden harness and special contact lenses. In the movie: a suit and bare fingertips at ~150 mph, which is Category 4 hurricane wind. And his hair barely moves.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #missionimpossible #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -180,11 +181,11 @@
       "film": "Avengers: Infinity War",
       "file": "ep14.mp4",
       "facebook": {
-        "publishAt": "2026-12-08T19:00:00+08:00",
+        "publishAt": "2026-12-25T06:00:00+08:00",
         "caption": "Forget the heat. That's a neutron star.\n\nA neutron star packs more mass than the Sun into a ball the size of a city. That close, gravity doesn't just crush you, it stretches you. Thor, the dwarf and the whole forge: cosmic spaghetti.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #infinitywar #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-08T19:00:00+08:00",
+        "publishAt": "2026-12-25T06:00:00+08:00",
         "caption": "Forget the heat. That's a neutron star.\n\nA neutron star packs more mass than the Sun into a ball the size of a city. That close, gravity doesn't just crush you, it stretches you. Thor, the dwarf and the whole forge: cosmic spaghetti.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #infinitywar #movies #physics #reels #moviescenes #science #fyp"
       }
     },
@@ -193,11 +194,11 @@
       "film": "Godzilla (2014)",
       "file": "ep15.mp4",
       "facebook": {
-        "publishAt": "2026-12-09T19:00:00+08:00",
+        "publishAt": "2026-12-28T06:00:00+08:00",
         "caption": "355 feet tall, 90,000 tons. An aircraft carrier on two legs.\n\nScale an animal up and its weight grows faster than its bones (square-cube law). City streets are thin asphalt over tunnels. And his heart has to push blood 15 stories up, over 10x a giraffe's blood pressure.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#PhysicsNerd #godzilla #movies #physics"
       },
       "instagram": {
-        "publishAt": "2026-12-09T19:00:00+08:00",
+        "publishAt": "2026-12-28T06:00:00+08:00",
         "caption": "355 feet tall, 90,000 tons. An aircraft carrier on two legs.\n\nScale an animal up and its weight grows faster than its bones (square-cube law). City streets are thin asphalt over tunnels. And his heart has to push blood 15 stories up, over 10x a giraffe's blood pressure.\n\nDid the movie get away with it? Tell me which scene to check next 👇\n\n#physicsnerd #godzilla #movies #physics #reels #moviescenes #science #fyp"
       }
     }
