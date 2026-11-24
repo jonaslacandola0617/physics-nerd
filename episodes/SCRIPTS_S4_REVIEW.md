@@ -104,3 +104,8 @@ Small leftovers. Optional, but worth a 10-second edit before recording:
 Doc problems:
 - **EP25 is missing** from the updated doc; only its row in the lineup table is left. Paste it back in. The original passed review.
 - The beat-sheet tables under EP19–EP23 belong to other episodes (e.g. EP20's section holds the Matrix table). The clean VO blocks are right, and those are what get recorded.
+
+---
+
+# Final review (2026-11-24): ✅ PASS
+EP25 restored, all four tweaks applied (EP18 car crash, EP20 one bad wave, EP23 nothing but webs, EP24 single rock). Ready to record. Footage checks per episode still apply.
