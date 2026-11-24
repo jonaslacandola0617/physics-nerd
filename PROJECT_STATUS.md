@@ -43,12 +43,13 @@ Physics Nerd is the user's YouTube Shorts channel. Each episode is a short (≈5
 | Ep | Film | Status |
 |---|---|---|
 | 01–15 | Interstellar, Spider-Man 2, Civil War, Fast Five, Jurassic Park, Iron Man, Top Gun: Maverick, The Dark Knight, John Wick 4, Ant-Man, The Avengers, The Martian, MI: Rogue Nation, Infinity War, Godzilla (2014) | ✅ rendered + mastered + posts written |
-| 16–25 | Furious 7, Iron Man 2, Inception, Pacific Rim, Interstellar (wave), Indiana Jones 4, The Matrix, Homecoming, Empire Strikes Back, Fast & Furious 6 | ✅ scripts approved · ✅ voices recorded (Google Vids) · ✅ footage trimmed + checked |
+| 16–25 | Furious 7, Iron Man 2, Inception, Pacific Rim, Interstellar (wave), Indiana Jones 4, The Matrix, Homecoming, Empire Strikes Back, Fast & Furious 6 | ✅ scripts · ✅ voices · ✅ footage · ✅ VO/clips/timelines on main (`studio/src/episodes/ep16–25.ts`) · ❌ render |
 
 ## EP16–25 footage (Drive folder "S3": https://drive.google.com/drive/folders/1Ae1ab7ZSr6QSUCSQKZHxyOfWKkW4_1dW)
 All 11 clips checked on contact sheets; all have English audio, no burned-in subs. Scene positions (clip time):
 ep16 tower jump ~3:00–3:50 · ep17 case throw/suit-up ~11:00–12:00 · ep18a van chase + zero-g hotel, van leaves bridge near end · ep18b van hits water ~10:50 · ep19 ship-as-club ~11:00–11:50 · ep20 wave ~6:10–7:00 · ep21 fridge/nuke ~6:20–7:50 (audio track 1 is Hindi: use 0:a:1 English) · ep22 bullet dodge ~8:15–8:45 · ep23 ferry split ~7:00–9:30 · ep24 asteroid field ~0:00–2:30 · ep25 runway ~0:00–9:40 (720p; occasional burned-in caption on radio lines, e.g. "Pull up, pull up!!" ~4:57).
-Next: download VO takes and run the episode pipeline per episode.
+EP16–25 prep done (2026-11-24): VO takes in `episodes/_vids_takes/`, clips cut, timelines registered, 0 VO cuts, tsc clean. **Next: renderer session renders ep16–ep25 from main + masters to −14 LUFS.** Optional cutaway photos named in the script (e.g. shattered-glass.jpg) were replaced by emoji memes; the renderer can add real ones.
+Take/footage mismatches noted, not fixed (already recorded): EP17 Pepper throws the case out of the Rolls onto the track (VO says "over a racetrack barrier"); EP21 the fridge tumbles across flat desert (VO says "down a rocky hill"); EP25 VO says "two regular cars".
 
 ## Open items
 - EP16–25: footage checks listed in `SCRIPTS_S4_REVIEW.md` (e.g. EP16 gap/room size/"no brakes", EP17 does Pepper kiss the case, EP25 number of cars).
