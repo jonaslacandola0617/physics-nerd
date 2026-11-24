@@ -8,22 +8,13 @@ set MISSING=0
 
 call :cut "032.Interstellar.2014.BluRay.1080p.x265.10bit.2Audio.MNHD-FRDS.mkv" "ep20-interstellar.mkv" 1:06:00 1:20:00
 call :cut "Star.Wars.Episode.V.The.Empire.Strikes.Back.1980.REPACK.1080p.BluRay.AV1.DDP.5.1-dAV1nci.mkv" "ep24-empire.mkv" 0:38:00 0:52:00
-REM These two find the movie by name, so the exact file name does not matter:
-call :find "Homecoming" "ep23-homecoming.mkv" 1:10:00 1:24:00
-call :find "Furious?6" "ep25-fast6.mkv" 1:48:00 2:07:00
+call :cut "Spider.Man.Homecoming.2017.1080p.BluRay.x264.mp4" "ep23-homecoming.mkv" 1:10:00 1:24:00
+call :cut "Fast.And.Furious.6.The.Game.2013.720p.BluRay.x264.AAC-[YTS.MX].mp4" "ep25-fast6.mkv" 1:48:00 2:07:00
 
 echo.
 echo Done: %OK% clips made, %MISSING% movies not found.
 echo Upload everything in 'clips_s3' to the Videos folder on Drive.
 pause
-goto :eof
-
-:find
-set "F="
-for %%f in ("*%~1*.mkv" "*%~1*.mp4") do if not defined F set "F=%%f"
-if not defined F echo MISSING: no .mkv/.mp4 with "%~1" in the name& set /a MISSING+=1& goto :eof
-echo Found: "%F%"
-call :cut "%F%" "%~2" %3 %4
 goto :eof
 
 :cut
