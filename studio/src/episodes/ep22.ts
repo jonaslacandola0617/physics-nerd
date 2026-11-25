@@ -11,18 +11,18 @@ const C = (name: string) => `ep22/clips/${name}.mp4`;
 export const ep22: Episode = {
   id: 'ep22',
   title: ['Physics Nerd reacts to', 'The Matrix'],
-  voiceover: 'ep22/vo.mp3',
+  voiceover: 'ep22/vo.wav',
   words,
   captionFixes: {},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-dodge'), start: 3.0, label: 'Bullet time'}},
     {
-      kind: 'pause', from: 0, to: 5.4,
+      kind: 'pause', from: 0.0, to: 6.12,
       clip: {file: C('01-dodge'), start: 6.5, label: 'Freeze: Neo nearly horizontal', zoom: 0.05},
       overlays: [{type: 'stamp', text: 'CENTER OF GRAVITY: DELETED', good: false, at: 'deleting', dur: 1.8}],
     },
     {
-      kind: 'vo', from: 5.4, to: 17.8,
+      kind: 'vo', from: 6.12, to: 20.6,
       clip: {file: C('03-shot'), start: 0, label: 'The agent fires'},
       overlays: [
         {type: 'pop', text: '.50 AE: ~1,400 FT/S', x: 50, y: 24, at: 'Desert', dur: 2.6, color: '#FFD60A', size: 100},
@@ -30,12 +30,12 @@ export const ep22: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 17.8, to: 25.4,
+      kind: 'vo', from: 20.6, to: 29.83,
       clip: {file: C('04-bullets'), start: 0, label: 'Bullets ripple past'},
       overlays: [{type: 'versus', left: '~200 MS', leftSub: 'normal reaction time', right: '~18 MS', rightSub: 'bullet flight', at: 'normal', dur: 4.5}],
     },
     {
-      kind: 'pause', from: 25.4, to: 33.15,
+      kind: 'pause', from: 29.83, to: 38.67,
       clip: {file: C('01-dodge'), start: 6.5, label: 'Freeze: heels vs torso', zoom: 0.03},
       overlays: [
         {type: 'arrow', x1: 30, y1: 34, x2: 30, y2: 86, at: 'center', dur: 4.0, label: 'CENTER OF MASS', color: '#FF3B30'},
@@ -43,13 +43,13 @@ export const ep22: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 33.15, to: 39.35,
+      kind: 'vo', from: 38.67, to: 45.03,
       clip: {file: C('05-fall'), start: 0, label: 'Neo drops onto the roof'},
       overlays: [{type: 'meme', file: 'ep22/assets/limbo.jpg', emoji: '', at: 'failed', dur: 1.2}],
     },
     {kind: 'play', dur: 2.2, clip: {file: C('05-fall'), start: 3.0, label: 'Flat on the roof'}},
     {
-      kind: 'pause', from: 39.35, to: 45.6,
+      kind: 'pause', from: 45.03, to: 52.84,
       clip: {file: C('06-look'), start: 1.2, label: 'Freeze: Neo, surprised', zoom: 0.05},
       overlays: [
         {type: 'meme', file: 'ep22/assets/plank.jpg', emoji: '', at: 'core', dur: 1.2},

@@ -29,7 +29,7 @@ CLIPS = {
     "03-webs": [
         ('a', 457.5, 459.6, 0.5),  # web lines stuck across the deck,
         ('a', 496.5, 498.6, 0.5),  # webs on the railings,
-        ('a', 512.6, 516.6, 0.5),  # webs straining
+        ('a', 512.6, 517.6, 0.5),  # webs straining
     ],
     "04-ironman": [
         ('a', 519.6, 521.6, 0.5),  # webs snapping,

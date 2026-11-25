@@ -11,18 +11,18 @@ const C = (name: string) => `ep25/clips/${name}.mp4`;
 export const ep25: Episode = {
   id: 'ep25',
   title: ['Physics Nerd reacts to', 'Fast & Furious 6'],
-  voiceover: 'ep25/vo.mp3',
+  voiceover: 'ep25/vo.wav',
   words,
   captionFixes: {'screentime,': 'screen time,', '6': 'Six'},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-runway'), start: 1.5, label: 'Cars racing under the plane'}},
     {
-      kind: 'pause', from: 0, to: 6.0,
+      kind: 'pause', from: 0.0, to: 6.08,
       clip: {file: C('01-runway'), start: 3.0, label: 'Freeze: cars under the plane', zoom: 0.06},
       overlays: [{type: 'meme', file: 'ep25/assets/wet-concrete.jpg', emoji: '', at: 'Nobel', dur: 1.4}],
     },
     {
-      kind: 'vo', from: 6.0, to: 19.05,
+      kind: 'vo', from: 6.08, to: 18.93,
       clip: {file: C('03-endless'), start: 0, label: 'Still on the runway'},
       overlays: [
         {type: 'pop', text: '~13 MIN OF SCREEN TIME', x: 50, y: 24, at: '13', dur: 2.4, color: '#FFD60A', size: 95},
@@ -30,7 +30,7 @@ export const ep25: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 19.05, to: 28.01,
+      kind: 'pause', from: 18.93, to: 28.0,
       clip: {file: C('04-lights'), start: 0.6, label: 'Freeze: runway lights to the horizon', zoom: 0.05},
       overlays: [
         {type: 'versus', left: '3.4 MI', leftSub: 'longest real runway', right: '~26 MI', rightSub: 'Fast 6 runway', at: 'longest', dur: 4.0},
@@ -38,7 +38,7 @@ export const ep25: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 28.01, to: 39.76,
+      kind: 'vo', from: 28.0, to: 40.61,
       clip: {file: C('05-harpoon'), start: 0, label: 'Harpoon guns fired into the plane'},
       overlays: [
         {type: 'pop', text: '~400-TON CARGO PLANE', x: 50, y: 24, at: '400', dur: 2.4, color: '#FF3B30', size: 95},
@@ -47,7 +47,7 @@ export const ep25: Episode = {
     },
     {kind: 'play', dur: 4.2, clip: {file: C('06-boom'), start: 0, label: 'The plane goes up'}},
     {
-      kind: 'pause', from: 39.76, to: 48.63,
+      kind: 'pause', from: 40.61, to: 49.56,
       clip: {file: C('07-out'), start: 5.0, label: 'Freeze: driving out of the fire', zoom: 0.06},
       overlays: [
         {type: 'meme', file: 'ep25/assets/wedding-cans.jpg', emoji: '', at: 'wedding', dur: 1.3},

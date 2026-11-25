@@ -23,11 +23,13 @@ CLIPS = {
         ('a', 694.0, 696.75, 0.45),  # "In the case, please!" Pepper throws it
     ],
     "02-case": [
+        ('a', 683.0, 694.0, 0.45),  # Whiplash wrecks the Rolls, "In the case, please!",
         ('a', 696.2, 699.6, 0.45),  # case lands, Tony steps on it, it unfolds
     ],
     "03-plates": [
         ('a', 699.5, 709.0, 0.5),  # plates wrap arms and chest, reactor,
-        ('a', 712.2, 716.4, 0.5),  # helmet closes
+        ('a', 712.2, 717.9, 0.5),  # helmet closes,
+        ('a', 719.2, 720.2, 0.5),  # walks out
     ],
     "04-done": [
         ('a', 714.7, 716.4, 0.5),  # faceplate,

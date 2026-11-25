@@ -25,12 +25,12 @@ CLIPS = {
     ],
     "03-ties": [
         ('a', 62.0, 66.5, 0.5),  # tumbling asteroids,
-        ('a', 70.5, 72.6, 0.5),  # TIE fighter explodes,
+        ('a', 70.0, 73.0, 0.5),  # TIE fighter explodes,
         ('a', 76.0, 79.6, 0.5),  # another TIE hits a rock,
-        ('a', 105.0, 108.0, 0.5),  # skimming the big asteroid
+        ('a', 105.0, 108.9, 0.5),  # skimming the big asteroid
     ],
     "04-surface": [
-        ('a', 109.0, 119.0, 0.5),  # Falcon over the asteroid surface, TIEs chasing
+        ('a', 109.0, 120.6, 0.5),  # Falcon over the asteroid surface, TIEs chasing
     ],
     "05-odds": [
         ('a', 57.4, 61.8, 0.5),  # "approximately 3,720 to 1" "Never tell me the odds."

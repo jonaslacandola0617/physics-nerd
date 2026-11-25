@@ -23,14 +23,14 @@ CLIPS = {
         ('a', 395.7, 405.7, 0.47),  # wide: Neo leans back in bullet time
     ],
     "03-shot": [
-        ('a', 392.4, 405.7, 0.47),  # agent aims and fires, Neo leans back
+        ('a', 390.7, 405.7, 0.47),  # agent aims and fires, Neo leans back
     ],
     "04-bullets": [
         ('a', 400.0, 405.4, 0.47),  # bullets rippling past,
-        ('a', 416.4, 419.8, 0.5),  # agent, gun
+        ('a', 416.4, 420.4, 0.5),  # agent, gun
     ],
     "05-fall": [
-        ('a', 404.4, 410.7, 0.45),  # Neo drops onto the roof
+        ('a', 404.4, 411.0, 0.45),  # Neo drops onto the roof
     ],
     "06-look": [
         ('a', 411.0, 414.4, 0.5),  # Neo on the ground

@@ -10,18 +10,18 @@ const C = (name: string) => `ep19/clips/${name}.mp4`;
 export const ep19: Episode = {
   id: 'ep19',
   title: ['Physics Nerd reacts to', 'Pacific Rim'],
-  voiceover: 'ep19/vo.mp3',
+  voiceover: 'ep19/vo.wav',
   words,
   captionFixes: {holes: 'hulls', hole: 'hull', vibranium: 'Vibranium', 'vibranium,': 'Vibranium,'},
   beats: [
     {kind: 'play', dur: 2.4, clip: {file: C('01-swing'), start: 0, label: 'Ship meets Kaiju'}},
     {
-      kind: 'pause', from: 0, to: 6.6,
+      kind: 'pause', from: 0.0, to: 7.51,
       clip: {file: C('02-held'), start: 0.7, label: 'Freeze: Gipsy holding the ship like a bat', zoom: 0.06},
       overlays: [{type: 'meme', file: 'ep19/assets/baseball-bat.jpg', emoji: '', at: 'baseball', dur: 1.3}],
     },
     {
-      kind: 'vo', from: 6.6, to: 19.8,
+      kind: 'vo', from: 7.51, to: 21.86,
       clip: {file: C('03-ship'), start: 0, label: 'The swing'},
       overlays: [
         {type: 'meme', file: 'ep19/assets/clapperboard.jpg', emoji: '', at: 'coolest', dur: 1.2},
@@ -29,7 +29,7 @@ export const ep19: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 19.8, to: 26.85,
+      kind: 'pause', from: 21.86, to: 29.57,
       clip: {file: C('02-held'), start: 0.7, label: 'Freeze: held by one end', zoom: 0.04},
       overlays: [
         {type: 'radius', cx: 26, cy: 50, r: 9, at: 'end', dur: 4.0, label: 'SNAP POINT'},
@@ -37,7 +37,7 @@ export const ep19: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 26.85, to: 34.9,
+      kind: 'pause', from: 29.57, to: 38.56,
       clip: {file: C('04-hull'), start: 0.6, label: 'Freeze: the hull overhead', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'BENDING FORCE → SNAP', x: 50, y: 24, at: 'bending', dur: 2.4, color: '#FF3B30', size: 100},
@@ -46,7 +46,7 @@ export const ep19: Episode = {
     },
     {kind: 'play', dur: 2.0, clip: {file: C('01-swing'), start: 0.3, label: 'Clean across the jaw'}},
     {
-      kind: 'pause', from: 34.9, to: 43.8,
+      kind: 'pause', from: 38.56, to: 47.91,
       clip: {file: C('01-swing'), start: 1.6, label: 'Freeze: the ship, somehow in one piece', zoom: 0.06},
       overlays: [
         {type: 'stamp', text: 'SHIPYARD WARRANTY: VOID', good: false, at: 'Vibranium', dur: 1.8},

@@ -27,7 +27,7 @@ CLIPS = {
     ],
     "03-ship": [
         ('a', 680.68, 691.9, 0.5),  # the ship swings over the street into the Kaiju,
-        ('a', 696.2, 697.0, 0.5),  # impact
+        ('a', 696.2, 699.5, 0.5),  # impact
     ],
     "04-hull": [
         ('a', 683.4, 684.5, 0.5),  # hull overhead

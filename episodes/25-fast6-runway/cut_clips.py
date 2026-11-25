@@ -32,7 +32,7 @@ CLIPS = {
     ],
     "05-harpoon": [
         ('a', 205.3, 216.3, 0.45),  # harpoon guns fired into the plane,
-        ('a', 228.3, 229.3, 0.5),  # car on the line
+        ('a', 228.3, 230.6, 0.5),  # car on the line
     ],
     "06-boom": [
         ('a', 393.4, 397.6, 0.5),  # the plane explodes

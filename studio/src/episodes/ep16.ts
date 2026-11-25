@@ -11,18 +11,18 @@ const C = (name: string) => `ep16/clips/${name}.mp4`;
 export const ep16: Episode = {
   id: 'ep16',
   title: ['Physics Nerd reacts to', 'Furious 7'],
-  voiceover: 'ep16/vo.mp3',
+  voiceover: 'ep16/vo.wav',
   words,
   captionFixes: {},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-exit'), start: 0, label: 'Out the window of tower 1'}},
     {
-      kind: 'pause', from: 0, to: 5.3,
+      kind: 'pause', from: 0.0, to: 5.52,
       clip: {file: C('01-exit'), start: 0.75, label: 'Freeze: mid-air through the glass', zoom: 0.07},
       overlays: [{type: 'meme', file: 'ep16/assets/contract.jpg', emoji: '', at: 'clause', dur: 1.6}],
     },
     {
-      kind: 'vo', from: 5.3, to: 15.9,
+      kind: 'vo', from: 5.52, to: 16.19,
       clip: {file: C('02-rev'), start: 0, label: 'Dom revs inside the room'},
       overlays: [
         {type: 'pop', text: 'INDOOR RUNWAY: ~60 FT', x: 50, y: 24, at: '60', dur: 2.4, color: '#FFD60A', size: 100},
@@ -30,12 +30,12 @@ export const ep16: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 15.9, to: 20.15,
+      kind: 'vo', from: 16.19, to: 20.65,
       clip: {file: C('03-slowmo'), start: 0, label: 'Slow-mo between the towers'},
       overlays: [{type: 'sfx', name: 'whoosh', at: 'slow'}],
     },
     {
-      kind: 'pause', from: 20.15, to: 30.0,
+      kind: 'pause', from: 20.65, to: 29.84,
       clip: {file: C('04-towers'), start: 0.5, label: 'Freeze: the gap between towers', zoom: 0.05},
       overlays: [
         {type: 'arrow', x1: 52, y1: 30, x2: 80, y2: 44, at: 'crossing', dur: 4.5, label: '150 FT', color: '#FF3B30'},
@@ -44,7 +44,7 @@ export const ep16: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 30.0, to: 36.2,
+      kind: 'pause', from: 29.84, to: 36.91,
       clip: {file: C('06-crash'), start: 0.55, label: 'Freeze: smashing into tower 2', zoom: 0.07},
       overlays: [
         {type: 'pop', text: '≈ 1½ FLOORS LOWER', x: 50, y: 24, at: 'half', dur: 2.2, color: '#FF3B30', size: 100},
@@ -53,12 +53,12 @@ export const ep16: Episode = {
     },
     {kind: 'play', dur: 2.2, clip: {file: C('06-crash'), start: 0, label: 'Into tower 2, then tower 3'}},
     {
-      kind: 'vo', from: 36.2, to: 43.05,
+      kind: 'vo', from: 36.91, to: 44.47,
       clip: {file: C('07-gallery'), start: 0, label: 'Plowing through the tower 3 gallery'},
       overlays: [{type: 'pop', text: 'LAMINATED SAFETY GLASS', x: 50, y: 24, at: 'laminated', dur: 2.4, color: '#FFD60A', size: 90}],
     },
     {
-      kind: 'pause', from: 43.05, to: 47.9,
+      kind: 'pause', from: 44.47, to: 49.79,
       clip: {file: C('08-dom'), start: 0.5, label: 'Freeze: Dom on the broken glass', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'NO BRAKES · NO GRAVITY · JUST FAMILY', x: 50, y: 22, at: 'twice', dur: 2.6, color: '#FF3B30', size: 75},

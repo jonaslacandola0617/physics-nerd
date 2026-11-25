@@ -11,13 +11,13 @@ const C = (name: string) => `ep23/clips/${name}.mp4`;
 export const ep23: Episode = {
   id: 'ep23',
   title: ['Physics Nerd reacts to', 'Spider-Man: Homecoming'],
-  voiceover: 'ep23/vo.mp3',
+  voiceover: 'ep23/vo.wav',
   words,
-  captionFixes: {pole: 'pull'},
+  captionFixes: {pole: 'pull', Toby: 'Tobey', railing: 'railings'},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-hold'), start: 0, label: 'Spidey between the two halves'}},
     {
-      kind: 'pause', from: 0, to: 7.2,
+      kind: 'pause', from: 0.0, to: 7.45,
       clip: {file: C('01-hold'), start: 3.0, label: 'Freeze: Peter straining', zoom: 0.05},
       overlays: [
         {type: 'meme', file: 'ep23/assets/subway.jpg', emoji: '', at: 'subway', dur: 1.2},
@@ -25,7 +25,7 @@ export const ep23: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 7.2, to: 19.5,
+      kind: 'vo', from: 7.45, to: 19.56,
       clip: {file: C('02-wide'), start: 0, label: 'The ferry splits open'},
       overlays: [
         {type: 'pop', text: 'STATEN ISLAND FERRY: THOUSANDS OF TONS', x: 50, y: 22, at: 'thousands', dur: 2.8, color: '#FFD60A', size: 75},
@@ -33,12 +33,12 @@ export const ep23: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 19.5, to: 27.68,
+      kind: 'vo', from: 19.56, to: 28.21,
       clip: {file: C('03-webs'), start: 0, label: 'What the webs are stuck to'},
       overlays: [{type: 'pop', text: 'PAINTED SHEET METAL · BENCHES · RAILINGS', x: 50, y: 22, at: 'Thin', dur: 3.0, color: '#FFD60A', size: 70}],
     },
     {
-      kind: 'pause', from: 27.68, to: 35.95,
+      kind: 'pause', from: 28.21, to: 36.31,
       clip: {file: C('03-webs'), start: 2.6, label: 'Freeze: webs on the deck', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'HUNDREDS OF TONS OF PULL', x: 50, y: 24, at: 'hundreds', dur: 2.4, color: '#FF3B30', size: 95},
@@ -47,7 +47,7 @@ export const ep23: Episode = {
     },
     {kind: 'play', dur: 4.0, clip: {file: C('04-ironman'), start: 0, label: 'Webs snap, Iron Man flies in'}},
     {
-      kind: 'pause', from: 35.95, to: 47.4,
+      kind: 'pause', from: 36.31, to: 48.19,
       clip: {file: C('05-tony'), start: 1.2, label: 'Freeze: Tony scolds Peter', zoom: 0.05},
       overlays: [
         {type: 'stamp', text: 'PARTIAL CREDIT', good: true, at: 'partial', dur: 1.5},

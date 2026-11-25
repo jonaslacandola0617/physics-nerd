@@ -11,13 +11,13 @@ const C = (name: string) => `ep21/clips/${name}.mp4`;
 export const ep21: Episode = {
   id: 'ep21',
   title: ['Physics Nerd reacts to', 'Indiana Jones'],
-  voiceover: 'ep21/vo.mp3',
+  voiceover: 'ep21/vo.wav',
   words,
-  captionFixes: {"archaeologist's": 'archaeologist', g: 'G'},
+  captionFixes: {"archaeologist's": 'archaeologist', "archeologist's": 'archaeologist', g: 'G'},
   beats: [
     {kind: 'play', dur: 2.5, clip: {file: C('01-launch'), start: 1.5, label: 'The fridge flies past the car'}},
     {
-      kind: 'pause', from: 0, to: 7.2,
+      kind: 'pause', from: 0.0, to: 8.11,
       clip: {file: C('01-launch'), start: 3.5, label: 'Freeze: fridge over the car', zoom: 0.06},
       overlays: [
         {type: 'meme', file: 'ep21/assets/mushroom-cloud.jpg', emoji: '', at: 'mushroom', dur: 1.3},
@@ -25,20 +25,20 @@ export const ep21: Episode = {
       ],
     },
     {
-      kind: 'vo', from: 7.2, to: 15.75,
+      kind: 'vo', from: 8.11, to: 16.4,
       clip: {file: C('02-fridge'), start: 0, label: 'Indy shuts himself in the lead-lined fridge'},
       overlays: [{type: 'stamp', text: 'RADIATION: PARTLY BLOCKED', good: true, at: 'block', dur: 1.6}],
     },
     {
-      kind: 'vo', from: 15.75, to: 29.25,
+      kind: 'vo', from: 16.4, to: 30.67,
       clip: {file: C('03-blast'), start: 0, label: 'The blast throws the fridge past the car'},
       overlays: [
         {type: 'pop', text: 'INSTANT LAUNCH: 100+ G', x: 50, y: 24, at: 'zero', dur: 2.8, color: '#FF3B30', size: 100},
       ],
     },
     {
-      kind: 'pause', from: 29.25, to: 37.35,
-      clip: {file: C('02-fridge'), start: 5.3, label: 'Freeze: LEAD LINED', zoom: 0.05},
+      kind: 'pause', from: 30.67, to: 39.14,
+      clip: {file: C('02-fridge'), start: 6.0, label: 'Freeze: LEAD LINED', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'UNPADDED METAL BOX', x: 50, y: 24, at: 'unpadded', dur: 2.2, color: '#FFD60A', size: 100},
         {type: 'meme', file: 'ep21/assets/smoothie.jpg', emoji: '', at: 'smoothie', dur: 1.3},
@@ -46,7 +46,7 @@ export const ep21: Episode = {
     },
     {kind: 'play', dur: 3.7, clip: {file: C('04-tumble'), start: 0, label: 'Slam, tumble, Indy rolls out'}},
     {
-      kind: 'pause', from: 37.35, to: 46.0,
+      kind: 'pause', from: 39.14, to: 48.71,
       clip: {file: C('05-cloud'), start: 3.0, label: 'Freeze: Indy vs the mushroom cloud', zoom: 0.06},
       overlays: [
         {type: 'meme', file: 'ep21/assets/dryer.jpg', emoji: '', at: 'dryer', dur: 1.3},

@@ -23,8 +23,8 @@ CLIPS = {
         ('b', 519.27, 521.8, 0.55),  # van falls past the bridge in slow motion
     ],
     "02-zerog": [
-        ('b', 512.5, 517.0, 0.5),  # sleeping crew floating weightless,
-        ('b', 549.5, 550.8, 0.5),  # floating,
+        ('b', 512.5, 519.0, 0.5),  # sleeping crew floating weightless,
+        ('b', 549.5, 550.9, 0.5),  # floating,
         ('b', 559.9, 563.5, 0.5),  # Ariadne floats
     ],
     "03-impact": [

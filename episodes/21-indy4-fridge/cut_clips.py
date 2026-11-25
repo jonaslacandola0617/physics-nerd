@@ -23,13 +23,13 @@ CLIPS = {
         ('a', 413.6, 422.6, 0.5),  # road, car speeding, the fridge flies past
     ],
     "02-fridge": [
-        ('a', 386.6, 392.6, 0.5),  # Indy climbs into the fridge, LEAD LINED label,
-        ('a', 395.6, 397.2, 0.5),  # the fridge in the kitchen
+        ('a', 385.9, 392.6, 0.5),  # Indy climbs into the fridge, LEAD LINED label,
+        ('a', 395.6, 397.8, 0.5),  # the fridge in the kitchen
     ],
     "03-blast": [
         ('a', 397.9, 399.5, 0.5),  # the flash,
-        ('a', 404.6, 406.9, 0.5),  # shockwave through the town,
-        ('a', 413.6, 422.6, 0.5),  # fridge launched past the car
+        ('a', 403.9, 407.6, 0.5),  # shockwave through the town,
+        ('a', 413.6, 423.4, 0.5),  # fridge launched past the car
     ],
     "04-tumble": [
         ('a', 424.2, 426.4, 0.5),  # fridge slams and tumbles,

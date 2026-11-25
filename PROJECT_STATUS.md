@@ -11,7 +11,7 @@ Physics Nerd is the user's YouTube Shorts channel. Each episode is a short (≈5
 
 ## Rules the user set
 - Gemini writes scripts; **Claude fact-checks every number and checks every line against the footage** (contact sheets). Nothing is recorded until the user approves the text.
-- **Voice = Google Vids** (user records and exports into the voiceover Drive folder). ElevenLabs is no longer used (no credits; old takes kept in `episodes/*/elevenlabs/` or `old*/`).
+- **Voice = Google AI Studio** from EP16 on (more expressive; WAV exports in Drive folder https://drive.google.com/drive/folders/1plOnUZT0X-GAhUfU4a841oAWycllP8v3). **Use the takes unedited**: no roomify (the user dislikes it), no breath-trimming; the studio plays `studio/public/epNN/vo.wav` directly. EP01–15 used Google Vids + roomify. ElevenLabs is no longer used (no credits; old takes kept in `episodes/*/elevenlabs/` or `old*/`).
 - **Never download from pirate streaming sites** (the user once asked to record from zxcstream.com: declined, stays declined). The user downloads movies themselves, trims them with ffmpeg (`-c copy`) using the .bat files in `tools/windows/`, and uploads only the trimmed scene files.
 - Avoid movie copies with **burned-in subtitles or ad watermarks** ("Hollymoviehd", "ESub" releases had both). YTS / Pahe releases were clean. Check new files for this and for the audio language (one Dark Knight copy was a Telugu dub).
 - Commit clips, timelines and renders; push to `main` (and the session branch). Never commit full movies (`videos/` is git-ignored; so is `package/`).
@@ -32,7 +32,7 @@ Physics Nerd is the user's YouTube Shorts channel. Each episode is a short (≈5
 ## Episode pipeline (per episode)
 1. Download the VO take → `episodes/_vids_takes/epNN.mp4`; transcribe and diff against the script word for word (Whisper misreads: check low-confidence words before flagging).
 2. `HF_HUB_DISABLE_XET=1 python3 -I tools/fetch_vo.py episodes/NN-name epNN episodes/_vids_takes/epNN.mp4`
-   → `python3 -I tools/tighten_vo.py NN-name epNN --keep 0.32` → `python3 -I tools/roomify.py NN-name epNN`
+   (makes the words JSON), then copy the original WAV to `studio/public/epNN/vo.wav` and set `voiceover: 'epNN/vo.wav'`. **No tighten_vo / roomify** (see Rules). To move an existing timeline onto a new take: `python3 -I tools/retime_vo.py epNN old_words.json`, then make sure no VO beat runs longer than its clip.
 3. Find the shots: **full-decode contact sheets** (`select='between(t,a,b)*not(mod(n,12))'` + `drawtext %{pts\:flt}` + `tile`, `-fps_mode vfr`). Fast seeking (`-ss` before `-i`) is unreliable on these trims. HDR sources (Ant-Man, the first Dark Knight file) need tone-mapping (zscale+tonemap=hable). `cropdetect` for letterbox.
 4. Write `episodes/NN-name/cut_clips.py` with `tools/make_cutter.py` (`write(path, doc, 'epNN', {src: 'dir/file'}, {src: (w, h, yoff)}, clips, pre='', aud={src: '""'} for stereo)`); run it, then check freeze frames on a contact sheet.
 5. Timeline `studio/src/episodes/epNN.ts` (beats: `play` / `vo` / `pause`; overlays `pop`, `stamp`, `meme`, `arrow`, `spin`, `versus`, `sfx`; `at:` a spoken word). Register it in `studio/src/Root.tsx`. Fix Whisper words in `epNN.words.json` (it drives captions) or via `captionFixes`.
@@ -55,3 +55,6 @@ Take/footage mismatches noted, not fixed (already recorded): EP17 Pepper throws 
 - EP16–25: footage checks listed in `SCRIPTS_S4_REVIEW.md` (e.g. EP16 gap/room size/"no brakes", EP17 does Pepper kiss the case, EP25 number of cars).
 - Optional cutaway photos (the renderer has been adding them, e.g. `studio/public/ep15/assets/road-repair.jpg`).
 - Channel art is done (`brand/`).
+
+## 2026-11-25: EP16–25 re-voiced
+AI Studio takes in `episodes/_studio_takes/`, timelines retimed (`tools/retime_vo.py`), short clips extended, 0 VO cuts, tsc clean. **The ep16–ep25 renders on main are from the old Google Vids voices: re-render ep16–ep25 and re-master.**
