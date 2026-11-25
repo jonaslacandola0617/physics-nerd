@@ -12,7 +12,6 @@ export const ep19: Episode = {
   title: ['Physics Nerd reacts to', 'Pacific Rim'],
   voiceover: 'ep19/vo.wav',
   words,
-  bedDb: -3.4, // AI Studio take at -19.9 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {holes: 'hulls', hole: 'hull', vibranium: 'Vibranium', 'vibranium,': 'Vibranium,'},
   beats: [
     {kind: 'play', dur: 2.4, clip: {file: C('01-swing'), start: 0, label: 'Ship meets Kaiju'}},

@@ -13,7 +13,6 @@ export const ep17: Episode = {
   title: ['Physics Nerd reacts to', 'Iron Man 2'],
   voiceover: 'ep17/vo.wav',
   words,
-  bedDb: -4.0, // AI Studio take at -20.5 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {"Soldier's": 'Soldier', V: 'Five'},
   beats: [
     {kind: 'play', dur: 2.8, clip: {file: C('03-plates'), start: 0.5, label: 'The case wraps around Tony: plates snap on'}},

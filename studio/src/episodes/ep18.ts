@@ -13,7 +13,6 @@ export const ep18: Episode = {
   title: ['Physics Nerd reacts to', 'Inception'],
   voiceover: 'ep18/vo.wav',
   words,
-  bedDb: -3.5, // AI Studio take at -20.0 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {freefall: 'free fall', 'freefall,': 'free fall,'},
   beats: [
     {kind: 'play', dur: 2.5, clip: {file: C('01-hang'), start: 0, label: 'The van drops past the bridge'}},

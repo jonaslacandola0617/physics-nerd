@@ -13,7 +13,6 @@ export const ep24: Episode = {
   title: ['Physics Nerd reacts to', 'The Empire Strikes Back'],
   voiceover: 'ep24/vo.wav',
   words,
-  bedDb: -4.5, // AI Studio take at -21.0 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {spacecrafts: 'spacecraft'},
   beats: [
     {kind: 'play', dur: 4.2, clip: {file: C('01-field'), start: 0, label: 'Into the asteroid field'}},

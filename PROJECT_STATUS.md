@@ -11,7 +11,7 @@ Physics Nerd is the user's YouTube Shorts channel. Each episode is a short (≈5
 
 ## Rules the user set
 - Gemini writes scripts; **Claude fact-checks every number and checks every line against the footage** (contact sheets). Nothing is recorded until the user approves the text.
-- **Voice = Google AI Studio** from EP16 on (more expressive; WAV exports in Drive folder https://drive.google.com/drive/folders/1plOnUZT0X-GAhUfU4a841oAWycllP8v3). **Use the takes unedited**: no roomify (the user dislikes it), no breath-trimming; the studio plays `studio/public/epNN/vo.wav` directly. EP01–15 used Google Vids + roomify. ElevenLabs is no longer used (no credits; old takes kept in `episodes/*/elevenlabs/` or `old*/`).
+- **Voice = Google AI Studio** from EP16 on (more expressive; WAV exports in Drive folder https://drive.google.com/drive/folders/1plOnUZT0X-GAhUfU4a841oAWycllP8v3). **Use the takes unedited** apart from raising the level: no roomify (the user dislikes it), no breath-trimming; the studio plays `studio/public/epNN/vo.wav` directly. EP01–15 used Google Vids + roomify. ElevenLabs is no longer used (no credits; old takes kept in `episodes/*/elevenlabs/` or `old*/`).
 - **Never download from pirate streaming sites** (the user once asked to record from zxcstream.com: declined, stays declined). The user downloads movies themselves, trims them with ffmpeg (`-c copy`) using the .bat files in `tools/windows/`, and uploads only the trimmed scene files.
 - Avoid movie copies with **burned-in subtitles or ad watermarks** ("Hollymoviehd", "ESub" releases had both). YTS / Pahe releases were clean. Check new files for this and for the audio language (one Dark Knight copy was a Telugu dub).
 - Commit clips, timelines and renders; push to `main` (and the session branch). Never commit full movies (`videos/` is git-ignored; so is `package/`).
@@ -58,4 +58,4 @@ Take/footage mismatches noted, not fixed (already recorded): EP17 Pepper throws 
 
 ## 2026-11-25: EP16–25 re-voiced
 AI Studio takes in `episodes/_studio_takes/`, timelines retimed (`tools/retime_vo.py`), short clips extended, 0 VO cuts, tsc clean. **The ep16–ep25 renders on main are from the old Google Vids voices: re-render ep16–ep25 and re-master.**
-Levels: the AI Studio takes sit at about -19 to -21 LUFS (old roomified VO was -16.5). Instead of boosting the voice, each episode has `bedDb` (-2.6 to -4.5 dB) that turns the movie audio and SFX down to keep the old voice-to-bed balance; `master_audio.py` then brings the mix to -14 LUFS. For a new take: bedDb = (take LUFS) + 16.5.
+Levels: the AI Studio takes come in at about -19 to -21 LUFS. The user wants them raised like before: `studio/public/epNN/vo.wav` = the take + gain to ~-16.5 LUFS + a peak-only limiter (ffmpeg `volume=XdB,alimiter=limit=0.82`), nothing else. Originals stay in `episodes/_studio_takes/`. (`bedDb` exists in the template but is unused.)

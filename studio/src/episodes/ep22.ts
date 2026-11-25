@@ -13,7 +13,6 @@ export const ep22: Episode = {
   title: ['Physics Nerd reacts to', 'The Matrix'],
   voiceover: 'ep22/vo.wav',
   words,
-  bedDb: -4.5, // AI Studio take at -21.0 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-dodge'), start: 3.0, label: 'Bullet time'}},

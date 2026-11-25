@@ -13,7 +13,6 @@ export const ep16: Episode = {
   title: ['Physics Nerd reacts to', 'Furious 7'],
   voiceover: 'ep16/vo.wav',
   words,
-  bedDb: -3.0, // AI Studio take at -19.5 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-exit'), start: 0, label: 'Out the window of tower 1'}},

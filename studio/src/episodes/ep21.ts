@@ -13,7 +13,6 @@ export const ep21: Episode = {
   title: ['Physics Nerd reacts to', 'Indiana Jones'],
   voiceover: 'ep21/vo.wav',
   words,
-  bedDb: -2.6, // AI Studio take at -19.1 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {"archaeologist's": 'archaeologist', "archeologist's": 'archaeologist', g: 'G'},
   beats: [
     {kind: 'play', dur: 2.5, clip: {file: C('01-launch'), start: 1.5, label: 'The fridge flies past the car'}},
