@@ -14,7 +14,7 @@ export const ep27: Episode = {
   title: ['Physics Nerd reacts to', 'Age of Ultron'],
   voiceover: 'ep27/vo.wav',
   words,
-  captionFixes: {earth: 'Earth', A: 'AI', '.I.': ''},
+  captionFixes: {earth: 'Earth'},
   beats: [
     {kind: 'play', dur: 2.8, clip: {file: C('01-lift'), start: 1.0, label: 'Sokovia tears out of the ground'}},
     {
