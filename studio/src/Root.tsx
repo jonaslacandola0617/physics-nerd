@@ -28,10 +28,11 @@ import {ep24} from './episodes/ep24';
 import {ep25} from './episodes/ep25';
 import {ep26} from './episodes/ep26';
 import {ep27} from './episodes/ep27';
+import {ep28} from './episodes/ep28';
 import {FPS, Short, episodeFrames} from './template/Short';
 import {Episode} from './template/types';
 
-const episodes: Episode[] = [ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27];
+const episodes: Episode[] = [ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27, ep28];
 
 export const Root: React.FC = () => (
   <>
