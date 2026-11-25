@@ -61,4 +61,4 @@ AI Studio takes in `episodes/_studio_takes/`, timelines retimed (`tools/retime_v
 Levels: the AI Studio takes come in at about -19 to -21 LUFS. The user wants them raised like before: `studio/public/epNN/vo.wav` = the take + gain to ~-16.5 LUFS + a peak-only limiter (ffmpeg `volume=XdB,alimiter=limit=0.82`), nothing else. Originals stay in `episodes/_studio_takes/`. (`bedDb` exists in the template but is unused.)
 
 ## EP26–35 (doc "S4 - EP26-35")
-Scripts copied to `episodes/physics_nerd_scripts_ep26_to_ep35.md`; review + footage windows in `episodes/SCRIPTS_EP26-35_REVIEW.md` (2026-11-25). Waiting for the user to apply the ⚠️ fixes, then record in AI Studio (Fenrir) and trim the movies.
+Scripts copied to `episodes/physics_nerd_scripts_ep26_to_ep35.md`; review + footage windows in `episodes/SCRIPTS_EP26-35_REVIEW.md` (2026-11-25). ✅ Fixes applied, scripts approved. Next: user records in AI Studio (Fenrir) and sends the 10 movie file names for a trim .bat.

@@ -2,6 +2,8 @@
 
 Source: Google Doc "S4 - EP26-35" (https://docs.google.com/document/d/1eVtVDFRSvkEBzaeEWKJEk30sAj0Yc3HHnY7X3q7hW2E), copied to `physics_nerd_scripts_ep26_to_ep35.md`. Read in full.
 
+**Status 2026-11-25: all ⚠️ fixes applied in the doc (EP26, 27, 31, 32, 33, 35). Scripts ✅ approved for recording. The ❓ items get checked against the footage.**
+
 ✅ = holds up · ⚠️ = fix before recording · ❓ = check against the footage
 
 | Ep | Verdict | Main issue |
