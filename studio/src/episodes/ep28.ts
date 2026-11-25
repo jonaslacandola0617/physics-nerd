@@ -30,7 +30,7 @@ export const ep28: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 20.27, to: 27.10,
+      kind: 'pause', from: 20.27, to: 27.6,
       clip: {file: C('03-tangled'), start: 13.5, label: 'Freeze: holding the tether', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'ORBIT = FREE FALL', x: 50, y: 22, at: 'orbit', dur: 2.2, color: '#FFD60A', size: 100},
@@ -38,7 +38,7 @@ export const ep28: Episode = {
       ],
     },
     {
-      kind: 'pause', from: 27.10, to: 37.8,
+      kind: 'pause', from: 27.6, to: 37.8,
       clip: {file: C('03-tangled'), start: 8.5, label: 'Freeze: two astronauts, one rope', zoom: 0.08},
       overlays: [
         {type: 'pop', text: 'ONE GENTLE TUG', x: 50, y: 22, at: 'gentle', dur: 2.4, color: '#34C759', size: 105},
