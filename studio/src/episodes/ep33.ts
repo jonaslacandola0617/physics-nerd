@@ -26,14 +26,14 @@ export const ep33: Episode = {
       clip: {file: C('02-room'), start: 7.6, label: 'Jack beside the panel'},
       overlays: [
         {type: 'pop', text: 'PROBLEM ≠ SPACE', x: 50, y: 22, at: 'surface', dur: 2.0, color: '#FF3B30', size: 105},
-        {type: 'pop', text: 'PROBLEM = BUOYANCY', x: 50, y: 78, at: 'buoyancy', dur: 2.2, color: '#34C759', size: 105},
+        {type: 'pop', text: 'PROBLEM = BUOYANCY', x: 50, y: 78, at: 'area', dur: 1.9, color: '#34C759', size: 105},
       ],
     },
     {
       kind: 'vo', from: 14.9, to: 30.80,
       clip: {file: C('02-room'), start: 0, label: 'The panel in the water'},
       overlays: [
-        {type: 'meme', emoji: '🛟❌', at: 'inflatable', dur: 1.3},
+        {type: 'meme', file: 'ep33/assets/pool-float.jpg', emoji: '', at: 'inflatable', dur: 1.3},
         {type: 'pop', text: 'LIFT = WATER PUSHED ASIDE − PANEL', x: 50, y: 22, at: 'floating', dur: 3.2, color: '#FFD60A', size: 75},
         {type: 'pop', text: '28°F WATER', x: 50, y: 78, at: '28', dur: 2.0, color: '#0A84FF', size: 110},
       ],
@@ -43,7 +43,7 @@ export const ep33: Episode = {
       clip: {file: C('03-waterline'), start: 3.0, label: 'Freeze: Rose barely above the water', zoom: 0.05},
       overlays: [
         {type: 'pop', text: '+ JACK = PANEL UNDERWATER', x: 50, y: 22, at: 'extra', dur: 2.6, color: '#FF3B30', size: 90},
-        {type: 'meme', emoji: '🥶🥶', at: 'freeze', dur: 1.3},
+        {type: 'meme', file: 'ep33/assets/frozen-face.jpg', emoji: '', at: 'freeze', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 2.5, clip: {file: C('04-hands'), start: 0, label: 'Jack and Rose'}},

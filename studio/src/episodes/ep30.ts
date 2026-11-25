@@ -20,7 +20,7 @@ export const ep30: Episode = {
     {
       kind: 'pause', from: 0, to: 6.3,
       clip: {file: C('02-roof'), start: 2.5, label: 'Freeze: both of them fine on a flattened roof', zoom: 0.05},
-      overlays: [{type: 'meme', emoji: '🚕', at: 'taxi', dur: 1.2}],
+      overlays: [{type: 'meme', file: 'ep30/assets/taxi.jpg', emoji: '', at: 'taxi', dur: 1.2}],
     },
     {
       kind: 'vo', from: 6.3, to: 16.7,
@@ -40,8 +40,8 @@ export const ep30: Episode = {
       clip: {file: C('02-roof'), start: 6.0, label: 'Freeze: Rachel on top of Batman', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'TAXI ROOF ≠ AIRBAG', x: 50, y: 22, at: 'airbag', dur: 2.2, color: '#FF3B30', size: 100},
-        {type: 'meme', emoji: '🥞', at: 'pancake', dur: 1.2},
-        {type: 'meme', emoji: '🫁💥', at: 'organs', dur: 1.3},
+        {type: 'meme', file: 'ep30/assets/flattened-metal.jpg', emoji: '', at: 'pancake', dur: 1.2},
+        {type: 'meme', file: 'ep30/assets/crash-dummy.jpg', emoji: '', at: 'organs', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 2.0, clip: {file: C('02-roof'), start: 7.5, label: 'Catching their breath'}},
@@ -49,7 +49,7 @@ export const ep30: Episode = {
       kind: 'pause', from: 38.45, to: 44.0,
       clip: {file: C('05-driver'), start: 1.5, label: 'Freeze: the cab driver, window shattered', zoom: 0.05},
       overlays: [
-        {type: 'stamp', text: 'GOTHAM CONCUSSIONS: 0', good: false, at: 'concussion', dur: 1.5},
+        {type: 'stamp', text: 'GOTHAM CONCUSSIONS: 0', good: false, at: 'ever', dur: 1.5},
         {type: 'sfx', name: 'boom', at: 'concussion'},
       ],
     },

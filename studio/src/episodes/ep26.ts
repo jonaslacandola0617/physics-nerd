@@ -26,7 +26,7 @@ export const ep26: Episode = {
       clip: {file: C('05-gap'), start: 1.5, label: 'The flat freeway and the gap'},
       overlays: [
         {type: 'pop', text: 'FLAT ROAD · 50 FT GAP · ~70 MPH', x: 50, y: 22, at: 'completely', dur: 2.8, color: '#FFD60A', size: 80},
-        {type: 'meme', emoji: '✈️', at: 'fighter', dur: 1.2},
+        {type: 'meme', file: 'ep26/assets/fighter-jet.jpg', emoji: '', at: 'fighter', dur: 1.2},
       ],
     },
     {
@@ -42,13 +42,13 @@ export const ep26: Episode = {
       clip: {file: C('04-edge'), start: 0.5, label: 'Freeze: front wheels over the edge', zoom: 0.05},
       overlays: [
         {type: 'pop', text: '0.5 SEC AIR TIME', x: 50, y: 22, at: 'half', dur: 2.2, color: '#FFD60A', size: 105},
-        {type: 'arrow', x1: 40, y1: 35, x2: 40, y2: 70, at: 'drop', dur: 2.6, label: '~4 FT DROP', color: '#FF3B30'},
+        {type: 'arrow', x1: 40, y1: 35, x2: 40, y2: 70, at: 'gravity', dur: 2.6, label: '~4 FT DROP', color: '#FF3B30'},
       ],
     },
     {
       kind: 'pause', from: 32.8, to: 39.4,
       clip: {file: C('02-air'), start: 2.2, label: 'Freeze: nose at the far ledge', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '🧱💥', at: 'slamming', dur: 1.4}],
+      overlays: [{type: 'meme', file: 'ep26/assets/crash-barrier.jpg', emoji: '', at: 'slamming', dur: 1.4}],
     },
     {kind: 'play', dur: 3.0, clip: {file: C('06-land'), start: 1.0, label: 'Lands and keeps rolling'}},
     {

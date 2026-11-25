@@ -37,14 +37,14 @@ export const ep31: Episode = {
     {
       kind: 'pause', from: 31.6, to: 40.2,
       clip: {file: C('05-rock'), start: 1.0, label: 'Freeze: the asteroid surface', zoom: 0.05},
-      overlays: [{type: 'meme', emoji: '🧨🎳', at: 'firecracker', dur: 1.6}],
+      overlays: [{type: 'meme', file: 'ep31/assets/firecracker-bowling-ball.jpg', emoji: '', at: 'firecracker', dur: 1.6}],
     },
     {kind: 'play', dur: 3.5, clip: {file: C('06-cheer'), start: 0, label: 'Earth celebrates'}},
     {
       kind: 'pause', from: 40.2, to: 47.9,
       clip: {file: C('01-split'), start: 6.6, label: 'Freeze: the glowing asteroid', zoom: 0.05},
       overlays: [
-        {type: 'meme', emoji: '☢️🤠', at: 'radioactive', dur: 1.4},
+        {type: 'meme', file: 'ep31/assets/radioactive-texas.jpg', emoji: '', at: 'radioactive', dur: 1.4},
         {type: 'sfx', name: 'boom', at: 'heads'},
       ],
     },

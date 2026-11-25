@@ -21,8 +21,8 @@ export const ep27: Episode = {
       kind: 'pause', from: 0, to: 7.97,
       clip: {file: C('04-under'), start: 1.0, label: 'Freeze: the slab balanced on one core', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🍕', at: 'pizza', dur: 1.2},
-        {type: 'meme', emoji: '🧀', at: 'cheese', dur: 1.0},
+        {type: 'meme', file: 'ep27/assets/pizza.jpg', emoji: '', at: 'pizza', dur: 1.2},
+        {type: 'meme', file: 'ep27/assets/cheese-pull.jpg', emoji: '', at: 'cheese', dur: 1.0},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep27: Episode = {
       kind: 'pause', from: 27.4, to: 41.16,
       clip: {file: C('04-under'), start: 6.0, label: 'Freeze: rock hanging off the bottom', zoom: 0.06},
       overlays: [
-        {type: 'meme', emoji: '🥞☝️', at: 'pancake', dur: 1.5},
+        {type: 'meme', file: 'ep27/assets/wet-pancake.jpg', emoji: '', at: 'pancake', dur: 1.5},
         {type: 'pop', text: 'OUTER EDGES SHEAR OFF', x: 50, y: 22, at: 'shear', dur: 2.4, color: '#FF3B30', size: 95},
       ],
     },

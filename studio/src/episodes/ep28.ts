@@ -26,7 +26,7 @@ export const ep28: Episode = {
       clip: {file: C('03-tangled'), start: 0, label: 'Caught in the parachute cords'},
       overlays: [
         {type: 'pop', text: 'RELATIVE SPEED = 0 MPH', x: 50, y: 22, at: 'complete', dur: 2.6, color: '#34C759', size: 95},
-        {type: 'meme', emoji: '🧗', at: 'mountain', dur: 1.2},
+        {type: 'meme', file: 'ep28/assets/cliff-climber.jpg', emoji: '', at: 'hanging', dur: 1.2},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep28: Episode = {
       clip: {file: C('03-tangled'), start: 8.5, label: 'Freeze: two astronauts, one rope', zoom: 0.08},
       overlays: [
         {type: 'pop', text: 'ONE GENTLE TUG', x: 50, y: 22, at: 'gentle', dur: 2.4, color: '#34C759', size: 105},
-        {type: 'meme', emoji: '🥤', at: 'soda', dur: 1.2},
+        {type: 'meme', file: 'ep28/assets/soda-can.jpg', emoji: '', at: 'soda', dur: 1.2},
       ],
     },
     {kind: 'play', dur: 3.0, clip: {file: C('01-letgo'), start: 3.0, label: 'Drifting off into the void'}},

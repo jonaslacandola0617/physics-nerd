@@ -21,7 +21,7 @@ export const ep29: Episode = {
       clip: {file: C('01-boost'), start: 2.0, label: 'Freeze: a duct-taped 1980s Pontiac in space', zoom: 0.06},
       overlays: [
         {type: 'pop', text: 'NASA BUDGET: BILLIONS', x: 50, y: 22, at: 'billions', dur: 2.0, color: '#FFD60A', size: 100},
-        {type: 'meme', emoji: '🚗🦆', at: 'duct', dur: 1.3},
+        {type: 'meme', file: 'ep29/assets/duct-tape-car.jpg', emoji: '', at: 'Pontiac', dur: 1.3},
       ],
     },
     {
@@ -35,7 +35,7 @@ export const ep29: Episode = {
     {
       kind: 'pause', from: 22.04, to: 28.6,
       clip: {file: C('01-boost'), start: 2.4, label: 'Freeze: the little roof rocket', zoom: 0.06},
-      overlays: [{type: 'meme', emoji: '☁️', at: 'cloud', dur: 1.2}],
+      overlays: [{type: 'meme', file: 'ep29/assets/cloud.jpg', emoji: '', at: 'cloud', dur: 1.2}],
     },
     {
       kind: 'pause', from: 28.6, to: 37.29,
@@ -47,7 +47,7 @@ export const ep29: Episode = {
       clip: {file: C('02-float'), start: 1.0, label: 'Freeze: the taped-up car body', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'WINDSHIELD ALONE: ~17 TONS', x: 50, y: 22, at: 'windshield', dur: 2.6, color: '#FF3B30', size: 90},
-        {type: 'meme', emoji: '🥤💥', at: 'shaken', dur: 1.3},
+        {type: 'meme', file: 'ep29/assets/shaken-soda.jpg', emoji: '', at: 'shaken', dur: 1.3},
       ],
     },
     {kind: 'play', dur: 3.0, clip: {file: C('06-smash'), start: 0.5, label: 'Straight through the satellite'}},
@@ -55,7 +55,7 @@ export const ep29: Episode = {
       kind: 'pause', from: 45.65, to: 51.5,
       clip: {file: C('05-helmet'), start: 0.5, label: 'Freeze: Roman, diving helmet on', zoom: 0.05},
       overlays: [
-        {type: 'stamp', text: 'PHYSICS TEXTBOOKS: AVOIDED', good: false, at: 'textbooks', dur: 1.6},
+        {type: 'stamp', text: 'PHYSICS TEXTBOOKS: AVOIDED', good: false, at: 'away', dur: 1.6},
         {type: 'sfx', name: 'boom', at: 'textbooks'},
       ],
     },

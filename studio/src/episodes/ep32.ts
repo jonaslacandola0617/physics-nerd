@@ -28,7 +28,7 @@ export const ep32: Episode = {
       clip: {file: C('03-climb'), start: 0, label: 'Climbing with the gloves'},
       overlays: [
         {type: 'pop', text: 'REAL TECH: GECKO DRY ADHESION', x: 50, y: 22, at: 'Stanford', dur: 3.0, color: '#34C759', size: 80},
-        {type: 'meme', emoji: '🦎', at: 'gecko', dur: 1.3},
+        {type: 'meme', file: 'ep32/assets/gecko-foot.jpg', emoji: '', at: 'gecko', dur: 1.3},
       ],
     },
     {

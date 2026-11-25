@@ -34,7 +34,7 @@ export const ep34: Episode = {
       clip: {file: C('04-guards'), start: 0, label: 'Moving arms and heads'},
       overlays: [
         {type: 'pop', text: 'F = m × a', x: 50, y: 22, at: 'Force', dur: 2.4, color: '#FFD60A', size: 130},
-        {type: 'meme', emoji: '🚆💥', at: 'train', dur: 1.3},
+        {type: 'meme', file: 'ep34/assets/train.jpg', emoji: '', at: 'clipped', dur: 1.3},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep34: Episode = {
       clip: {file: C('01-stroll'), start: 7.0, label: 'Freeze: tasting the soup', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'MACH 10 INDOORS = SONIC BOOM', x: 50, y: 22, at: 'sonic', dur: 2.6, color: '#FF3B30', size: 85},
-        {type: 'meme', emoji: '🍜', at: 'soup', dur: 1.2},
+        {type: 'meme', file: 'ep34/assets/soup.jpg', emoji: '', at: 'tastes', dur: 1.2},
       ],
     },
     {kind: 'play', dur: 4.0, clip: {file: C('05-snap'), start: 1.0, label: 'Time resumes'}},

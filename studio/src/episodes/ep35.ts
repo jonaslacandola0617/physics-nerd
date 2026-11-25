@@ -34,7 +34,7 @@ export const ep35: Episode = {
       clip: {file: C('04-snow'), start: 1.0, label: 'Freeze: the frozen runway', zoom: 0.05},
       overlays: [
         {type: 'pop', text: 'FREEZING = ALMOST NO VAPOR', x: 50, y: 22, at: 'vapor', dur: 2.4, color: '#0A84FF', size: 90},
-        {type: 'meme', emoji: '💧🔥', at: 'water', dur: 1.2},
+        {type: 'meme', file: 'ep35/assets/match-in-water.jpg', emoji: '', at: 'dropped', dur: 1.2},
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ep35: Episode = {
       clip: {file: C('05-plane'), start: 3.5, label: 'Freeze: the 747 at takeoff speed', zoom: 0.05},
       overlays: [
         {type: 'versus', left: '~5 MPH', leftSub: 'flame across a puddle', right: '150+ MPH', rightSub: '747 at takeoff', at: 'crawls', dur: 4.0},
-        {type: 'meme', emoji: '🐌', at: 'zero', dur: 1.2},
+        {type: 'meme', file: 'ep35/assets/snail.jpg', emoji: '', at: 'zero', dur: 1.2},
       ],
     },
     {kind: 'play', dur: 3.0, clip: {file: C('06-boom'), start: 3.0, label: 'The fireball'}},
@@ -50,8 +50,8 @@ export const ep35: Episode = {
       kind: 'pause', from: 43.1, to: 50.4,
       clip: {file: C('07-mcclane'), start: 1.5, label: 'Freeze: McClane in the snow', zoom: 0.05},
       overlays: [
-        {type: 'meme', emoji: '✈️🏝️', at: 'Valverde', dur: 1.3},
-        {type: 'stamp', text: 'LIGHTER: WON\'T WORK', good: false, at: 'lighter', dur: 1.5},
+        {type: 'meme', file: 'ep35/assets/plane-island.jpg', emoji: '', at: 'Valverde', dur: 1.3},
+        {type: 'stamp', text: 'LIGHTER: WON\'T WORK', good: false, at: 'why', dur: 1.5},
         {type: 'sfx', name: 'boom', at: 'work'},
       ],
     },
