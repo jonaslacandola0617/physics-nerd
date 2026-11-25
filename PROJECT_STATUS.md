@@ -58,3 +58,4 @@ Take/footage mismatches noted, not fixed (already recorded): EP17 Pepper throws 
 
 ## 2026-11-25: EP16–25 re-voiced
 AI Studio takes in `episodes/_studio_takes/`, timelines retimed (`tools/retime_vo.py`), short clips extended, 0 VO cuts, tsc clean. **The ep16–ep25 renders on main are from the old Google Vids voices: re-render ep16–ep25 and re-master.**
+Levels: the AI Studio takes sit at about -19 to -21 LUFS (old roomified VO was -16.5). Instead of boosting the voice, each episode has `bedDb` (-2.6 to -4.5 dB) that turns the movie audio and SFX down to keep the old voice-to-bed balance; `master_audio.py` then brings the mix to -14 LUFS. For a new take: bedDb = (take LUFS) + 16.5.

@@ -7,9 +7,10 @@ import {ClipRef} from './types';
  * Plays a movie clip (or a labelled placeholder until the footage exists).
  * `frozen`: show only the frame at clip.start (a PAUSE beat); the slow zoom still moves.
  */
-export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames: number; blurred?: boolean; frozen?: boolean}> = ({
+export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames: number; blurred?: boolean; frozen?: boolean; volume?: number}> = ({
   clip,
   muted,
+  volume,
   durationInFrames,
   blurred,
   frozen,
@@ -64,6 +65,7 @@ export const ClipView: React.FC<{clip: ClipRef; muted: boolean; durationInFrames
       src={staticFile(clip.file)}
       startFrom={Math.round((clip.start ?? 0) * fps)}
       muted={muted || blurred || frozen}
+      volume={volume ?? 1}
       style={style}
     />
   );

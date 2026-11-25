@@ -13,6 +13,7 @@ export const ep23: Episode = {
   title: ['Physics Nerd reacts to', 'Spider-Man: Homecoming'],
   voiceover: 'ep23/vo.wav',
   words,
+  bedDb: -3.1, // AI Studio take at -19.6 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {pole: 'pull', Toby: 'Tobey', railing: 'railings'},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-hold'), start: 0, label: 'Spidey between the two halves'}},

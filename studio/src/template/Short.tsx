@@ -146,6 +146,7 @@ const BeatView: React.FC<{beat: Beat; prev?: Beat; ep: Episode; words: Word[]; f
     else if (AUTO_SFX[o.type]) sfx.push({name: AUTO_SFX[o.type]!, at: o.at});
   }
 
+  const bed = Math.pow(10, (ep.bedDb ?? 0) / 20);
   return (
     <AbsoluteFill>
       {/* blurred full-frame background */}
@@ -153,7 +154,7 @@ const BeatView: React.FC<{beat: Beat; prev?: Beat; ep: Episode; words: Word[]; f
       {/* sharp clip box */}
       <div style={{position: 'absolute', top: LAYOUT.boxTop, left: 0, width: 1080, height: LAYOUT.boxHeight, overflow: 'hidden'}}>
         <FreezeTint active={frozen}>
-          <ClipView clip={beat.clip} muted={!playsMovieAudio} frozen={frozen} durationInFrames={frames} />
+          <ClipView clip={beat.clip} muted={!playsMovieAudio} frozen={frozen} durationInFrames={frames} volume={bed} />
         </FreezeTint>
         {(frozen || resumed) && <PlayerGlyph paused={frozen} />}
         {overlays.map((o, i) => (
@@ -168,7 +169,7 @@ const BeatView: React.FC<{beat: Beat; prev?: Beat; ep: Episode; words: Word[]; f
       )}
       {sfx.map((s, i) => (
         <Sequence key={`sfx${i}`} from={Math.max(0, Math.round(s.at * FPS))} layout="none">
-          <Audio src={staticFile(`sfx/${s.name}.wav`)} volume={s.volume ?? SFX_VOLUME[s.name]} />
+          <Audio src={staticFile(`sfx/${s.name}.wav`)} volume={(s.volume ?? SFX_VOLUME[s.name]) * bed} />
         </Sequence>
       ))}
     </AbsoluteFill>

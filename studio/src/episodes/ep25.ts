@@ -13,6 +13,7 @@ export const ep25: Episode = {
   title: ['Physics Nerd reacts to', 'Fast & Furious 6'],
   voiceover: 'ep25/vo.wav',
   words,
+  bedDb: -3.9, // AI Studio take at -20.4 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {'screentime,': 'screen time,', '6': 'Six'},
   beats: [
     {kind: 'play', dur: 2.6, clip: {file: C('01-runway'), start: 1.5, label: 'Cars racing under the plane'}},

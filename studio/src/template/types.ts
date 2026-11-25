@@ -44,5 +44,8 @@ export type Episode = {
   voiceover: string; // path inside public/
   words: Word[];
   captionFixes?: Record<string, string>; // whisper token -> display text
+  /** dB applied to the movie audio and sound effects (not the voice). Negative = quieter. Used to keep the
+   *  voice-to-bed balance when a voiceover take is quieter than the usual ~-16.5 LUFS. */
+  bedDb?: number;
   beats: Beat[];
 };

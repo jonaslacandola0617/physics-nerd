@@ -13,6 +13,7 @@ export const ep20: Episode = {
   title: ['Physics Nerd reacts to', 'Interstellar'],
   voiceover: 'ep20/vo.wav',
   words,
+  bedDb: -4.1, // AI Studio take at -20.6 LUFS vs the usual -16.5: movie audio + SFX down to keep the balance
   captionFixes: {ranger: 'Ranger'},
   beats: [
     {kind: 'play', dur: 3.5, clip: {file: C('02-wall'), start: 7.5, label: 'The Ranger tipped up the face of the giant wave'}},
