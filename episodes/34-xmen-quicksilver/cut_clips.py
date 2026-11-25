@@ -30,7 +30,8 @@ CLIPS = {
         ('a', 845.4, 851.0, 0.5),  # bullets frozen in the air
     ],
     "04-guards": [
-        ('a', 851.4, 862.0, 0.5),  # adjusting the guards, flicking them
+        ('a', 851.4, 862.0, 0.5),  # adjusting the guards, flicking them,
+        ('a', 838.9, 844.9, 0.5),  # moving a guard's arm
     ],
     "05-snap": [
         ('a', 876.0, 881.0, 0.5),  # time resumes, guards slam into each other
