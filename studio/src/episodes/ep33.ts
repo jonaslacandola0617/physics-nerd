@@ -15,15 +15,15 @@ export const ep33: Episode = {
   words,
   captionFixes: {Door: 'door', Mythbusters: 'MythBusters'},
   beats: [
-    {kind: 'play', dur: 2.6, clip: {file: C('01-panel'), start: 0, label: 'Rose on the panel, Jack in the water'}},
+    {kind: 'play', dur: 2.6, clip: {file: C('02-room'), start: 5.0, label: 'Rose on the panel, Jack in the water holding on'}},
     {
       kind: 'pause', from: 0, to: 7.03,
-      clip: {file: C('01-panel'), start: 2.6, label: 'Freeze: the panel', zoom: 0.08},
+      clip: {file: C('02-room'), start: 7.6, label: 'Freeze: Jack holding the panel', zoom: 0.08},
       overlays: [{type: 'pop', text: '30 YEARS OF ARGUING', x: 50, y: 22, at: '30', dur: 2.2, color: '#FFD60A', size: 100}],
     },
     {
       kind: 'vo', from: 7.03, to: 14.9,
-      clip: {file: C('02-room'), start: 4.0, label: 'Jack beside the panel'},
+      clip: {file: C('02-room'), start: 7.6, label: 'Jack beside the panel'},
       overlays: [
         {type: 'pop', text: 'PROBLEM ≠ SPACE', x: 50, y: 22, at: 'surface', dur: 2.0, color: '#FF3B30', size: 105},
         {type: 'pop', text: 'PROBLEM = BUOYANCY', x: 50, y: 78, at: 'buoyancy', dur: 2.2, color: '#34C759', size: 105},
